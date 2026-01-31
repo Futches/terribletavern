@@ -1,18 +1,18 @@
-/* CSS Variables - Tavern Color Palette */
+/* CSS Variables - Fox Logo Color Palette */
 :root {
-    --color-dark-wood: #2C1810;
-    --color-medium-wood: #5C3D2E;
-    --color-light-wood: #8B5A2B;
-    --color-gold: #C9A227;
-    --color-gold-light: #E5C76B;
+    --color-charcoal: #1A1A1A;
+    --color-brown: #5D4037;
+    --color-brown-light: #8D6E63;
+    --color-rust: #D84315;
+    --color-rust-light: #E64A19;
     --color-cream: #F5E6D3;
     --color-cream-light: #FDF8F3;
-    --color-text: #2C1810;
+    --color-text: #1A1A1A;
     --color-text-light: #F5E6D3;
-    --color-accent: #8B0000;
+    --color-accent: #607D8B;
 
     --font-heading: 'Cinzel', serif;
-    --font-body: 'Lora', serif;
+    --font-body: 'Cinzel', serif;
 
     --header-height: 70px;
     --transition-speed: 0.3s;
@@ -62,13 +62,13 @@ a {
     left: 0;
     right: 0;
     height: var(--header-height);
-    background-color: var(--color-dark-wood);
+    background-color: var(--color-charcoal);
     z-index: 1000;
     transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 #header.scrolled {
-    background-color: rgba(44, 24, 16, 0.98);
+    background-color: rgba(26, 26, 26, 0.98);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -86,12 +86,12 @@ a {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--color-gold);
+    color: var(--color-rust);
     letter-spacing: 2px;
 }
 
 .logo a:hover {
-    color: var(--color-gold-light);
+    color: var(--color-rust-light);
 }
 
 .nav-links {
@@ -117,7 +117,7 @@ a {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-gold);
+    background-color: var(--color-rust);
     transition: width var(--transition-speed);
 }
 
@@ -126,7 +126,7 @@ a {
 }
 
 .nav-links a:hover {
-    color: var(--color-gold);
+    color: var(--color-rust);
 }
 
 /* Mobile Navigation Toggle */
@@ -174,14 +174,14 @@ a {
     justify-content: center;
     text-align: center;
     background: linear-gradient(
-        rgba(44, 24, 16, 0.85),
-        rgba(44, 24, 16, 0.9)
+        rgba(26, 26, 26, 0.85),
+        rgba(26, 26, 26, 0.9)
     ),
     linear-gradient(
         135deg,
-        var(--color-dark-wood) 0%,
-        var(--color-medium-wood) 50%,
-        var(--color-dark-wood) 100%
+        var(--color-charcoal) 0%,
+        var(--color-brown) 50%,
+        var(--color-charcoal) 100%
     );
     padding-top: var(--header-height);
 }
@@ -192,7 +192,7 @@ a {
 
 .hero h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-    color: var(--color-gold);
+    color: var(--color-rust);
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: 3px;
@@ -208,8 +208,8 @@ a {
 .cta-button {
     display: inline-block;
     padding: 15px 40px;
-    background-color: var(--color-gold);
-    color: var(--color-dark-wood);
+    background-color: var(--color-rust);
+    color: var(--color-charcoal);
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 600;
@@ -220,9 +220,9 @@ a {
 }
 
 .cta-button:hover {
-    background-color: var(--color-gold-light);
+    background-color: var(--color-rust-light);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+    box-shadow: 0 4px 15px rgba(216, 67, 21, 0.4);
 }
 
 /* About Section */
@@ -234,7 +234,7 @@ a {
 .about h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--color-dark-wood);
+    color: var(--color-charcoal);
     margin-bottom: 50px;
     position: relative;
 }
@@ -244,7 +244,7 @@ a {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: var(--color-gold);
+    background-color: var(--color-rust);
     margin: 15px auto 0;
 }
 
@@ -286,7 +286,7 @@ a {
 }
 
 .feature h3 {
-    color: var(--color-medium-wood);
+    color: var(--color-brown);
     margin-bottom: 10px;
 }
 
@@ -294,16 +294,16 @@ a {
 .menu {
     padding: 100px 0;
     background: linear-gradient(
-        rgba(92, 61, 46, 0.95),
-        rgba(44, 24, 16, 0.95)
+        rgba(93, 64, 55, 0.95),
+        rgba(26, 26, 26, 0.95)
     ),
-    var(--color-medium-wood);
+    var(--color-brown);
 }
 
 .menu h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--color-gold);
+    color: var(--color-rust);
     margin-bottom: 20px;
 }
 
@@ -312,7 +312,7 @@ a {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: var(--color-gold);
+    background-color: var(--color-rust);
     margin: 15px auto 0;
 }
 
@@ -338,11 +338,21 @@ a {
 }
 
 .menu-category h3 {
-    color: var(--color-gold);
-    font-size: 1.5rem;
+    color: var(--color-rust);
+    font-size: 1.2rem;
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 2px solid var(--color-gold);
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.menu-category h3::before,
+.menu-category h3::after {
+    content: '--------';
+    letter-spacing: 2px;
+    margin: 0 10px;
 }
 
 .menu-item {
@@ -360,20 +370,21 @@ a {
 .menu-item .item-name {
     color: var(--color-cream);
     font-family: var(--font-heading);
-    font-size: 1.1rem;
-}
-
-.menu-item .item-price {
-    float: right;
-    color: var(--color-gold);
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
 }
 
 .menu-item .item-description {
-    color: rgba(245, 230, 211, 0.7);
-    font-size: 0.9rem;
+    color: rgba(245, 230, 211, 0.8);
+    font-size: 0.85rem;
     margin-top: 8px;
-    clear: both;
+    text-align: center;
+    font-variant: small-caps;
+    letter-spacing: 1px;
 }
 
 /* Contact Section */
@@ -385,7 +396,7 @@ a {
 .contact h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--color-dark-wood);
+    color: var(--color-charcoal);
     margin-bottom: 50px;
 }
 
@@ -394,7 +405,7 @@ a {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: var(--color-gold);
+    background-color: var(--color-rust);
     margin: 15px auto 0;
 }
 
@@ -411,7 +422,7 @@ a {
 }
 
 .contact-item h3 {
-    color: var(--color-medium-wood);
+    color: var(--color-brown);
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
@@ -422,7 +433,7 @@ a {
 }
 
 .contact-form h3 {
-    color: var(--color-medium-wood);
+    color: var(--color-brown);
     margin-bottom: 25px;
     font-size: 1.3rem;
 }
@@ -434,7 +445,7 @@ a {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: var(--color-dark-wood);
+    color: var(--color-charcoal);
     font-weight: 600;
 }
 
@@ -443,7 +454,7 @@ a {
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid var(--color-light-wood);
+    border: 2px solid var(--color-brown-light);
     border-radius: 5px;
     font-family: var(--font-body);
     font-size: 1rem;
@@ -455,13 +466,13 @@ a {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-gold);
+    border-color: var(--color-rust);
 }
 
 .submit-button {
     width: 100%;
     padding: 15px;
-    background-color: var(--color-medium-wood);
+    background-color: var(--color-brown);
     color: var(--color-cream);
     font-family: var(--font-heading);
     font-size: 1rem;
@@ -475,12 +486,12 @@ a {
 }
 
 .submit-button:hover {
-    background-color: var(--color-dark-wood);
+    background-color: var(--color-charcoal);
 }
 
 /* Footer */
 footer {
-    background-color: var(--color-dark-wood);
+    background-color: var(--color-charcoal);
     padding: 60px 0 20px;
     color: var(--color-cream);
 }
@@ -494,7 +505,7 @@ footer {
 
 .footer-brand h3 {
     font-family: var(--font-heading);
-    color: var(--color-gold);
+    color: var(--color-rust);
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -516,7 +527,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--color-gold);
+    color: var(--color-rust);
 }
 
 .footer-social p {
@@ -534,7 +545,7 @@ footer {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: var(--color-medium-wood);
+    background-color: var(--color-brown);
     color: var(--color-cream);
     border-radius: 50%;
     font-size: 0.8rem;
@@ -542,8 +553,8 @@ footer {
 }
 
 .social-links a:hover {
-    background-color: var(--color-gold);
-    color: var(--color-dark-wood);
+    background-color: var(--color-rust);
+    color: var(--color-charcoal);
 }
 
 .footer-bottom {
@@ -603,7 +614,7 @@ footer {
         width: 70%;
         max-width: 300px;
         height: 100vh;
-        background-color: var(--color-dark-wood);
+        background-color: var(--color-charcoal);
         flex-direction: column;
         justify-content: center;
         align-items: center;
