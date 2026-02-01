@@ -252,25 +252,26 @@ a {
     font-size: 0.95rem;
 }
 
-.hero-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+.hero-image-full {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 50px;
 }
 
-.hero-images img {
-    width: 280px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform var(--transition-speed);
+.hero-image-full img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.hero-images img:hover {
-    transform: scale(1.02);
+.divider-image {
+    width: 100%;
+}
+
+.divider-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* About Section */
