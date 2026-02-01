@@ -173,16 +173,7 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(
-        rgba(26, 26, 26, 0.85),
-        rgba(26, 26, 26, 0.9)
-    ),
-    linear-gradient(
-        135deg,
-        var(--color-charcoal) 0%,
-        var(--color-brown) 50%,
-        var(--color-charcoal) 100%
-    );
+    background-color: #ffffff;
     padding-top: var(--header-height);
 }
 
@@ -198,15 +189,14 @@ a {
 
 .hero h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-    color: var(--color-rust);
+    color: var(--color-charcoal);
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: 3px;
 }
 
 .tagline {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: var(--color-cream);
+    color: var(--color-brown);
     font-style: italic;
     margin-bottom: 40px;
 }
@@ -217,7 +207,7 @@ a {
 }
 
 .hero-intro p {
-    color: var(--color-cream);
+    color: var(--color-charcoal);
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 15px;
