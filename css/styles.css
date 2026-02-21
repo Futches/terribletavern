@@ -752,3 +752,20 @@ footer {
         padding: 0;
     }
 }
+/* Featured Menu - main page (no category headers) */
+.menu-featured {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu-featured .menu-item {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(245, 230, 211, 0.2);
+}
+
+.menu-featured .menu-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
