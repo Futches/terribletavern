@@ -241,6 +241,45 @@ const finder = (() => {
     }
   }
 
+  function openSearch() {
+    showStep('step-search');
+    document.getElementById('search-input').value = '';
+    document.getElementById('search-results').innerHTML = '';
+    setTimeout(() => document.getElementById('search-input').focus(), 100);
+  }
+
+  function onSearch(query) {
+    const list = document.getElementById('search-results');
+    list.innerHTML = '';
+    const q = query.trim().toLowerCase();
+    if (!q) return;
+
+    const matches = cocktails
+      .filter(d => d.name.toLowerCase().includes(q))
+      .slice(0, 20);
+
+    if (matches.length === 0) {
+      list.innerHTML = '<li class="search-empty">No drinks found.</li>';
+      return;
+    }
+
+    matches.forEach(drink => {
+      const li = document.createElement('li');
+      li.className = 'search-result-item';
+      li.innerHTML = `
+        <div class="search-result-name">${drink.name}</div>
+        <div class="search-result-meta">${drink.category}</div>
+      `;
+      li.addEventListener('click', () => {
+        results = [drink];
+        resultIndex = 0;
+        history = [];
+        renderResult();
+      });
+      list.appendChild(li);
+    });
+  }
+
   function restart() {
     state = { mood: null, spirit: null, sequence: null };
     results = [];
@@ -252,5 +291,5 @@ const finder = (() => {
   // Init
   loadData().catch(console.error);
 
-  return { start, next, back, restart, share };
+  return { start, next, back, restart, share, openSearch, onSearch };
 })();

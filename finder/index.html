@@ -28,6 +28,15 @@
         <h1 class="finder-title">Find Your Drink</h1>
         <p class="finder-subtitle">Answer three questions and we'll find the perfect cocktail for right now.</p>
         <button class="finder-btn primary" onclick="finder.start()">Let's Go</button>
+        <button class="finder-btn secondary" style="margin-top:12px;" onclick="finder.openSearch()">Search by Name</button>
+      </div>
+
+      <!-- Step: Search -->
+      <div class="finder-step" id="step-search">
+        <h2 class="finder-question">What's the drink?</h2>
+        <input type="text" id="search-input" class="search-input" placeholder="Start typing a name…" oninput="finder.onSearch(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
+        <ul class="search-results" id="search-results"></ul>
+        <button class="finder-btn ghost" style="margin-top:16px;" onclick="finder.restart()">← Back</button>
       </div>
 
       <!-- Step 1: Mood -->
