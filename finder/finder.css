@@ -141,6 +141,15 @@
 }
 .finder-btn.ghost:active { color: var(--color-cream); }
 
+.finder-btn.share {
+  background: transparent;
+  color: var(--color-cream);
+  border: 1px solid rgba(245, 230, 211, 0.3);
+  width: 100%;
+  margin-top: 4px;
+}
+.finder-btn.share:active { background: rgba(245,230,211,0.08); }
+
 /* Result card */
 .result-header {
   display: flex;

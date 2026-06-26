@@ -221,6 +221,26 @@ const finder = (() => {
     }
   }
 
+  function share() {
+    const drink = results[resultIndex];
+    if (!drink) return;
+
+    const ingredients = parseIngredients(drink.ingredients).join('\n  • ');
+    const text = [
+      `🍹 ${drink.name}`,
+      `\nIngredients:\n  • ${ingredients}`,
+      drink.method && drink.method !== 'nan' ? `\nHow to make it:\n  ${drink.method}` : '',
+      drink.notes && drink.notes !== 'nan'   ? `\nNotes:\n  ${drink.notes}` : '',
+      `\n— Found at terribletavern.com/finder`,
+    ].filter(Boolean).join('\n');
+
+    if (navigator.share) {
+      navigator.share({ title: drink.name, text }).catch(() => {});
+    } else {
+      window.open(`sms:?body=${encodeURIComponent(text)}`);
+    }
+  }
+
   function restart() {
     state = { mood: null, spirit: null, sequence: null };
     results = [];
@@ -232,5 +252,5 @@ const finder = (() => {
   // Init
   loadData().catch(console.error);
 
-  return { start, next, back, restart };
+  return { start, next, back, restart, share };
 })();
