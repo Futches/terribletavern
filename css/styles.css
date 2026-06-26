@@ -560,6 +560,16 @@ a {
     background-color: var(--color-charcoal);
 }
 
+.easter-egg-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0.25;
+    transition: opacity 0.3s;
+}
+.easter-egg-link:hover { opacity: 1; }
+
 /* Footer */
 footer {
     background-color: var(--color-charcoal);
