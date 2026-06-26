@@ -66,17 +66,35 @@ const finder = (() => {
     });
   }
 
-  function filter() {
+  function filterWith(mood, spirit, sequence, useSeason) {
     const season = getSeason();
     return cocktails
       .filter(d => {
-        const seasonOk = d.season === season || d.season === 'All-Season';
-        const moodOk   = !state.mood    || d.moods.includes(state.mood);
-        const spiritOk = !state.spirit  || d.category === state.spirit;
-        const seqOk    = !state.sequence || d.sequence === state.sequence || d.sequence === 'Any Time';
+        const seasonOk = !useSeason || d.season === season || d.season === 'All-Season';
+        const moodOk   = !mood     || d.moods.includes(mood);
+        const spiritOk = !spirit   || d.category === spirit;
+        const seqOk    = !sequence || d.sequence === sequence || d.sequence === 'Any Time';
         return seasonOk && moodOk && spiritOk && seqOk;
       })
       .sort((a, b) => b.mood_score - a.mood_score);
+  }
+
+  function filter() {
+    // Progressively relax filters so we always return results
+    const attempts = [
+      () => filterWith(state.mood, state.spirit, state.sequence, true),
+      () => filterWith(state.mood, state.spirit, null,           true),
+      () => filterWith(state.mood, null,          null,           true),
+      () => filterWith(state.mood, state.spirit, state.sequence, false),
+      () => filterWith(state.mood, state.spirit, null,           false),
+      () => filterWith(state.mood, null,          null,           false),
+      () => filterWith(null,       null,          null,           false),
+    ];
+    for (const attempt of attempts) {
+      const results = attempt();
+      if (results.length > 0) return results;
+    }
+    return [];
   }
 
   function parseIngredients(raw) {
