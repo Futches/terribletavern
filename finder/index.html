@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Find Your Drink — Terrible Tavern</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="finder.css">
+</head>
+<body class="finder-page">
+
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="logo-link">
+        <img src="../images/Logo.png" alt="Terrible Tavern" class="header-logo">
+      </a>
+    </div>
+  </header>
+
+  <main class="finder-main">
+    <div class="finder-container" id="finderApp">
+
+      <!-- Step 0: Welcome -->
+      <div class="finder-step active" id="step-welcome">
+        <h1 class="finder-title">Find Your Drink</h1>
+        <p class="finder-subtitle">Answer three questions and we'll find the perfect cocktail for right now.</p>
+        <button class="finder-btn primary" onclick="finder.start()">Let's Go</button>
+      </div>
+
+      <!-- Step 1: Mood -->
+      <div class="finder-step" id="step-mood">
+        <div class="step-indicator">1 of 3</div>
+        <h2 class="finder-question">What's the vibe?</h2>
+        <div class="finder-options" id="mood-options"></div>
+      </div>
+
+      <!-- Step 2: Spirit -->
+      <div class="finder-step" id="step-spirit">
+        <div class="step-indicator">2 of 3</div>
+        <h2 class="finder-question">What are you drinking?</h2>
+        <div class="finder-options" id="spirit-options"></div>
+      </div>
+
+      <!-- Step 3: Sequence -->
+      <div class="finder-step" id="step-sequence">
+        <div class="step-indicator">3 of 3</div>
+        <h2 class="finder-question">Where are you in the night?</h2>
+        <div class="finder-options" id="sequence-options"></div>
+      </div>
+
+      <!-- No results -->
+      <div class="finder-step" id="step-noresults">
+        <h2 class="finder-question">Nothing found</h2>
+        <p class="finder-subtitle">No drinks matched all three filters. Try loosening your choices.</p>
+        <button class="finder-btn secondary" onclick="finder.restart()">Start Over</button>
+      </div>
+
+      <!-- Result -->
+      <div class="finder-step" id="step-result">
+        <div class="result-header">
+          <span class="result-count" id="result-count"></span>
+          <span class="result-season" id="result-season"></span>
+        </div>
+        <h2 class="drink-name" id="drink-name"></h2>
+        <div class="drink-meta" id="drink-meta"></div>
+
+        <div class="drink-section">
+          <h3 class="section-label">Ingredients</h3>
+          <ul class="ingredient-list" id="ingredient-list"></ul>
+        </div>
+
+        <div class="drink-section" id="method-section">
+          <h3 class="section-label">How to Make It</h3>
+          <p class="drink-method" id="drink-method"></p>
+        </div>
+
+        <div class="drink-section" id="notes-section">
+          <h3 class="section-label">Notes</h3>
+          <p class="drink-notes" id="drink-notes"></p>
+        </div>
+
+        <div class="result-actions">
+          <button class="finder-btn secondary" onclick="finder.back()">← Back</button>
+          <button class="finder-btn primary" onclick="finder.next()">Find Alternative</button>
+        </div>
+        <div class="result-actions-bottom">
+          <button class="finder-btn ghost" onclick="finder.restart()">Start Over</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../js/finder.js"></script>
+</body>
+</html>
