@@ -489,6 +489,13 @@
   gap: 8px;
   margin-top: 12px;
   align-items: center;
+  position: relative;
+}
+.custom-sugg-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0; right: 0;
+  z-index: 50;
 }
 .custom-add-select {
   flex: 1;

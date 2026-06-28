@@ -257,7 +257,13 @@ body {
 /* Custom items */
 .custom-chip { cursor: default; }
 .custom-add-row {
-  display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap;
+  display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; position: relative;
+}
+.custom-sugg-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0; right: 0;
+  z-index: 50;
 }
 .custom-add-select {
   flex: 1; min-width: 140px; padding: 10px 14px;

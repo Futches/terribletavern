@@ -178,6 +178,20 @@ const finder = (() => {
     return raw.split(/,(?![^(]*\))/).map(s => s.trim()).filter(Boolean);
   }
 
+  function buildRecipeIngredientIndex() {
+    const seen = new Set();
+    (cocktails || []).forEach(drink => {
+      parseIngredients(drink.ingredients).forEach(ing => {
+        const name = ing
+          .replace(/^\d[\d./\s]*(oz|ml|dashes?|tsp|tbsp|cups?|rinse|splash|drops?|parts?|bar\s?spoons?|pinch|scoop|whole|large|small|medium)\.?\s*/i, '')
+          .replace(/^(fresh|frozen|muddled|dried|ground|crushed|cracked|grated|sliced|cubed|chilled|warm|hot)\s+/i, '')
+          .trim();
+        if (name && name.length > 2) seen.add(name);
+      });
+    });
+    return Array.from(seen).sort();
+  }
+
   function lookupSub(ingredient) {
     const lower = ingredient.toLowerCase().replace(/^\d[\d./ ]*oz\s*/i, '').replace(/fresh\s+/i, '').trim();
     for (const key of Object.keys(substitutions)) {
@@ -414,6 +428,28 @@ const finder = (() => {
         const select = addRow.querySelector('.custom-add-select');
         const input = addRow.querySelector('.custom-add-input');
         const btn = addRow.querySelector('.custom-add-btn');
+        // Autocomplete from recipe ingredients
+        const recipeIngIndex = buildRecipeIngredientIndex();
+        const suggBox = document.createElement('ul');
+        suggBox.className = 'mybar-search-results custom-sugg-list';
+        addRow.style.position = 'relative';
+        addRow.appendChild(suggBox);
+
+        function showSugg(q) {
+          suggBox.innerHTML = '';
+          if (!q || q.length < 2) return;
+          const matches = recipeIngIndex.filter(s => s.toLowerCase().includes(q.toLowerCase())).slice(0, 8);
+          matches.forEach(m => {
+            const li = document.createElement('li');
+            li.className = 'mybar-search-result';
+            li.textContent = m;
+            li.addEventListener('mousedown', () => { input.value = m; suggBox.innerHTML = ''; });
+            suggBox.appendChild(li);
+          });
+        }
+        input.addEventListener('input', () => showSugg(input.value.trim()));
+        input.addEventListener('blur', () => setTimeout(() => { suggBox.innerHTML = ''; }, 150));
+
         btn.addEventListener('click', () => {
           const val = input.value.trim();
           const cat = select.value;
@@ -421,6 +457,7 @@ const finder = (() => {
           customBar.push({ name: val, category: cat });
           localStorage.setItem('terribleTavernCustomBar', JSON.stringify(customBar));
           input.value = '';
+          suggBox.innerHTML = '';
           updateCount(); updateMyBarLabel(); renderCustomSection();
         });
         input.addEventListener('keydown', e => { if (e.key === 'Enter') btn.click(); });
