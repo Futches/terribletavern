@@ -293,36 +293,43 @@ const finder = (() => {
 
     function renderChips() {
       chipArea.innerHTML = '';
+      const merged = {};
+      const order = [];
       for (let t = 0; t <= activeTier; t++) {
         const tier = barIngredients[tierOrder[t]];
         for (const [catName, items] of Object.entries(tier.categories)) {
-          const section = document.createElement('div');
-          section.className = 'mybar-category';
-          const title = document.createElement('div');
-          title.className = 'mybar-category-title';
-          title.textContent = catName;
-          section.appendChild(title);
-          const chips = document.createElement('div');
-          chips.className = 'mybar-items';
-          items.forEach(item => {
-            const chip = document.createElement('div');
-            chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
-            chip.textContent = item.name;
-            chip.addEventListener('click', () => {
-              if (myBar.has(item.name)) {
-                myBar.delete(item.name);
-                chip.classList.remove('checked');
-              } else {
-                myBar.add(item.name);
-                chip.classList.add('checked');
-              }
-              updateCount();
-            });
-            chips.appendChild(chip);
-          });
-          section.appendChild(chips);
-          chipArea.appendChild(section);
+          if (!merged[catName]) { merged[catName] = []; order.push(catName); }
+          merged[catName].push(...items);
         }
+      }
+      for (const catName of order) {
+        const items = merged[catName];
+        const section = document.createElement('div');
+        section.className = 'mybar-category';
+        const title = document.createElement('div');
+        title.className = 'mybar-category-title';
+        title.textContent = catName;
+        section.appendChild(title);
+        const chips = document.createElement('div');
+        chips.className = 'mybar-items';
+        items.forEach(item => {
+          const chip = document.createElement('div');
+          chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
+          chip.textContent = item.name;
+          chip.addEventListener('click', () => {
+            if (myBar.has(item.name)) {
+              myBar.delete(item.name);
+              chip.classList.remove('checked');
+            } else {
+              myBar.add(item.name);
+              chip.classList.add('checked');
+            }
+            updateCount();
+          });
+          chips.appendChild(chip);
+        });
+        section.appendChild(chips);
+        chipArea.appendChild(section);
       }
     }
 
