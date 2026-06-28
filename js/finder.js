@@ -230,20 +230,10 @@ const finder = (() => {
         const btn = document.createElement('button');
         btn.className = 'sub-toggle';
         btn.textContent = 'No this?';
-        const subEl = document.createElement('div');
-        subEl.className = 'substitution';
-        subEl.textContent = sub;
-        btn.addEventListener('click', () => {
-          const open = subEl.classList.toggle('visible');
-          btn.classList.toggle('open', open);
-          btn.textContent = open ? 'Got it' : 'No this?';
-        });
+        btn.addEventListener('click', () => openNoThisModal(ing, sub));
         row.appendChild(btn);
-        li.appendChild(row);
-        li.appendChild(subEl);
-      } else {
-        li.appendChild(row);
       }
+      li.appendChild(row);
 
       list.appendChild(li);
     });
@@ -438,59 +428,29 @@ const finder = (() => {
 
   function next() {
     if (results.length === 0) return;
-    const drink = results[resultIndex];
-    const matches = getSpiritSubMatches(drink);
-    if (matches.length > 0) {
-      showSubModal(matches, () => {
-        history.push(resultIndex);
-        resultIndex = (resultIndex + 1) % results.length;
-        renderResult();
-      });
-    } else {
-      history.push(resultIndex);
-      resultIndex = (resultIndex + 1) % results.length;
-      renderResult();
-    }
+    history.push(resultIndex);
+    resultIndex = (resultIndex + 1) % results.length;
+    renderResult();
   }
 
-  function getSpiritSubMatches(drink) {
-    if (!drink) return [];
-    const spirits = drink.spirits || '';
-    const matches = [];
-    for (const [name, data] of Object.entries(spiritSubs)) {
-      if (spirits.toLowerCase().includes(name.toLowerCase())) {
-        matches.push({ name, ...data });
-      }
-    }
-    return matches;
-  }
-
-  let subModalCallback = null;
-
-  function showSubModal(matches, callback) {
-    subModalCallback = callback;
+  function openNoThisModal(ingredientName, quickSub) {
     const titleEl = document.getElementById('spirit-sub-title');
     const contentEl = document.getElementById('spirit-sub-content');
-    if (matches.length === 1) {
-      titleEl.textContent = `About ${matches[0].name}`;
-      contentEl.textContent = matches[0].note;
-    } else {
-      titleEl.textContent = 'Specialty Spirits in This Drink';
-      contentEl.innerHTML = matches.map(m =>
-        `<strong style="color:var(--color-cream);display:block;margin-bottom:4px;margin-top:14px;">${m.name}</strong>${m.note}`
-      ).join('');
+    titleEl.textContent = ingredientName;
+    let html = `<p style="margin-bottom:12px;">${quickSub}</p>`;
+    // Check for a detailed note in spiritSubs
+    for (const [name, data] of Object.entries(spiritSubs)) {
+      if (ingredientName.toLowerCase().includes(name.toLowerCase())) {
+        html += `<p style="border-top:1px solid rgba(245,230,211,0.1);padding-top:12px;margin-top:4px;">${data.note}</p>`;
+        break;
+      }
     }
+    contentEl.innerHTML = html;
     document.getElementById('spirit-sub-modal').style.display = 'flex';
-  }
-
-  function dismissSubModal() {
-    document.getElementById('spirit-sub-modal').style.display = 'none';
-    if (subModalCallback) { subModalCallback(); subModalCallback = null; }
   }
 
   function closeSubModal() {
     document.getElementById('spirit-sub-modal').style.display = 'none';
-    subModalCallback = null;
   }
 
   function back() {
@@ -584,5 +544,5 @@ const finder = (() => {
 
   loadData().catch(console.error);
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, dismissSubModal, closeSubModal };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal };
 })();
