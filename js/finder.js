@@ -38,7 +38,7 @@ const finder = (() => {
   let spiritSubs = {};
   let barIngredients = {};
   let myBar = new Set();
-  let customBar = new Set();
+  let customBar = []; // [{name, category}]
   let tavernMode = false;
   let state = { mood: null, spirit: null, sequence: null, pendingStart: false };
   let results = [];
@@ -74,14 +74,14 @@ const finder = (() => {
     } else {
       myBar = new Set(JSON.parse(localStorage.getItem('terribleTavernBar') || '[]'));
     }
-    customBar = new Set(JSON.parse(localStorage.getItem('terribleTavernCustomBar') || '[]'));
+    customBar = JSON.parse(localStorage.getItem('terribleTavernCustomBar') || '[]').filter(i => i && i.name && i.category && i.category !== 'undefined');
     updateMyBarLabel();
   }
 
   function updateMyBarLabel() {
     const label = document.getElementById('my-bar-label');
     if (!label) return;
-    const total = myBar.size + customBar.size;
+    const total = myBar.size + customBar.length;
     if (tavernMode) {
       label.textContent = `🍸 Tonight's Bar (${myBar.size} items)`;
     } else {
@@ -91,7 +91,7 @@ const finder = (() => {
 
   // Check if a drink ingredient string matches a bar item's keywords
   function ingredientInBar(ingStr) {
-    if (myBar.size === 0 && customBar.size === 0) return true;
+    if (myBar.size === 0 && customBar.length === 0) return true;
     const lower = ingStr.toLowerCase();
     try {
       for (const tier of Object.values(barIngredients)) {
@@ -105,7 +105,7 @@ const finder = (() => {
       }
     } catch(e) { return true; }
     for (const custom of customBar) {
-      if (lower.includes(custom.toLowerCase())) return true;
+      if (lower.includes(custom.name.toLowerCase())) return true;
     }
     return false;
   }
@@ -347,6 +347,17 @@ const finder = (() => {
     customSection.className = 'mybar-category custom-items-section';
     customSection.id = 'custom-items-section';
 
+    // Build ordered category list from barIngredients
+    const allCategories = [];
+    const seenCats = new Set();
+    ['Essentials', 'Advanced', 'Deep Cuts'].forEach(tier => {
+      if (barIngredients[tier]) {
+        Object.keys(barIngredients[tier].categories).forEach(cat => {
+          if (!seenCats.has(cat)) { allCategories.push(cat); seenCats.add(cat); }
+        });
+      }
+    });
+
     function renderCustomSection() {
       customSection.innerHTML = '';
       const title = document.createElement('div');
@@ -354,41 +365,56 @@ const finder = (() => {
       title.textContent = 'Custom Items';
       customSection.appendChild(title);
 
-      if (customBar.size > 0) {
-        const chips = document.createElement('div');
-        chips.className = 'mybar-items';
-        customBar.forEach(name => {
-          const chip = document.createElement('div');
-          chip.className = 'mybar-chip checked custom-chip';
-          chip.innerHTML = `${name} <span class="custom-chip-remove" data-name="${name}">×</span>`;
-          chip.querySelector('.custom-chip-remove').addEventListener('click', (e) => {
-            e.stopPropagation();
-            customBar.delete(name);
-            localStorage.setItem('terribleTavernCustomBar', JSON.stringify([...customBar]));
-            updateCount();
-            updateMyBarLabel();
-            renderCustomSection();
-          });
-          chips.appendChild(chip);
+      if (customBar.length > 0) {
+        // Group by category
+        const byCategory = {};
+        customBar.forEach(item => {
+          if (!byCategory[item.category]) byCategory[item.category] = [];
+          byCategory[item.category].push(item.name);
         });
-        customSection.appendChild(chips);
+        Object.entries(byCategory).forEach(([cat, names]) => {
+          const catTitle = document.createElement('div');
+          catTitle.className = 'mybar-category-title';
+          catTitle.style.cssText = 'font-size:0.62rem;color:#666;margin-top:10px;margin-bottom:6px;';
+          catTitle.textContent = cat;
+          customSection.appendChild(catTitle);
+          const chips = document.createElement('div');
+          chips.className = 'mybar-items';
+          names.forEach(name => {
+            const chip = document.createElement('div');
+            chip.className = 'mybar-chip checked custom-chip';
+            chip.innerHTML = `${name} <span class="custom-chip-remove">×</span>`;
+            chip.querySelector('.custom-chip-remove').addEventListener('click', e => {
+              e.stopPropagation();
+              customBar = customBar.filter(i => !(i.name === name && i.category === cat));
+              localStorage.setItem('terribleTavernCustomBar', JSON.stringify(customBar));
+              updateCount(); updateMyBarLabel(); renderCustomSection();
+            });
+            chips.appendChild(chip);
+          });
+          customSection.appendChild(chips);
+        });
       }
 
       if (!tavernMode) {
         const addRow = document.createElement('div');
         addRow.className = 'custom-add-row';
-        addRow.innerHTML = `<input type="text" class="custom-add-input" placeholder="e.g. Raspberry-Infused Bourbon" autocomplete="off" autocorrect="off" spellcheck="false"><button class="custom-add-btn">Add</button>`;
+        const selectOpts = allCategories.map(c => `<option value="${c}">${c}</option>`).join('');
+        addRow.innerHTML = `
+          <select class="custom-add-select"><option value="">Category…</option>${selectOpts}</select>
+          <input type="text" class="custom-add-input" placeholder="Item name" autocomplete="off" autocorrect="off" spellcheck="false">
+          <button class="custom-add-btn">Add</button>`;
+        const select = addRow.querySelector('.custom-add-select');
         const input = addRow.querySelector('.custom-add-input');
         const btn = addRow.querySelector('.custom-add-btn');
         btn.addEventListener('click', () => {
           const val = input.value.trim();
-          if (!val) return;
-          customBar.add(val);
-          localStorage.setItem('terribleTavernCustomBar', JSON.stringify([...customBar]));
+          const cat = select.value;
+          if (!val || !cat) return;
+          customBar.push({ name: val, category: cat });
+          localStorage.setItem('terribleTavernCustomBar', JSON.stringify(customBar));
           input.value = '';
-          updateCount();
-          updateMyBarLabel();
-          renderCustomSection();
+          updateCount(); updateMyBarLabel(); renderCustomSection();
         });
         input.addEventListener('keydown', e => { if (e.key === 'Enter') btn.click(); });
         customSection.appendChild(addRow);
@@ -404,7 +430,7 @@ const finder = (() => {
 
   function updateCount() {
     const el = document.getElementById('mybar-count');
-    const total = myBar.size + customBar.size;
+    const total = myBar.size + customBar.length;
     if (el) el.textContent = total > 0 ? `${total} selected` : '';
   }
 
@@ -421,7 +447,7 @@ const finder = (() => {
 
   function clearMyBar() {
     myBar.clear();
-    customBar.clear();
+    customBar = [];
     localStorage.removeItem('terribleTavernBar');
     localStorage.removeItem('terribleTavernCustomBar');
     updateMyBarLabel();

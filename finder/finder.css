@@ -431,12 +431,31 @@
 .custom-chip-remove:hover { color: var(--color-cream); }
 .custom-add-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
   align-items: center;
 }
-.custom-add-input {
+.custom-add-select {
   flex: 1;
+  min-width: 140px;
+  padding: 10px 14px;
+  background: rgba(245,230,211,0.06);
+  border: 1px solid rgba(245,230,211,0.18);
+  border-radius: 8px;
+  color: var(--color-cream);
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.custom-add-select:focus { border-color: var(--color-rust); }
+.custom-add-select option { background: #1a1a1a; color: var(--color-cream); }
+.custom-add-input {
+  flex: 2;
+  min-width: 140px;
   padding: 10px 14px;
   background: rgba(245,230,211,0.06);
   border: 1px solid rgba(245,230,211,0.18);
