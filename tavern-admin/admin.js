@@ -10,6 +10,7 @@ let config = {};
 let barIngredients = {};
 let tonight = new Set();
 let activeTier = 2;
+let adminCustomItems = []; // [{name, category}]
 
 const adminApp = (() => {
 
@@ -58,10 +59,32 @@ const adminApp = (() => {
     } catch(e) { tonight = new Set(); }
   }
 
+  function loadCustomItems() {
+    try { adminCustomItems = JSON.parse(localStorage.getItem('tavernAdminCustom') || '[]').filter(i => i && i.name && i.category && i.category !== 'undefined'); } catch(e) { adminCustomItems = []; }
+  }
+
+  function saveCustomItems() {
+    localStorage.setItem('tavernAdminCustom', JSON.stringify(adminCustomItems));
+  }
+
+  function allCategories() {
+    const seen = new Set();
+    const cats = [];
+    TIER_ORDER.forEach(tierName => {
+      const tier = barIngredients[tierName];
+      if (!tier) return;
+      Object.keys(tier.categories).forEach(cat => {
+        if (!seen.has(cat)) { seen.add(cat); cats.push(cat); }
+      });
+    });
+    return cats;
+  }
+
   async function init() {
     loadConfig();
     const res = await fetch('../data/bar-ingredients.json');
     barIngredients = await res.json();
+    loadCustomItems();
 
     if (config.token) {
       await readCurrentInventory();
@@ -171,6 +194,78 @@ const adminApp = (() => {
         area.appendChild(section);
       }
     }
+    renderCustomSection(area);
+  }
+
+  function renderCustomSection(area) {
+    const existing = document.getElementById('admin-custom-section');
+    if (existing) existing.remove();
+
+    const section = document.createElement('div');
+    section.className = 'mybar-category';
+    section.id = 'admin-custom-section';
+
+    const title = document.createElement('div');
+    title.className = 'mybar-category-title';
+    title.textContent = 'Custom Items';
+    section.appendChild(title);
+
+    if (adminCustomItems.length > 0) {
+      const byCategory = {};
+      adminCustomItems.forEach(item => {
+        if (!byCategory[item.category]) byCategory[item.category] = [];
+        byCategory[item.category].push(item.name);
+      });
+      Object.entries(byCategory).forEach(([cat, names]) => {
+        const catTitle = document.createElement('div');
+        catTitle.className = 'mybar-category-title';
+        catTitle.style.cssText = 'font-size:0.62rem;color:#666;margin-top:10px;margin-bottom:6px;';
+        catTitle.textContent = cat;
+        section.appendChild(catTitle);
+        const chips = document.createElement('div');
+        chips.className = 'mybar-items';
+        names.forEach(name => {
+          const chip = document.createElement('div');
+          chip.className = 'mybar-chip checked custom-chip';
+          chip.innerHTML = `${name} <span class="custom-chip-remove" style="cursor:pointer;margin-left:6px;opacity:0.6;">×</span>`;
+          chip.querySelector('.custom-chip-remove').addEventListener('click', e => {
+            e.stopPropagation();
+            adminCustomItems = adminCustomItems.filter(i => !(i.name === name && i.category === cat));
+            tonight.delete(name);
+            saveCustomItems();
+            updateCount();
+            renderCustomSection(document.getElementById('admin-chip-area'));
+          });
+          chips.appendChild(chip);
+        });
+        section.appendChild(chips);
+      });
+    }
+
+    const addRow = document.createElement('div');
+    addRow.className = 'custom-add-row';
+    const cats = allCategories();
+    const selectOpts = cats.map(c => `<option value="${c}">${c}</option>`).join('');
+    addRow.innerHTML = `
+      <select class="custom-add-select"><option value="">Category…</option>${selectOpts}</select>
+      <input type="text" class="custom-add-input" placeholder="Item name" autocomplete="off" autocorrect="off" spellcheck="false">
+      <button class="custom-add-btn">Add</button>`;
+    const select = addRow.querySelector('.custom-add-select');
+    const input = addRow.querySelector('.custom-add-input');
+    const btn = addRow.querySelector('.custom-add-btn');
+    btn.addEventListener('click', () => {
+      const val = input.value.trim();
+      const cat = select.value;
+      if (!val || !cat) return;
+      adminCustomItems.push({ name: val, category: cat });
+      tonight.add(val);
+      saveCustomItems();
+      input.value = '';
+      updateCount();
+      renderCustomSection(document.getElementById('admin-chip-area'));
+    });
+    section.appendChild(addRow);
+    area.appendChild(section);
   }
 
   function updateCount() {
@@ -199,6 +294,7 @@ const adminApp = (() => {
       );
       if (!r.ok) throw new Error();
       localStorage.setItem('terribleTavernBar', JSON.stringify([...tonight]));
+      localStorage.setItem('terribleTavernCustomBar', JSON.stringify(adminCustomItems));
       btn.textContent = '✓ Published! Live in ~1 min';
       setTimeout(() => { btn.textContent = 'Publish Tonight\'s Bar'; btn.disabled = false; }, 3000);
     } catch(e) {
@@ -209,7 +305,10 @@ const adminApp = (() => {
 
   function clearAll() {
     tonight.clear();
+    adminCustomItems = [];
+    saveCustomItems();
     document.querySelectorAll('#admin-chip-area .mybar-chip').forEach(c => c.classList.remove('checked'));
+    renderCustomSection(document.getElementById('admin-chip-area'));
     updateCount();
   }
 
