@@ -61,7 +61,7 @@ const finder = (() => {
       try {
         const r = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`);
         const d = await r.json();
-        myBar = new Set(d.record || []);
+        myBar = new Set(d.record.items || []);
         const banner = document.getElementById('tavern-banner');
         if (banner) banner.style.display = 'block';
       } catch(e) {

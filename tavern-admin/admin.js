@@ -33,7 +33,7 @@ const adminApp = (() => {
       try {
         const r = await fetch(`${JSONBIN}/b/${config.binId}/latest`);
         const d = await r.json();
-        tonight = new Set(d.record || []);
+        tonight = new Set(d.record.items || []);
       } catch(e) { tonight = new Set(); }
       showAdmin();
     } else {
@@ -58,9 +58,12 @@ const adminApp = (() => {
           'X-Bin-Name': 'Terrible Tavern Tonight',
           'X-Bin-Private': 'false'
         },
-        body: JSON.stringify([])
+        body: JSON.stringify({ items: [] })
       });
-      if (!res.ok) throw new Error('Invalid API key — check and try again.');
+      if (!res.ok) {
+        const err2 = await res.json().catch(() => ({}));
+        throw new Error(err2.message || 'Invalid API key — check and try again.');
+      }
       const data = await res.json();
       config = { masterKey: key, binId: data.metadata.id };
       saveConfig();
@@ -163,7 +166,7 @@ const adminApp = (() => {
           'Content-Type': 'application/json',
           'X-Master-Key': config.masterKey
         },
-        body: JSON.stringify([...tonight])
+        body: JSON.stringify({ items: [...tonight] })
       });
       if (!res.ok) throw new Error();
       btn.textContent = '✓ Published!';
