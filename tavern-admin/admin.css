@@ -281,11 +281,12 @@ body {
 /* Sticky search header */
 .admin-sticky-header {
   position: sticky;
-  top: 0;
+  top: 44px;
   background: var(--color-charcoal);
   z-index: 10;
-  padding: 16px 0 10px;
-  margin-bottom: 4px;
+  padding: 12px 0 12px;
+  border-bottom: 1px solid rgba(245,230,211,0.08);
+  margin-bottom: 16px;
 }
 .admin-search-wrap {
   position: relative;
