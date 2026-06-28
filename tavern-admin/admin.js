@@ -198,6 +198,7 @@ const adminApp = (() => {
         { method: 'PUT', headers: ghHeaders(), body: JSON.stringify(body) }
       );
       if (!r.ok) throw new Error();
+      localStorage.setItem('terribleTavernBar', JSON.stringify([...tonight]));
       btn.textContent = '✓ Published! Live in ~1 min';
       setTimeout(() => { btn.textContent = 'Publish Tonight\'s Bar'; btn.disabled = false; }, 3000);
     } catch(e) {
