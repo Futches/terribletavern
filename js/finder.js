@@ -517,7 +517,19 @@ const finder = (() => {
     showStep('step-welcome');
   }
 
+  function tavernBannerTap() {
+    document.getElementById('tavern-modal').style.display = 'flex';
+  }
+
+  function closeTavernModal() {
+    document.getElementById('tavern-modal').style.display = 'none';
+  }
+
+  function returnToHomeBar() {
+    window.location.href = window.location.pathname;
+  }
+
   loadData().catch(console.error);
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar };
 })();
