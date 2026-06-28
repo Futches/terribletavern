@@ -431,6 +431,78 @@ const finder = (() => {
     renderCustomSection();
     container.appendChild(customSection);
 
+    // Build flat item index across all tiers for search
+    const searchIndex = [];
+    ['Essentials', 'Advanced', 'Deep Cuts'].forEach((tierName, t) => {
+      const tier = barIngredients[tierName];
+      if (!tier) return;
+      Object.values(tier.categories).forEach(items => {
+        items.forEach(item => searchIndex.push({ name: item.name, tier: t }));
+      });
+    });
+
+    function scrollToChip(name, tierIndex) {
+      if (activeTier < tierIndex) {
+        activeTier = tierIndex;
+        selector.querySelectorAll('.mybar-tier-btn').forEach((b, j) => b.classList.toggle('active', j === tierIndex));
+        renderChips();
+      }
+      const chip = Array.from(chipArea.querySelectorAll('.mybar-chip')).find(c => c.textContent.trim() === name);
+      if (chip) {
+        chip.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        chip.classList.add('mybar-chip-highlight');
+        setTimeout(() => chip.classList.remove('mybar-chip-highlight'), 1400);
+      }
+    }
+
+    function scrollToCustomAdd() {
+      const addInput = customSection.querySelector('.custom-add-input');
+      if (addInput) {
+        addInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => addInput.focus(), 350);
+      }
+    }
+
+    const searchInput = document.getElementById('mybar-search');
+    const searchResults = document.getElementById('mybar-search-results');
+    if (searchInput) {
+      searchInput.value = '';
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.trim().toLowerCase();
+        searchResults.innerHTML = '';
+        if (!q) return;
+        const matches = searchIndex.filter(i => i.name.toLowerCase().includes(q)).slice(0, 8);
+        if (matches.length === 0) {
+          const li = document.createElement('li');
+          li.className = 'mybar-search-result no-match';
+          li.textContent = 'No match — tap to add as custom item';
+          li.addEventListener('mousedown', () => {
+            const addInput = customSection.querySelector('.custom-add-input');
+            if (addInput) addInput.value = searchInput.value.trim();
+            searchResults.innerHTML = '';
+            searchInput.value = '';
+            scrollToCustomAdd();
+          });
+          searchResults.appendChild(li);
+        } else {
+          matches.forEach(item => {
+            const li = document.createElement('li');
+            li.className = 'mybar-search-result';
+            li.textContent = item.name;
+            li.addEventListener('mousedown', () => {
+              searchResults.innerHTML = '';
+              searchInput.value = '';
+              scrollToChip(item.name, item.tier);
+            });
+            searchResults.appendChild(li);
+          });
+        }
+      });
+      searchInput.addEventListener('blur', () => {
+        setTimeout(() => { searchResults.innerHTML = ''; }, 150);
+      });
+    }
+
     updateCount();
     showStep('step-mybar');
   }

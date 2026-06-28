@@ -82,8 +82,14 @@
       <!-- My Bar -->
       <div class="finder-step" id="step-mybar">
         <div class="mybar-header">
-          <h2 class="finder-question">My Bar</h2>
-          <span class="mybar-count" id="mybar-count"></span>
+          <div class="mybar-header-row">
+            <h2 class="finder-question">My Bar</h2>
+            <span class="mybar-count" id="mybar-count"></span>
+          </div>
+          <div class="mybar-search-wrap">
+            <input type="text" id="mybar-search" class="mybar-search-input" placeholder="Search ingredients…" autocomplete="off" autocorrect="off" spellcheck="false">
+            <ul id="mybar-search-results" class="mybar-search-results"></ul>
+          </div>
         </div>
         <p class="finder-subtitle">Check off what you have. We'll use this to put makeable drinks first.</p>
         <div id="mybar-categories"></div>

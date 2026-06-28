@@ -341,16 +341,69 @@
 
 /* My Bar page */
 .mybar-header {
+  position: sticky;
+  top: var(--header-height);
+  background: var(--color-charcoal);
+  z-index: 10;
+  padding: 12px 0 10px;
+  margin-bottom: 4px;
+}
+.mybar-header-row {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 .mybar-count {
   font-family: 'Cinzel', serif;
   font-size: 0.75rem;
   color: var(--color-rust);
   letter-spacing: 0.08em;
+}
+.mybar-search-wrap {
+  position: relative;
+}
+.mybar-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  background: rgba(245,230,211,0.06);
+  border: 1px solid rgba(245,230,211,0.18);
+  border-radius: 8px;
+  color: var(--color-cream);
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  outline: none;
+}
+.mybar-search-input::placeholder { color: rgba(245,230,211,0.35); }
+.mybar-search-results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0; right: 0;
+  background: #222;
+  border: 1px solid rgba(245,230,211,0.15);
+  border-radius: 8px;
+  list-style: none;
+  margin: 0; padding: 4px 0;
+  z-index: 50;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.mybar-search-result {
+  padding: 10px 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  color: var(--color-cream);
+  cursor: pointer;
+}
+.mybar-search-result:hover { background: rgba(245,230,211,0.08); }
+.mybar-search-result.no-match { color: rgba(245,230,211,0.45); font-style: italic; }
+@keyframes chipFlash {
+  0%   { background: rgba(216,67,21,0.6); border-color: var(--color-rust); }
+  100% { background: ''; border-color: ''; }
+}
+.mybar-chip-highlight {
+  animation: chipFlash 1.2s ease-out forwards;
 }
 .mybar-tier-selector {
   display: flex;
