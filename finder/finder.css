@@ -150,13 +150,11 @@
 }
 .finder-btn.share:active { background: rgba(245,230,211,0.08); }
 
-/* My Bar button on welcome */
-.my-bar-btn {
-  margin-top: 20px;
+/* My Bar divider on welcome */
+.my-bar-divider {
   border-top: 1px solid rgba(245,230,211,0.1);
-  padding-top: 20px;
-  font-size: 0.8rem;
-  color: #777;
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
 
 /* My Bar page */

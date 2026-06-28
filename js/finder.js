@@ -250,7 +250,7 @@ const finder = (() => {
 
   function openMyBar() {
     if (!barIngredients || !barIngredients['Essentials']) {
-      alert('Still loading — please try again in a moment.');
+      loadData().then(() => openMyBar()).catch(console.error);
       return;
     }
     const container = document.getElementById('mybar-categories');
