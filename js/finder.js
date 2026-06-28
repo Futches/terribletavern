@@ -26,7 +26,7 @@ const finder = (() => {
   ];
 
   function getSeason() {
-    const m = new Date().getMonth(); // 0-indexed
+    const m = new Date().getMonth();
     if (m <= 1 || m === 11) return 'Winter';
     if (m <= 4)             return 'Spring';
     if (m <= 7)             return 'Summer';
@@ -35,23 +35,58 @@ const finder = (() => {
 
   let cocktails = [];
   let substitutions = {};
+  let barIngredients = {};
+  let myBar = new Set();
   let state = { mood: null, spirit: null, sequence: null };
   let results = [];
   let resultIndex = 0;
-  let history = []; // stack of resultIndex values for Back
+  let history = [];
 
   async function loadData() {
-    const [cRes, sRes] = await Promise.all([
+    const [cRes, sRes, bRes] = await Promise.all([
       fetch('../data/cocktails.json'),
       fetch('../data/substitutions.json'),
+      fetch('../data/bar-ingredients.json'),
     ]);
     cocktails = await cRes.json();
     substitutions = await sRes.json();
+    barIngredients = await bRes.json();
+    myBar = new Set(JSON.parse(localStorage.getItem('terribleTavernBar') || '[]'));
+    updateMyBarLabel();
+  }
+
+  function updateMyBarLabel() {
+    const label = document.getElementById('my-bar-label');
+    if (!label) return;
+    label.textContent = myBar.size > 0
+      ? `My Bar (${myBar.size} items)`
+      : 'Set Up My Bar';
+  }
+
+  // Check if a drink ingredient string matches a bar item's keywords
+  function ingredientInBar(ingStr) {
+    if (myBar.size === 0) return true; // no bar set up — treat as available
+    const lower = ingStr.toLowerCase();
+    for (const [, items] of Object.entries(barIngredients)) {
+      for (const item of items) {
+        if (!myBar.has(item.name)) continue;
+        if (item.match.some(kw => lower.includes(kw))) return true;
+      }
+    }
+    return false;
+    }
+
+  function drinkMakeability(drink) {
+    if (myBar.size === 0) return { makeable: false, missing: [] };
+    const ings = parseIngredients(drink.ingredients);
+    const missing = ings.filter(i => !ingredientInBar(i));
+    return { makeable: missing.length === 0, missing };
   }
 
   function showStep(id) {
     document.querySelectorAll('.finder-step').forEach(el => el.classList.remove('active'));
     document.getElementById(id).classList.add('active');
+    window.scrollTo(0, 0);
   }
 
   function buildOptions(containerId, items, onSelect) {
@@ -68,19 +103,26 @@ const finder = (() => {
 
   function filterWith(mood, spirit, sequence, useSeason) {
     const season = getSeason();
-    return cocktails
-      .filter(d => {
-        const seasonOk = !useSeason || d.season === season || d.season === 'All-Season';
-        const moodOk   = !mood     || d.moods.includes(mood);
-        const spiritOk = !spirit   || d.category === spirit;
-        const seqOk    = !sequence || d.sequence === sequence || d.sequence === 'Any Time';
-        return seasonOk && moodOk && spiritOk && seqOk;
-      })
-      .sort((a, b) => b.mood_score - a.mood_score);
+    const filtered = cocktails.filter(d => {
+      const seasonOk = !useSeason || d.season === season || d.season === 'All-Season';
+      const moodOk   = !mood     || d.moods.includes(mood);
+      const spiritOk = !spirit   || d.category === spirit;
+      const seqOk    = !sequence || d.sequence === sequence || d.sequence === 'Any Time';
+      return seasonOk && moodOk && spiritOk && seqOk;
+    });
+
+    // Sort: makeable drinks first (if bar is set up), then by mood score
+    return filtered.sort((a, b) => {
+      if (myBar.size > 0) {
+        const aMake = drinkMakeability(a).makeable ? 1 : 0;
+        const bMake = drinkMakeability(b).makeable ? 1 : 0;
+        if (bMake !== aMake) return bMake - aMake;
+      }
+      return b.mood_score - a.mood_score;
+    });
   }
 
   function filter() {
-    // Progressively relax filters so we always return results
     const attempts = [
       () => filterWith(state.mood, state.spirit, state.sequence, true),
       () => filterWith(state.mood, state.spirit, null,           true),
@@ -91,8 +133,8 @@ const finder = (() => {
       () => filterWith(null,       null,          null,           false),
     ];
     for (const attempt of attempts) {
-      const results = attempt();
-      if (results.length > 0) return results;
+      const r = attempt();
+      if (r.length > 0) return r;
     }
     return [];
   }
@@ -113,14 +155,30 @@ const finder = (() => {
   function renderResult() {
     const drink = results[resultIndex];
     const season = getSeason();
+    const { makeable, missing } = drinkMakeability(drink);
 
     document.getElementById('result-count').textContent =
       `Result ${resultIndex + 1} of ${results.length}`;
-    document.getElementById('result-season').textContent = `${season}`;
+    document.getElementById('result-season').textContent = season;
     document.getElementById('drink-name').textContent = drink.name;
 
     const meta = [drink.category, drink.glass, drink.ice].filter(Boolean).join(' · ');
     document.getElementById('drink-meta').textContent = meta;
+
+    // Makeable badge
+    let badge = document.getElementById('makeable-badge');
+    if (!badge) {
+      badge = document.createElement('div');
+      badge.id = 'makeable-badge';
+      document.getElementById('drink-meta').after(badge);
+    }
+    if (myBar.size > 0 && makeable) {
+      badge.className = 'makeable-badge';
+      badge.textContent = '✓ You can make this';
+    } else {
+      badge.className = '';
+      badge.textContent = '';
+    }
 
     const ingredients = parseIngredients(drink.ingredients);
     const list = document.getElementById('ingredient-list');
@@ -128,6 +186,7 @@ const finder = (() => {
 
     ingredients.forEach(ing => {
       const sub = lookupSub(ing);
+      const have = ingredientInBar(ing);
       const li = document.createElement('li');
       li.className = 'ingredient-item';
 
@@ -135,7 +194,7 @@ const finder = (() => {
       row.className = 'ingredient-row';
 
       const name = document.createElement('span');
-      name.className = 'ingredient-name';
+      name.className = 'ingredient-name' + (myBar.size > 0 && !have ? ' missing' : '');
       name.textContent = ing;
       row.appendChild(name);
 
@@ -182,6 +241,70 @@ const finder = (() => {
     showStep('step-result');
   }
 
+  // ── My Bar ──────────────────────────────────────────────────────────────
+
+  function openMyBar() {
+    const container = document.getElementById('mybar-categories');
+    container.innerHTML = '';
+
+    for (const [category, items] of Object.entries(barIngredients)) {
+      const section = document.createElement('div');
+      section.className = 'mybar-category';
+
+      const title = document.createElement('div');
+      title.className = 'mybar-category-title';
+      title.textContent = category;
+      section.appendChild(title);
+
+      const chips = document.createElement('div');
+      chips.className = 'mybar-items';
+
+      items.forEach(item => {
+        const chip = document.createElement('div');
+        chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
+        chip.textContent = item.name;
+        chip.addEventListener('click', () => {
+          if (myBar.has(item.name)) {
+            myBar.delete(item.name);
+            chip.classList.remove('checked');
+          } else {
+            myBar.add(item.name);
+            chip.classList.add('checked');
+          }
+          updateCount();
+        });
+        chips.appendChild(chip);
+      });
+
+      section.appendChild(chips);
+      container.appendChild(section);
+    }
+
+    updateCount();
+    showStep('step-mybar');
+  }
+
+  function updateCount() {
+    const el = document.getElementById('mybar-count');
+    if (el) el.textContent = myBar.size > 0 ? `${myBar.size} selected` : '';
+  }
+
+  function saveMyBar() {
+    localStorage.setItem('terribleTavernBar', JSON.stringify([...myBar]));
+    updateMyBarLabel();
+    showStep('step-welcome');
+  }
+
+  function clearMyBar() {
+    myBar.clear();
+    localStorage.removeItem('terribleTavernBar');
+    updateMyBarLabel();
+    document.querySelectorAll('.mybar-chip').forEach(c => c.classList.remove('checked'));
+    updateCount();
+  }
+
+  // ── Guided flow ─────────────────────────────────────────────────────────
+
   function start() {
     buildOptions('mood-options', MOODS, mood => {
       state.mood = mood;
@@ -224,7 +347,6 @@ const finder = (() => {
   function share() {
     const drink = results[resultIndex];
     if (!drink) return;
-
     const ingredients = parseIngredients(drink.ingredients).join('\n  • ');
     const text = [
       `🍹 ${drink.name}`,
@@ -266,8 +388,10 @@ const finder = (() => {
     matches.forEach(drink => {
       const li = document.createElement('li');
       li.className = 'search-result-item';
+      const { makeable } = drinkMakeability(drink);
+      const badge = (myBar.size > 0 && makeable) ? ' ✓' : '';
       li.innerHTML = `
-        <div class="search-result-name">${drink.name}</div>
+        <div class="search-result-name">${drink.name}${badge}</div>
         <div class="search-result-meta">${drink.category}</div>
       `;
       li.addEventListener('click', () => {
@@ -288,8 +412,7 @@ const finder = (() => {
     showStep('step-welcome');
   }
 
-  // Init
   loadData().catch(console.error);
 
-  return { start, next, back, restart, share, openSearch, onSearch };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar };
 })();

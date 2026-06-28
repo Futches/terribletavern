@@ -29,6 +29,24 @@
         <p class="finder-subtitle">Answer three questions and we'll find the perfect cocktail for right now.</p>
         <button class="finder-btn primary" onclick="finder.start()">Let's Go</button>
         <button class="finder-btn secondary" style="margin-top:12px;" onclick="finder.openSearch()">Search by Name</button>
+        <button class="finder-btn ghost my-bar-btn" onclick="finder.openMyBar()">
+          <span id="my-bar-label">Set Up My Bar</span>
+        </button>
+      </div>
+
+      <!-- My Bar -->
+      <div class="finder-step" id="step-mybar">
+        <div class="mybar-header">
+          <h2 class="finder-question">My Bar</h2>
+          <span class="mybar-count" id="mybar-count"></span>
+        </div>
+        <p class="finder-subtitle">Check off what you have. We'll use this to put makeable drinks first.</p>
+        <div id="mybar-categories"></div>
+        <div class="mybar-actions">
+          <button class="finder-btn primary" onclick="finder.saveMyBar()">Save My Bar</button>
+          <button class="finder-btn ghost" style="margin-top:8px;" onclick="finder.clearMyBar()">Clear All</button>
+          <button class="finder-btn ghost" style="margin-top:4px;" onclick="finder.restart()">← Back</button>
+        </div>
       </div>
 
       <!-- Step: Search -->
