@@ -187,13 +187,16 @@ const adminApp = (() => {
     });
 
     function scrollToChip(name, tierIndex) {
-      if (activeTier < tierIndex) {
+      if (tierIndex >= 0 && activeTier < tierIndex) {
         activeTier = tierIndex;
         document.querySelectorAll('.admin-tier-btn').forEach((b, j) => b.classList.toggle('active', j === tierIndex));
         renderChipArea();
       }
       const chip = Array.from(document.querySelectorAll('#admin-chip-area .mybar-chip'))
-        .find(c => c.textContent.trim() === name);
+        .find(c => {
+          const label = c.querySelector('.custom-chip-label');
+          return label ? label.textContent.trim() === name : c.textContent.trim() === name;
+        });
       if (chip) {
         chip.scrollIntoView({ behavior: 'smooth', block: 'center' });
         chip.classList.add('admin-chip-highlight');
@@ -213,7 +216,10 @@ const adminApp = (() => {
       const q = input.value.trim().toLowerCase();
       resultsEl.innerHTML = '';
       if (!q) return;
-      const matches = searchIndex.filter(i => i.name.toLowerCase().includes(q)).slice(0, 8);
+      const customMatches = adminCustomItems
+        .filter(i => i.name.toLowerCase().includes(q))
+        .map(i => ({ name: i.name, tier: -1, isCustom: true }));
+      const matches = [...customMatches, ...searchIndex.filter(i => i.name.toLowerCase().includes(q))].slice(0, 8);
       if (matches.length === 0) {
         const li = document.createElement('li');
         li.className = 'admin-search-result no-match';
