@@ -258,12 +258,48 @@ const finder = (() => {
 
     const tierOrder = ['Essentials', 'Advanced', 'Deep Cuts'];
 
+    function buildChip(item) {
+      const chip = document.createElement('div');
+      chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
+      chip.textContent = item.name;
+      chip.dataset.itemName = item.name;
+      chip.addEventListener('click', () => {
+        if (myBar.has(item.name)) {
+          myBar.delete(item.name);
+          document.querySelectorAll(`.mybar-chip[data-item-name="${CSS.escape(item.name)}"]`)
+            .forEach(c => c.classList.remove('checked'));
+        } else {
+          myBar.add(item.name);
+          document.querySelectorAll(`.mybar-chip[data-item-name="${CSS.escape(item.name)}"]`)
+            .forEach(c => c.classList.add('checked'));
+        }
+        updateCount();
+      });
+      return chip;
+    }
+
+    function appendTierCategories(tierName, body) {
+      const tier = barIngredients[tierName];
+      for (const [catName, items] of Object.entries(tier.categories)) {
+        const section = document.createElement('div');
+        section.className = 'mybar-category';
+        const title = document.createElement('div');
+        title.className = 'mybar-category-title';
+        title.textContent = catName;
+        section.appendChild(title);
+        const chips = document.createElement('div');
+        chips.className = 'mybar-items';
+        items.forEach(item => chips.appendChild(buildChip(item)));
+        section.appendChild(chips);
+        body.appendChild(section);
+      }
+    }
+
     tierOrder.forEach((tierName, i) => {
       const tier = barIngredients[tierName];
       const tierEl = document.createElement('div');
       tierEl.className = 'mybar-tier';
 
-      // Header (tap to expand)
       const header = document.createElement('div');
       header.className = 'mybar-tier-header';
       header.innerHTML = `
@@ -282,39 +318,17 @@ const finder = (() => {
         header.querySelector('.mybar-tier-toggle').textContent = isOpen ? '▲' : '▼ Show';
       });
 
-      // Categories within this tier
-      for (const [catName, items] of Object.entries(tier.categories)) {
-        const section = document.createElement('div');
-        section.className = 'mybar-category';
-
-        const title = document.createElement('div');
-        title.className = 'mybar-category-title';
-        title.textContent = catName;
-        section.appendChild(title);
-
-        const chips = document.createElement('div');
-        chips.className = 'mybar-items';
-
-        items.forEach(item => {
-          const chip = document.createElement('div');
-          chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
-          chip.textContent = item.name;
-          chip.addEventListener('click', () => {
-            if (myBar.has(item.name)) {
-              myBar.delete(item.name);
-              chip.classList.remove('checked');
-            } else {
-              myBar.add(item.name);
-              chip.classList.add('checked');
-            }
-            updateCount();
-          });
-          chips.appendChild(chip);
-        });
-
-        section.appendChild(chips);
-        body.appendChild(section);
-      }
+      // Show this tier plus all preceding tiers, with divider labels between them
+      const tiersToShow = tierOrder.slice(0, i + 1);
+      tiersToShow.forEach(name => {
+        if (tiersToShow.length > 1) {
+          const divider = document.createElement('div');
+          divider.className = 'mybar-tier-divider';
+          divider.textContent = name;
+          body.appendChild(divider);
+        }
+        appendTierCategories(name, body);
+      });
 
       tierEl.appendChild(header);
       tierEl.appendChild(body);

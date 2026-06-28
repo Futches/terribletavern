@@ -240,6 +240,21 @@
 .mybar-tier-body.open {
   display: block;
 }
+.mybar-tier-divider {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  color: var(--color-rust);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 16px 0 6px;
+  border-top: 1px solid rgba(245,230,211,0.08);
+  margin-top: 8px;
+}
+.mybar-tier-divider:first-child {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 4px;
+}
 .mybar-category {
   margin-bottom: 20px;
 }
