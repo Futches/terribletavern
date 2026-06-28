@@ -332,3 +332,5 @@ body {
 .admin-chip-highlight {
   animation: adminChipFlash 1.2s ease-out forwards;
 }
+
+.admin-search-results:empty { display: none; }

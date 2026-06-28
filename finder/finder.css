@@ -376,6 +376,7 @@
   outline: none;
 }
 .mybar-search-input::placeholder { color: rgba(245,230,211,0.35); }
+.mybar-search-results:empty { display: none; }
 .mybar-search-results {
   position: absolute;
   top: calc(100% + 4px);
