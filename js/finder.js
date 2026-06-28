@@ -105,6 +105,7 @@ const finder = (() => {
       }
     } catch(e) { return true; }
     for (const custom of customBar) {
+      if (custom.checked === false) continue;
       if (lower.includes(custom.name.toLowerCase())) return true;
     }
     return false;
@@ -305,6 +306,35 @@ const finder = (() => {
 
     let activeTier = 0;
 
+    function showCustomChipMenu(e, itemName) {
+      document.querySelectorAll('.custom-chip-menu').forEach(m => m.remove());
+      const menu = document.createElement('div');
+      menu.className = 'custom-chip-menu';
+      const delBtn = document.createElement('button');
+      delBtn.className = 'custom-chip-menu-btn delete';
+      delBtn.textContent = 'Delete';
+      delBtn.addEventListener('mousedown', () => {
+        customBar = customBar.filter(c => c.name !== itemName);
+        localStorage.setItem('terribleTavernCustomBar', JSON.stringify(customBar));
+        updateCount(); updateMyBarLabel(); menu.remove(); renderChips();
+      });
+      const oosBtn = document.createElement('button');
+      oosBtn.className = 'custom-chip-menu-btn';
+      oosBtn.textContent = 'Out of Stock';
+      oosBtn.addEventListener('mousedown', () => {
+        const ci = customBar.find(c => c.name === itemName);
+        if (ci) { ci.checked = false; localStorage.setItem('terribleTavernCustomBar', JSON.stringify(customBar)); }
+        updateCount(); menu.remove(); renderChips();
+      });
+      menu.appendChild(oosBtn);
+      menu.appendChild(delBtn);
+      document.body.appendChild(menu);
+      const rect = e.target.getBoundingClientRect();
+      menu.style.top = (rect.bottom + window.scrollY + 6) + 'px';
+      menu.style.left = Math.max(8, rect.left) + 'px';
+      setTimeout(() => document.addEventListener('click', () => menu.remove(), { once: true }), 0);
+    }
+
     function renderChips() {
       chipArea.innerHTML = '';
       const merged = {};
@@ -313,9 +343,16 @@ const finder = (() => {
         const tier = barIngredients[tierOrder[t]];
         for (const [catName, items] of Object.entries(tier.categories)) {
           if (!merged[catName]) { merged[catName] = []; order.push(catName); }
-          merged[catName].push(...items);
+          merged[catName].push(...items.map(i => ({ ...i, isCustom: false })));
         }
       }
+      // Inject custom items into their categories
+      customBar.forEach(item => {
+        const cat = item.category;
+        if (!merged[cat]) { merged[cat] = []; order.push(cat); }
+        merged[cat].push({ name: item.name, isCustom: true, checked: item.checked !== false });
+      });
+
       for (const catName of order) {
         const items = merged[catName];
         const section = document.createElement('div');
@@ -328,18 +365,24 @@ const finder = (() => {
         chips.className = 'mybar-items';
         items.forEach(item => {
           const chip = document.createElement('div');
-          chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
-          chip.textContent = item.name;
-          chip.addEventListener('click', () => {
-            if (myBar.has(item.name)) {
-              myBar.delete(item.name);
-              chip.classList.remove('checked');
-            } else {
-              myBar.add(item.name);
-              chip.classList.add('checked');
-            }
-            updateCount();
-          });
+          if (item.isCustom) {
+            chip.className = 'mybar-chip custom-bar-chip' + (item.checked ? ' checked' : '');
+            chip.innerHTML = `<span class="custom-chip-label">${item.name}</span><span class="custom-chip-x">×</span>`;
+            chip.querySelector('.custom-chip-label').addEventListener('click', () => {
+              const ci = customBar.find(c => c.name === item.name);
+              if (ci) { ci.checked = !(ci.checked !== false); localStorage.setItem('terribleTavernCustomBar', JSON.stringify(customBar)); }
+              updateCount(); renderChips();
+            });
+            chip.querySelector('.custom-chip-x').addEventListener('click', e => { e.stopPropagation(); showCustomChipMenu(e, item.name); });
+          } else {
+            chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
+            chip.textContent = item.name;
+            chip.addEventListener('click', () => {
+              if (myBar.has(item.name)) { myBar.delete(item.name); chip.classList.remove('checked'); }
+              else { myBar.add(item.name); chip.classList.add('checked'); }
+              updateCount();
+            });
+          }
           chips.appendChild(chip);
         });
         section.appendChild(chips);
@@ -383,39 +426,8 @@ const finder = (() => {
       customSection.innerHTML = '';
       const title = document.createElement('div');
       title.className = 'mybar-category-title';
-      title.textContent = 'Custom Items';
+      title.textContent = 'Add Custom Item';
       customSection.appendChild(title);
-
-      if (customBar.length > 0) {
-        // Group by category
-        const byCategory = {};
-        customBar.forEach(item => {
-          if (!byCategory[item.category]) byCategory[item.category] = [];
-          byCategory[item.category].push(item.name);
-        });
-        Object.entries(byCategory).forEach(([cat, names]) => {
-          const catTitle = document.createElement('div');
-          catTitle.className = 'mybar-category-title';
-          catTitle.style.cssText = 'font-size:0.62rem;color:#666;margin-top:10px;margin-bottom:6px;';
-          catTitle.textContent = cat;
-          customSection.appendChild(catTitle);
-          const chips = document.createElement('div');
-          chips.className = 'mybar-items';
-          names.forEach(name => {
-            const chip = document.createElement('div');
-            chip.className = 'mybar-chip checked custom-chip';
-            chip.innerHTML = `${name} <span class="custom-chip-remove">×</span>`;
-            chip.querySelector('.custom-chip-remove').addEventListener('click', e => {
-              e.stopPropagation();
-              customBar = customBar.filter(i => !(i.name === name && i.category === cat));
-              localStorage.setItem('terribleTavernCustomBar', JSON.stringify(customBar));
-              updateCount(); updateMyBarLabel(); renderCustomSection();
-            });
-            chips.appendChild(chip);
-          });
-          customSection.appendChild(chips);
-        });
-      }
 
       if (!tavernMode) {
         const addRow = document.createElement('div');
@@ -454,11 +466,11 @@ const finder = (() => {
           const val = input.value.trim();
           const cat = select.value;
           if (!val || !cat) return;
-          customBar.push({ name: val, category: cat });
+          customBar.push({ name: val, category: cat, checked: true });
           localStorage.setItem('terribleTavernCustomBar', JSON.stringify(customBar));
           input.value = '';
           suggBox.innerHTML = '';
-          updateCount(); updateMyBarLabel(); renderCustomSection();
+          updateCount(); updateMyBarLabel(); renderChips();
         });
         input.addEventListener('keydown', e => { if (e.key === 'Enter') btn.click(); });
         customSection.appendChild(addRow);

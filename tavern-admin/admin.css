@@ -358,3 +358,50 @@ body {
 }
 
 .admin-search-results:empty { display: none; }
+
+/* Custom bar chips */
+.custom-bar-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-color: rgba(255,255,255,0.45) !important;
+}
+.custom-bar-chip.checked {
+  border-color: rgba(255,255,255,0.75) !important;
+}
+.custom-chip-label { cursor: pointer; }
+.custom-chip-x {
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.55;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.custom-chip-x:hover { opacity: 1; }
+
+/* Context menu */
+.custom-chip-menu {
+  position: absolute;
+  background: #2a2a2a;
+  border: 1px solid rgba(245,230,211,0.2);
+  border-radius: 8px;
+  padding: 4px;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 130px;
+}
+.custom-chip-menu-btn {
+  background: none;
+  border: none;
+  color: var(--color-cream);
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  padding: 9px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+.custom-chip-menu-btn:hover { background: rgba(245,230,211,0.08); }
+.custom-chip-menu-btn.delete { color: #e57373; }

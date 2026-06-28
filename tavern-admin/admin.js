@@ -262,11 +262,38 @@ const adminApp = (() => {
     });
   }
 
+  function showCustomChipMenu(e, itemName) {
+    document.querySelectorAll('.custom-chip-menu').forEach(m => m.remove());
+    const menu = document.createElement('div');
+    menu.className = 'custom-chip-menu';
+    const oosBtn = document.createElement('button');
+    oosBtn.className = 'custom-chip-menu-btn';
+    oosBtn.textContent = 'Out of Stock';
+    oosBtn.addEventListener('mousedown', () => {
+      tonight.delete(itemName);
+      updateCount(); menu.remove(); renderChipArea();
+    });
+    const delBtn = document.createElement('button');
+    delBtn.className = 'custom-chip-menu-btn delete';
+    delBtn.textContent = 'Delete';
+    delBtn.addEventListener('mousedown', () => {
+      adminCustomItems = adminCustomItems.filter(i => i.name !== itemName);
+      tonight.delete(itemName);
+      saveCustomItems(); updateCount(); menu.remove(); renderChipArea();
+    });
+    menu.appendChild(oosBtn);
+    menu.appendChild(delBtn);
+    document.body.appendChild(menu);
+    const rect = e.target.getBoundingClientRect();
+    menu.style.top = (rect.bottom + window.scrollY + 6) + 'px';
+    menu.style.left = Math.max(8, rect.left) + 'px';
+    setTimeout(() => document.addEventListener('click', () => menu.remove(), { once: true }), 0);
+  }
+
   function renderChipArea() {
     const area = document.getElementById('admin-chip-area');
     area.innerHTML = '';
 
-    // Merge same-named categories across tiers, common items first
     const merged = {};
     const order = [];
     for (let t = 0; t <= activeTier; t++) {
@@ -274,9 +301,15 @@ const adminApp = (() => {
       if (!tier) continue;
       for (const [catName, items] of Object.entries(tier.categories)) {
         if (!merged[catName]) { merged[catName] = []; order.push(catName); }
-        merged[catName].push(...items);
+        merged[catName].push(...items.map(i => ({ ...i, isCustom: false })));
       }
     }
+    // Inject custom items into their categories
+    adminCustomItems.forEach(item => {
+      const cat = item.category;
+      if (!merged[cat]) { merged[cat] = []; order.push(cat); }
+      merged[cat].push({ name: item.name, isCustom: true });
+    });
 
     for (const catName of order) {
       const items = merged[catName];
@@ -290,18 +323,24 @@ const adminApp = (() => {
       chips.className = 'mybar-items';
       items.forEach(item => {
         const chip = document.createElement('div');
-        chip.className = 'mybar-chip' + (tonight.has(item.name) ? ' checked' : '');
-        chip.textContent = item.name;
-        chip.addEventListener('click', () => {
-          if (tonight.has(item.name)) {
-            tonight.delete(item.name);
-            chip.classList.remove('checked');
-          } else {
-            tonight.add(item.name);
-            chip.classList.add('checked');
-          }
-          updateCount();
-        });
+        if (item.isCustom) {
+          chip.className = 'mybar-chip custom-bar-chip' + (tonight.has(item.name) ? ' checked' : '');
+          chip.innerHTML = `<span class="custom-chip-label">${item.name}</span><span class="custom-chip-x">×</span>`;
+          chip.querySelector('.custom-chip-label').addEventListener('click', () => {
+            if (tonight.has(item.name)) tonight.delete(item.name);
+            else tonight.add(item.name);
+            updateCount(); renderChipArea();
+          });
+          chip.querySelector('.custom-chip-x').addEventListener('click', e => { e.stopPropagation(); showCustomChipMenu(e, item.name); });
+        } else {
+          chip.className = 'mybar-chip' + (tonight.has(item.name) ? ' checked' : '');
+          chip.textContent = item.name;
+          chip.addEventListener('click', () => {
+            if (tonight.has(item.name)) { tonight.delete(item.name); chip.classList.remove('checked'); }
+            else { tonight.add(item.name); chip.classList.add('checked'); }
+            updateCount();
+          });
+        }
         chips.appendChild(chip);
       });
       section.appendChild(chips);
@@ -320,40 +359,8 @@ const adminApp = (() => {
 
     const title = document.createElement('div');
     title.className = 'mybar-category-title';
-    title.textContent = 'Custom Items';
+    title.textContent = 'Add Custom Item';
     section.appendChild(title);
-
-    if (adminCustomItems.length > 0) {
-      const byCategory = {};
-      adminCustomItems.forEach(item => {
-        if (!byCategory[item.category]) byCategory[item.category] = [];
-        byCategory[item.category].push(item.name);
-      });
-      Object.entries(byCategory).forEach(([cat, names]) => {
-        const catTitle = document.createElement('div');
-        catTitle.className = 'mybar-category-title';
-        catTitle.style.cssText = 'font-size:0.62rem;color:#666;margin-top:10px;margin-bottom:6px;';
-        catTitle.textContent = cat;
-        section.appendChild(catTitle);
-        const chips = document.createElement('div');
-        chips.className = 'mybar-items';
-        names.forEach(name => {
-          const chip = document.createElement('div');
-          chip.className = 'mybar-chip checked custom-chip';
-          chip.innerHTML = `${name} <span class="custom-chip-remove" style="cursor:pointer;margin-left:6px;opacity:0.6;">×</span>`;
-          chip.querySelector('.custom-chip-remove').addEventListener('click', e => {
-            e.stopPropagation();
-            adminCustomItems = adminCustomItems.filter(i => !(i.name === name && i.category === cat));
-            tonight.delete(name);
-            saveCustomItems();
-            updateCount();
-            renderCustomSection(document.getElementById('admin-chip-area'));
-          });
-          chips.appendChild(chip);
-        });
-        section.appendChild(chips);
-      });
-    }
 
     const addRow = document.createElement('div');
     addRow.className = 'custom-add-row';
@@ -367,7 +374,6 @@ const adminApp = (() => {
     const input = addRow.querySelector('.custom-add-input');
     const btn = addRow.querySelector('.custom-add-btn');
 
-    // Autocomplete from recipe ingredients
     const suggBox = document.createElement('ul');
     suggBox.className = 'mybar-search-results custom-sugg-list';
     addRow.appendChild(suggBox);
@@ -397,7 +403,7 @@ const adminApp = (() => {
       input.value = '';
       suggBox.innerHTML = '';
       updateCount();
-      renderCustomSection(document.getElementById('admin-chip-area'));
+      renderChipArea();
     });
     section.appendChild(addRow);
     area.appendChild(section);
