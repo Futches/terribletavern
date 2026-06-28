@@ -1,0 +1,222 @@
+{
+  "Barr Hill Gin": {
+    "type": "branded",
+    "note": "Barr Hill is a Vermont honey gin with a distinctly floral, lightly sweet character from raw wildflower honey. Any quality London Dry gin works — Tanqueray or Beefeater are solid standbys. For the floral quality, Hendrick's is a closer match. Add a small bar spoon of honey to approximate the sweetness."
+  },
+  "Barr Hill Tom Cat Aged Gin": {
+    "type": "branded",
+    "note": "Tom Cat is Barr Hill's barrel-aged gin — it sits between gin and whiskey, with oak, honey, and juniper all present. Substitute with a barrel-aged gin like Ransom Old Tom, or use a light bourbon with a few dashes of juniper tincture if you're improvising."
+  },
+  "Barr Hill Old Tom Gin": {
+    "type": "branded",
+    "note": "Old Tom is a slightly sweeter, softer style of gin. Ransom Old Tom Gin is the closest substitute. In a pinch, use London Dry gin and add a small bar spoon of simple syrup to the drink."
+  },
+  "Barr Hill Tom Cat Reserve Gin": {
+    "type": "branded",
+    "note": "The Reserve is the premium aged expression of Tom Cat — deeper oak, more complexity. Substitute with any barrel-aged gin, or a light whiskey with a drop of juniper bitters."
+  },
+  "Serrano Tequila": {
+    "type": "flavored",
+    "note": "Serrano tequila brings bright, fresh heat without the smokiness of a jalapeño. To approximate: muddle 2-3 thin slices of serrano pepper with your blanco tequila and let it sit 10 minutes, then fine-strain. Start with less — serranos vary in heat."
+  },
+  "Serrano-Infused Tequila": {
+    "type": "infused",
+    "note": "Infuse your own: add 3-4 sliced serrano peppers to 4 oz blanco tequila, wait 15-30 minutes tasting frequently, then strain. Alternatively, use a store-bought spicy tequila like Tanteo Jalapeño — it'll be slightly smokier."
+  },
+  "Jalapeño-infused Tequila": {
+    "type": "infused",
+    "note": "Quick DIY: slice 1 jalapeño and steep in 4 oz blanco tequila for 20-40 minutes. Taste every 10 minutes — heat level varies by pepper. Strain through a fine mesh. Tanteo Jalapeño Tequila is a ready-made alternative."
+  },
+  "Jalapeño Infused Espolón Tequila": {
+    "type": "infused",
+    "note": "Infuse Espolón Blanco (or any clean blanco) with 1 sliced jalapeño for 20-30 minutes, then strain. The Espolón is chosen for its bright, grassy character — Olmeca Altos or Casamigos Blanco are good alternatives to infuse."
+  },
+  "Jalapeño Infused Gin": {
+    "type": "infused",
+    "note": "Steep 2-3 jalapeño slices in 4 oz of your gin for 15-20 minutes, tasting often. Strain well. Works best with a bold London Dry — Tanqueray or Beefeater hold up to the heat better than more delicate gins."
+  },
+  "Raspberry-Infused Bourbon": {
+    "type": "infused",
+    "note": "Muddle a small handful of fresh or frozen raspberries with your bourbon, let sit 10-15 minutes, then fine-strain. Alternatively, add a bar spoon of good raspberry jam and stir well before straining. Chambord as a partial substitution (use half the called amount) also works in a pinch."
+  },
+  "Bacardi Raspberry Rum": {
+    "type": "flavored",
+    "note": "A flavored rum — substitute with white rum plus a bar spoon of raspberry liqueur (Chambord or Giffard Framboise) or raspberry syrup. Adjust sweetness in the recipe accordingly."
+  },
+  "Coconut Rum": {
+    "type": "flavored",
+    "note": "Substitute with white rum plus a small measure of coconut cream or Coco López, reducing any other cream or coconut in the recipe. Malibu is the most common off-the-shelf option if you'd rather not DIY."
+  },
+  "Rum Haven Coconut Rum": {
+    "type": "flavored",
+    "note": "A higher-quality coconut rum than Malibu — crisper and less sweet. Use white rum plus a splash of coconut water and a small measure of coconut cream, or substitute Plantation 3 Stars with a touch of Coco López."
+  },
+  "Coconut Washed Rum": {
+    "type": "infused",
+    "note": "Fat-washing technique: melt 1 tbsp coconut oil, combine with 4 oz rum, freeze until solid, skim the fat off the top, fine-strain. The result is a silky rum with subtle coconut flavour. In a pinch, use regular white rum and add a small measure of coconut cream to the drink itself."
+  },
+  "Spiced Rum": {
+    "type": "flavored",
+    "note": "Sailor Jerry and Kraken are solid go-tos. For a DIY version, steep white rum with a cinnamon stick, 2 cloves, a star anise, and a small piece of vanilla bean for 24 hours. The flavor profile is warm spice — not coconut."
+  },
+  "Sugar Island Spiced Rum": {
+    "type": "flavored",
+    "note": "A lighter-style spiced rum with vanilla and cinnamon notes. Substitute with Sailor Jerry or any spiced rum. For a milder version, use white rum with a dash of vanilla extract and a pinch of cinnamon."
+  },
+  "Three Sheets Spiced Rum": {
+    "type": "flavored",
+    "note": "A craft spiced rum — substitute with any quality spiced rum like Sailor Jerry, or make a quick version by steeping white rum with cinnamon stick, cloves, and vanilla for several hours."
+  },
+  "Cardamom Infused Vodka": {
+    "type": "infused",
+    "note": "Crack 8-10 green cardamom pods and steep in 4 oz vodka for 2-4 hours, tasting regularly. Strain through cheesecloth. The infusion is assertive — start with less time if you're unsure. No off-the-shelf substitute exists; this is worth making."
+  },
+  "Ginger-Infused Vodka": {
+    "type": "infused",
+    "note": "Peel and slice a 2-inch piece of fresh ginger, steep in 4 oz vodka for 1-2 hours. Strain well. Alternatively, use plain vodka and add a bar spoon of ginger syrup or fresh ginger juice to the drink."
+  },
+  "Hibiscus Infused Vodka": {
+    "type": "infused",
+    "note": "Steep 2 tbsp dried hibiscus flowers in 4 oz vodka for 30-60 minutes until deep red. Strain. The flavor is tart, floral, and cranberry-adjacent. In a pinch, use plain vodka and add hibiscus syrup or a splash of unsweetened hibiscus tea."
+  },
+  "Butterfly Pea Infused Tito's": {
+    "type": "infused",
+    "note": "Steep a tablespoon of dried butterfly pea flowers in 4 oz vodka for 30 minutes — it turns a striking indigo blue and shifts to purple/pink with acid. The flavor is very mild and slightly earthy. Use plain vodka as a flavor substitute — you'll just lose the color-change effect."
+  },
+  "Cilantro Infused Gin": {
+    "type": "infused",
+    "note": "Steep a small bunch of fresh cilantro in 4 oz gin for 15-20 minutes, then strain. The flavor is bright and herbaceous. Use regular gin and garnish with fresh cilantro as a lighter alternative — or skip if cilantro isn't your thing, the drink will still work."
+  },
+  "Curry Spice Infused Gin": {
+    "type": "infused",
+    "note": "Toast 1/2 tsp curry spice blend in a dry pan for 30 seconds, then steep in 4 oz gin for 30-60 minutes. Strain through cheesecloth. No ready-made substitute — this is a specialty infusion worth DIYing if the drink interests you."
+  },
+  "Green Chartreuse": {
+    "type": "branded",
+    "note": "Green Chartreuse is a complex French herbal liqueur made by monks — there's no true substitute. Yellow Chartreuse is milder and sweeter. In a pinch, Strega (Italian herbal liqueur) is in the same family. Be aware the recipe was calibrated for Chartreuse's intensity, so reduce the amount slightly if substituting."
+  },
+  "Yellow Chartreuse": {
+    "type": "branded",
+    "note": "Yellow Chartreuse is softer, sweeter, and less intense than Green. Substitute with a small measure of honey syrup plus a few dashes of herbal bitters (like Angostura), though you'll lose much of the complexity. Green Chartreuse is an option if you have it — use slightly less."
+  },
+  "Velvet Falernum": {
+    "type": "branded",
+    "note": "Falernum is a Caribbean liqueur of lime, clove, almond, and ginger. BG Reynolds makes a good syrup version. DIY: combine simple syrup with a few drops of almond extract, fresh lime juice, a pinch of clove, and fresh ginger. Use as a 1:1 swap."
+  },
+  "Allspice Dram": {
+    "type": "branded",
+    "note": "Allspice Dram (also sold as Pimento Dram) is a Jamaican rum-based liqueur with strong allspice flavor. St. Elizabeth Allspice Dram is the standard. DIY: simmer 2 tbsp whole allspice berries in 1 cup rum with 1/2 cup sugar for 15 minutes, cool, strain. Use 1/4 of the called amount as a starting point — it's potent."
+  },
+  "Frangelico": {
+    "type": "branded",
+    "note": "Frangelico is a hazelnut liqueur. Substitute with any hazelnut liqueur (Torani makes a syrup version if you want non-alcoholic). A bar spoon of Nutella dissolved in warm spirit is an amusing workaround in a pinch."
+  },
+  "Strega": {
+    "type": "branded",
+    "note": "Strega is an Italian herbal liqueur with saffron, mint, fennel, and 70+ botanicals — it has a distinctly yellow color and complex flavor. No perfect substitute. Yellow Chartreuse is the closest in style. In a pinch, use equal parts Benedictine and a small amount of dry vermouth."
+  },
+  "Absinthe": {
+    "type": "branded",
+    "note": "Absinthe is an anise-forward spirit usually used as a rinse (a tiny amount coating the glass) rather than a full pour. Pastis or Pernod are milder substitutes. If used as a rinse, any anise-forward spirit works. Omitting it entirely softens the drink noticeably but is acceptable."
+  },
+  "Lillet Blanc": {
+    "type": "branded",
+    "note": "Lillet Blanc is a French aperitif wine — slightly sweet, floral, with bitter orange notes. Cocchi Americano is the most common substitute and is actually slightly closer to the original pre-1986 formula. Dry vermouth with a dash of orange bitters also works in a pinch."
+  },
+  "Lillet Rosé": {
+    "type": "branded",
+    "note": "Lillet Rosé is a rosé version of Lillet Blanc — fruity and floral. Substitute with Lillet Blanc plus a splash of dry rosé wine, or Cocchi Rosa if you can find it."
+  },
+  "Cointreau": {
+    "type": "branded",
+    "note": "Cointreau is a premium French triple sec — clean, dry orange flavor. Any triple sec works as a 1:1 substitute, though quality varies widely. Grand Marnier is richer and has an oak/cognac note; use slightly less. Combier is another close match."
+  },
+  "St. Germain": {
+    "type": "branded",
+    "note": "St-Germain is an elderflower liqueur — floral, lychee-like, slightly sweet. It's fairly distinctive. Elderflower cordial (non-alcoholic) can substitute at roughly half the volume plus a splash of neutral spirit. No other liqueur is a true match, but a floral syrup with a hint of citrus gets close."
+  },
+  "Amaro Nonino": {
+    "type": "branded",
+    "note": "Nonino is a lighter, grappa-based amaro with citrus, herbs, and a gentle bitterness. It's one of the more approachable amaros. Substitute with Amaro Montenegro (similar citrus notes) or Amaro CioCiaro. Avoid heavy, bitter amaros like Fernet in recipes calling specifically for Nonino."
+  },
+  "Amaro Montenegro": {
+    "type": "branded",
+    "note": "Montenegro is a sweet, orange-forward amaro from Italy — one of the most approachable. Substitute with Amaro CioCiaro or Nonino. In a pinch, use sweet vermouth plus a few dashes of aromatic bitters."
+  },
+  "Amaro Averna": {
+    "type": "branded",
+    "note": "Averna is a rich, dark Sicilian amaro — caramel, herbs, citrus peel. Substitute with Ramazzotti or Cynar for a similar bitter-sweet profile. Mixing sweet vermouth with a small measure of Campari approximates the bitterness without the herbal complexity."
+  },
+  "Cardamaro": {
+    "type": "branded",
+    "note": "Cardamaro is a wine-based amaro made with cardoon and blessed thistle — lighter and drier than most amaros, with a nutty, artichoke quality. Substitute with Cynar (artichoke-forward) or dry sherry plus a few dashes of herbal bitters. Carpano Antica Formula sweet vermouth also works in stirred cocktails."
+  },
+  "Cynar": {
+    "type": "branded",
+    "note": "Cynar is an Italian amaro made from artichokes — bitter, vegetal, with caramel sweetness underneath. Substitute with Campari for bitterness (sweeter, less vegetal) or Cardamaro for the artichoke quality. No perfect match — Cynar is fairly unique."
+  },
+  "Campari": {
+    "type": "branded",
+    "note": "Campari is a bright red Italian bitter liqueur — there's no true substitute for its specific flavor. Aperol is sweeter and lower ABV; use it for a milder result. Contratto Bitter or Select Aperitivo are closer in profile. Reducing the amount and adding extra bitters can approximate the effect in some recipes."
+  },
+  "Aperol": {
+    "type": "branded",
+    "note": "Aperol is a lighter, sweeter, lower-ABV version of Campari. Substitute with Campari at roughly half the volume for similar bitterness, or with Gran Classico for more complexity. In spritzes, a dry rosé wine works as a very mild approximation."
+  },
+  "Fernet": {
+    "type": "branded",
+    "note": "Fernet-Branca is an intensely bitter, menthol-forward amaro — polarizing and very distinctive. Substituting is difficult. Branca Menta (mint-forward Fernet) is close. In small doses, strong herbal bitters like Angostura at 3x the volume can approximate the bitterness without the minty edge."
+  },
+  "Benedictine": {
+    "type": "branded",
+    "note": "Benedictine is a French herbal liqueur — honey, herbs, saffron, vanilla. No close substitute. B&B (Benedictine & Brandy) is pre-mixed and widely available. In a pinch, mix equal parts Drambuie and a herbal liqueur like Yellow Chartreuse."
+  },
+  "Laird's Applejack": {
+    "type": "branded",
+    "note": "Laird's Applejack is an American apple brandy — the oldest distillery in the US. Calvados (French apple brandy) is the closest substitute with more elegance. A blend of calvados and neutral spirit approximates Applejack's profile. Clear Creek Apple Brandy is another good option."
+  },
+  "High West Double Rye": {
+    "type": "branded",
+    "note": "High West Double Rye is a blend of two rye whiskeys — one very spicy, one more mellow — creating a complex, balanced rye. Substitute with any quality rye: Rittenhouse for spice, Bulleit Rye for approachability, or WhistlePig 10 for a premium option."
+  },
+  "High West Campfire Whiskey": {
+    "type": "branded",
+    "note": "Campfire is a unique blend of bourbon, rye, and peated Scotch — it has a smoky, complex character. Substitute by combining 1.5 oz bourbon with 0.5 oz lightly peated Scotch (Monkey Shoulder or Glenlivet Founder's Reserve). There's no single-bottle equivalent."
+  },
+  "WhistlePig PiggyBack Rye": {
+    "type": "branded",
+    "note": "PiggyBack is WhistlePig's entry-level 6-year rye — well-balanced with rye spice and a touch of sweetness. Substitute with Bulleit Rye, Sazerac Rye, or Old Overholt Bonded for a similar profile at a lower price point."
+  },
+  "Rittenhouse Rye": {
+    "type": "branded",
+    "note": "Rittenhouse 100 Proof Bonded is a bartender favorite for its bold rye spice and value. Substitute with Sazerac Rye or Old Overholt Bonded. If you want more punch, Wild Turkey Rye is a solid choice."
+  },
+  "Del Maguey Vida Mezcal": {
+    "type": "branded",
+    "note": "Del Maguey Vida is a benchmark artisanal mezcal — medium smoke, fruit, and mineral character. Substitute with any quality mezcal: Banhez (fruity, lower smoke), El Silencio Espadin (accessible), or Ilegal Joven for a milder smokiness."
+  },
+  "Boulard VSOP Calvados": {
+    "type": "branded",
+    "note": "Calvados is French apple brandy aged in oak — rich, complex, with baked apple and caramel notes. Substitute with Laird's Bottled-in-Bond Apple Brandy for an American take, or use a quality brandy with a bar spoon of unsweetened apple juice as a workaround."
+  },
+  "Crème de Violette": {
+    "type": "branded",
+    "note": "Crème de Violette is a floral violet liqueur — essential to an Aviation cocktail. Empress 1908 Gin has a similar violet character and can be used in combination with regular gin. There's no true substitute; the floral violet flavor is fairly unique."
+  },
+  "Crème de Fleur": {
+    "type": "branded",
+    "note": "A floral, honey-based liqueur. Substitute with St-Germain elderflower liqueur for a similar floral sweetness, or with a light floral simple syrup (rose or lavender) plus a neutral spirit."
+  },
+  "Habanero Mezcal": {
+    "type": "flavored",
+    "note": "Steep 1-2 sliced habanero rings in 4 oz mezcal for 5-10 minutes — habaneros are significantly hotter than jalapeños, so taste frequently. Strain immediately when you hit the heat level you want. Tanteo Habanero Tequila is a milder ready-made alternative."
+  },
+  "Kona Coffee Liqueur": {
+    "type": "branded",
+    "note": "A Hawaiian coffee liqueur with clean, bright coffee flavor. Substitute with any quality coffee liqueur — Mr. Black is excellent and widely available, Kahlúa is the common standard. Avoid overly sweet versions if the recipe is spirit-forward."
+  },
+  "Coffee Liqueur": {
+    "type": "branded",
+    "note": "Mr. Black is the current bartender's choice for quality. Kahlúa is widely available and works well. For a DIY version, cold brew concentrate mixed with simple syrup and a small amount of vodka approximates the flavor."
+  }
+}

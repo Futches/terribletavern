@@ -35,6 +35,7 @@ const finder = (() => {
 
   let cocktails = [];
   let substitutions = {};
+  let spiritSubs = {};
   let barIngredients = {};
   let myBar = new Set();
   let tavernMode = false;
@@ -47,14 +48,16 @@ const finder = (() => {
     const params = new URLSearchParams(window.location.search);
     tavernMode = params.has('tavern');
 
-    const [cRes, sRes, bRes] = await Promise.all([
+    const [cRes, sRes, bRes, ssRes] = await Promise.all([
       fetch('../data/cocktails.json'),
       fetch('../data/substitutions.json'),
       fetch('../data/bar-ingredients.json'),
+      fetch('../data/spirit-subs.json'),
     ]);
     cocktails = await cRes.json();
     substitutions = await sRes.json();
     barIngredients = await bRes.json();
+    spiritSubs = await ssRes.json();
 
     if (tavernMode) {
       try {
@@ -435,9 +438,59 @@ const finder = (() => {
 
   function next() {
     if (results.length === 0) return;
-    history.push(resultIndex);
-    resultIndex = (resultIndex + 1) % results.length;
-    renderResult();
+    const drink = results[resultIndex];
+    const matches = getSpiritSubMatches(drink);
+    if (matches.length > 0) {
+      showSubModal(matches, () => {
+        history.push(resultIndex);
+        resultIndex = (resultIndex + 1) % results.length;
+        renderResult();
+      });
+    } else {
+      history.push(resultIndex);
+      resultIndex = (resultIndex + 1) % results.length;
+      renderResult();
+    }
+  }
+
+  function getSpiritSubMatches(drink) {
+    if (!drink) return [];
+    const spirits = drink.spirits || '';
+    const matches = [];
+    for (const [name, data] of Object.entries(spiritSubs)) {
+      if (spirits.toLowerCase().includes(name.toLowerCase())) {
+        matches.push({ name, ...data });
+      }
+    }
+    return matches;
+  }
+
+  let subModalCallback = null;
+
+  function showSubModal(matches, callback) {
+    subModalCallback = callback;
+    const titleEl = document.getElementById('spirit-sub-title');
+    const contentEl = document.getElementById('spirit-sub-content');
+    if (matches.length === 1) {
+      titleEl.textContent = `About ${matches[0].name}`;
+      contentEl.textContent = matches[0].note;
+    } else {
+      titleEl.textContent = 'Specialty Spirits in This Drink';
+      contentEl.innerHTML = matches.map(m =>
+        `<strong style="color:var(--color-cream);display:block;margin-bottom:4px;margin-top:14px;">${m.name}</strong>${m.note}`
+      ).join('');
+    }
+    document.getElementById('spirit-sub-modal').style.display = 'flex';
+  }
+
+  function dismissSubModal() {
+    document.getElementById('spirit-sub-modal').style.display = 'none';
+    if (subModalCallback) { subModalCallback(); subModalCallback = null; }
+  }
+
+  function closeSubModal() {
+    document.getElementById('spirit-sub-modal').style.display = 'none';
+    subModalCallback = null;
   }
 
   function back() {
@@ -531,5 +584,5 @@ const finder = (() => {
 
   loadData().catch(console.error);
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, dismissSubModal, closeSubModal };
 })();
