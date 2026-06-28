@@ -437,14 +437,16 @@ const finder = (() => {
     const titleEl = document.getElementById('spirit-sub-title');
     const contentEl = document.getElementById('spirit-sub-content');
     titleEl.textContent = ingredientName;
-    let html = `<p style="margin-bottom:12px;">${quickSub}</p>`;
-    // Check for a detailed note in spiritSubs
+    let detail = null;
     for (const [name, data] of Object.entries(spiritSubs)) {
       if (ingredientName.toLowerCase().includes(name.toLowerCase())) {
-        html += `<p style="border-top:1px solid rgba(245,230,211,0.1);padding-top:12px;margin-top:4px;">${data.note}</p>`;
+        detail = data.note;
         break;
       }
     }
+    let html = '';
+    if (detail) html += `<p style="margin-bottom:16px;">${detail}</p>`;
+    html += `<p style="border-top:1px solid rgba(245,230,211,0.1);padding-top:12px;"><span style="color:var(--color-rust);letter-spacing:0.1em;font-size:0.72rem;">ALTERNATIVE</span><br>${quickSub || 'None'}</p>`;
     contentEl.innerHTML = html;
     document.getElementById('spirit-sub-modal').style.display = 'flex';
   }
