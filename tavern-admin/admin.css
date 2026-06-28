@@ -16,24 +16,28 @@ body {
 
 /* Header */
 .admin-header {
-  height: 70px;
+  height: 44px;
   background: #111;
   border-bottom: 1px solid rgba(245,230,211,0.08);
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  justify-content: center;
   position: sticky;
   top: 0;
   z-index: 100;
 }
-.admin-logo {
-  height: 40px;
-  width: auto;
+.admin-logo-link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-rust);
+  text-decoration: none;
+  letter-spacing: 0.1em;
 }
 
 /* Layout */
 .admin-main {
-  padding: 40px 0 60px;
+  padding: 20px 0 60px;
   display: flex;
   justify-content: center;
 }
