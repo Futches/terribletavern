@@ -10,7 +10,7 @@
   text-align: center;
   padding: 9px 20px;
   position: sticky;
-  top: 70px;
+  top: 44px;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -81,10 +81,14 @@
   line-height: 1.5;
 }
 
-/* Header logo sizing for finder page */
-.finder-page .header-logo {
-  height: 40px;
-  width: auto;
+/* Header text link for finder page */
+.finder-page .logo-link {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-rust);
+  text-decoration: none;
+  letter-spacing: 0.08em;
 }
 
 /* Finder page layout */
@@ -94,7 +98,7 @@
 }
 
 .finder-main {
-  padding-top: 90px;
+  padding-top: 64px;
   padding-bottom: 40px;
   min-height: 100vh;
   display: flex;
