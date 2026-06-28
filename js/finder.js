@@ -65,16 +65,18 @@ const finder = (() => {
 
   // Check if a drink ingredient string matches a bar item's keywords
   function ingredientInBar(ingStr) {
-    if (myBar.size === 0) return true; // no bar set up — treat as available
+    if (myBar.size === 0) return true;
     const lower = ingStr.toLowerCase();
-    for (const [, items] of Object.entries(barIngredients)) {
-      for (const item of items) {
-        if (!myBar.has(item.name)) continue;
-        if (item.match.some(kw => lower.includes(kw))) return true;
+    for (const tier of Object.values(barIngredients)) {
+      for (const items of Object.values(tier.categories)) {
+        for (const item of items) {
+          if (!myBar.has(item.name)) continue;
+          if (item.match.some(kw => lower.includes(kw))) return true;
+        }
       }
     }
     return false;
-    }
+  }
 
   function drinkMakeability(drink) {
     if (myBar.size === 0) return { makeable: false, missing: [] };
@@ -247,38 +249,70 @@ const finder = (() => {
     const container = document.getElementById('mybar-categories');
     container.innerHTML = '';
 
-    for (const [category, items] of Object.entries(barIngredients)) {
-      const section = document.createElement('div');
-      section.className = 'mybar-category';
+    const tierOrder = ['Essentials', 'Advanced', 'Deep Cuts'];
 
-      const title = document.createElement('div');
-      title.className = 'mybar-category-title';
-      title.textContent = category;
-      section.appendChild(title);
+    tierOrder.forEach((tierName, i) => {
+      const tier = barIngredients[tierName];
+      const tierEl = document.createElement('div');
+      tierEl.className = 'mybar-tier';
 
-      const chips = document.createElement('div');
-      chips.className = 'mybar-items';
+      // Header (tap to expand)
+      const header = document.createElement('div');
+      header.className = 'mybar-tier-header';
+      header.innerHTML = `
+        <div>
+          <div class="mybar-tier-title">${tierName}</div>
+          <div class="mybar-tier-desc">${tier.description}</div>
+        </div>
+        <div class="mybar-tier-toggle">${i === 0 ? '▲' : '▼ Show'}</div>
+      `;
 
-      items.forEach(item => {
-        const chip = document.createElement('div');
-        chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
-        chip.textContent = item.name;
-        chip.addEventListener('click', () => {
-          if (myBar.has(item.name)) {
-            myBar.delete(item.name);
-            chip.classList.remove('checked');
-          } else {
-            myBar.add(item.name);
-            chip.classList.add('checked');
-          }
-          updateCount();
-        });
-        chips.appendChild(chip);
+      const body = document.createElement('div');
+      body.className = 'mybar-tier-body' + (i === 0 ? ' open' : '');
+
+      header.addEventListener('click', () => {
+        const isOpen = body.classList.toggle('open');
+        header.querySelector('.mybar-tier-toggle').textContent = isOpen ? '▲' : '▼ Show';
       });
 
-      section.appendChild(chips);
-      container.appendChild(section);
-    }
+      // Categories within this tier
+      for (const [catName, items] of Object.entries(tier.categories)) {
+        const section = document.createElement('div');
+        section.className = 'mybar-category';
+
+        const title = document.createElement('div');
+        title.className = 'mybar-category-title';
+        title.textContent = catName;
+        section.appendChild(title);
+
+        const chips = document.createElement('div');
+        chips.className = 'mybar-items';
+
+        items.forEach(item => {
+          const chip = document.createElement('div');
+          chip.className = 'mybar-chip' + (myBar.has(item.name) ? ' checked' : '');
+          chip.textContent = item.name;
+          chip.addEventListener('click', () => {
+            if (myBar.has(item.name)) {
+              myBar.delete(item.name);
+              chip.classList.remove('checked');
+            } else {
+              myBar.add(item.name);
+              chip.classList.add('checked');
+            }
+            updateCount();
+          });
+          chips.appendChild(chip);
+        });
+
+        section.appendChild(chips);
+        body.appendChild(section);
+      }
+
+      tierEl.appendChild(header);
+      tierEl.appendChild(body);
+      container.appendChild(tierEl);
+    });
 
     updateCount();
     showStep('step-mybar');

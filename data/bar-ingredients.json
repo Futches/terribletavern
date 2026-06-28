@@ -1,116 +1,152 @@
 {
-  "Base Spirits": [
-    { "name": "Bourbon",           "match": ["bourbon"] },
-    { "name": "Rye Whiskey",       "match": ["rye"] },
-    { "name": "Scotch",            "match": ["scotch", "islay"] },
-    { "name": "Irish Whiskey",     "match": ["irish whiskey"] },
-    { "name": "Japanese Whisky",   "match": ["japanese whisky", "suntory", "nikka"] },
-    { "name": "Gin",               "match": ["gin"] },
-    { "name": "Vodka",             "match": ["vodka"] },
-    { "name": "White Rum",         "match": ["white rum", "light rum", "blanco rum", "silver rum"] },
-    { "name": "Dark / Aged Rum",   "match": ["dark rum", "aged rum", "jamaican rum", "rhum", "blackstrap rum", "demerara rum"] },
-    { "name": "Blanco Tequila",    "match": ["blanco tequila", "silver tequila", "plata", "altos plata"] },
-    { "name": "Reposado Tequila",  "match": ["reposado"] },
-    { "name": "Añejo Tequila",     "match": ["añejo", "anejo"] },
-    { "name": "Mezcal",            "match": ["mezcal"] },
-    { "name": "Cognac / Brandy",   "match": ["cognac", "brandy", "armagnac"] },
-    { "name": "Cachaça",           "match": ["cachaça", "cachaca"] },
-    { "name": "Pisco",             "match": ["pisco"] },
-    { "name": "Aquavit",           "match": ["aquavit"] }
-  ],
-  "Liqueurs & Aperitifs": [
-    { "name": "Aperol",            "match": ["aperol"] },
-    { "name": "Campari",           "match": ["campari"] },
-    { "name": "Cointreau / Triple Sec", "match": ["cointreau", "triple sec", "orange liqueur", "grand marnier", "blue curacao", "curacao"] },
-    { "name": "St. Germain (Elderflower)", "match": ["st. germain", "saint germain", "elderflower liqueur"] },
-    { "name": "Amaretto",          "match": ["amaretto", "disaronno"] },
-    { "name": "Maraschino Liqueur","match": ["maraschino", "luxardo"] },
-    { "name": "Green Chartreuse",  "match": ["green chartreuse"] },
-    { "name": "Yellow Chartreuse", "match": ["yellow chartreuse"] },
-    { "name": "Bénédictine",       "match": ["benedictine", "bénédictine"] },
-    { "name": "Fernet-Branca",     "match": ["fernet"] },
-    { "name": "Amaro Montenegro",  "match": ["montenegro"] },
-    { "name": "Amaro Nonino",      "match": ["nonino"] },
-    { "name": "Amaro Averna",      "match": ["averna"] },
-    { "name": "Cynar",             "match": ["cynar"] },
-    { "name": "Kahlúa / Coffee Liqueur", "match": ["kahlua", "kahlúa", "coffee liqueur"] },
-    { "name": "Baileys / Cream Liqueur", "match": ["baileys", "irish cream"] },
-    { "name": "Frangelico",        "match": ["frangelico"] },
-    { "name": "Chambord / Raspberry Liqueur", "match": ["chambord", "raspberry liqueur", "crème de cassis", "creme de cassis"] },
-    { "name": "Drambuie",          "match": ["drambuie"] },
-    { "name": "Allspice Dram",     "match": ["allspice dram"] },
-    { "name": "Falernum",          "match": ["falernum"] },
-    { "name": "Absinthe / Pastis", "match": ["absinthe", "pastis", "pernod"] },
-    { "name": "Creme de Menthe",   "match": ["creme de menthe", "crème de menthe"] },
-    { "name": "Creme de Violette", "match": ["creme de violette", "crème de violette"] },
-    { "name": "Peach Schnapps",    "match": ["peach schnapps", "peach liqueur", "crème de pêche"] },
-    { "name": "Malibu / Coconut Rum", "match": ["malibu", "coconut rum"] }
-  ],
-  "Vermouth & Wine": [
-    { "name": "Sweet Vermouth",    "match": ["sweet vermouth", "vermouth di torino", "carpano", "dolin rouge"] },
-    { "name": "Dry Vermouth",      "match": ["dry vermouth"] },
-    { "name": "Lillet Blanc / Cocchi Americano", "match": ["lillet", "cocchi americano"] },
-    { "name": "Prosecco / Champagne", "match": ["prosecco", "champagne", "sparkling wine", "cava"] },
-    { "name": "Dry White Wine",    "match": ["white wine", "sauvignon blanc", "pinot grigio"] },
-    { "name": "Red Wine",          "match": ["red wine", "cabernet", "merlot"] },
-    { "name": "Sherry",            "match": ["sherry", "amontillado", "oloroso", "fino"] }
-  ],
-  "Bitters": [
-    { "name": "Angostura Bitters", "match": ["angostura"] },
-    { "name": "Peychaud's Bitters","match": ["peychaud"] },
-    { "name": "Orange Bitters",    "match": ["orange bitters"] },
-    { "name": "Mole / Chocolate Bitters", "match": ["mole bitters", "chocolate bitters"] },
-    { "name": "Celery Bitters",    "match": ["celery bitters"] },
-    { "name": "Lavender Bitters",  "match": ["lavender bitters"] }
-  ],
-  "Syrups & Sweeteners": [
-    { "name": "Simple Syrup",      "match": ["simple syrup"] },
-    { "name": "Honey / Honey Syrup", "match": ["honey"] },
-    { "name": "Agave Syrup",       "match": ["agave syrup", "agave nectar"] },
-    { "name": "Grenadine",         "match": ["grenadine"] },
-    { "name": "Orgeat",            "match": ["orgeat"] },
-    { "name": "Demerara Syrup",    "match": ["demerara"] },
-    { "name": "Maple Syrup",       "match": ["maple syrup"] },
-    { "name": "Passion Fruit Syrup", "match": ["passion fruit syrup", "passionfruit syrup"] },
-    { "name": "Ginger Syrup",      "match": ["ginger syrup"] },
-    { "name": "Cinnamon Syrup",    "match": ["cinnamon syrup"] },
-    { "name": "Lavender Syrup",    "match": ["lavender syrup"] },
-    { "name": "Raspberry Syrup",   "match": ["raspberry syrup"] }
-  ],
-  "Citrus & Juice": [
-    { "name": "Lemons",            "match": ["lemon juice", "lemon"] },
-    { "name": "Limes",             "match": ["lime juice", "lime"] },
-    { "name": "Oranges",           "match": ["orange juice", "orange"] },
-    { "name": "Grapefruit",        "match": ["grapefruit"] },
-    { "name": "Pineapple Juice",   "match": ["pineapple"] },
-    { "name": "Cranberry Juice",   "match": ["cranberry"] },
-    { "name": "Pomegranate Juice", "match": ["pomegranate"] },
-    { "name": "Apple Juice / Cider", "match": ["apple juice", "apple cider", "cider"] }
-  ],
-  "Mixers": [
-    { "name": "Club Soda",         "match": ["club soda", "soda water", "sparkling water"] },
-    { "name": "Tonic Water",       "match": ["tonic"] },
-    { "name": "Ginger Beer",       "match": ["ginger beer"] },
-    { "name": "Ginger Ale",        "match": ["ginger ale"] },
-    { "name": "Cola",              "match": ["cola", "coca-cola", "coke"] },
-    { "name": "Coconut Water",     "match": ["coconut water"] },
-    { "name": "Coconut Cream",     "match": ["coconut cream", "cream of coconut"] }
-  ],
-  "Pantry & Fresh": [
-    { "name": "Eggs",              "match": ["egg white", "egg yolk", "whole egg"] },
-    { "name": "Heavy Cream",       "match": ["heavy cream", "half and half", "half-and-half", "whipping cream"] },
-    { "name": "Cold Brew / Espresso", "match": ["cold brew", "espresso", "coffee"] },
-    { "name": "Mint",              "match": ["mint"] },
-    { "name": "Basil",             "match": ["basil"] },
-    { "name": "Rosemary",          "match": ["rosemary"] },
-    { "name": "Cucumber",          "match": ["cucumber"] },
-    { "name": "Jalapeño",          "match": ["jalapeño", "jalapeno"] },
-    { "name": "Strawberries",      "match": ["strawberry", "strawberries"] },
-    { "name": "Blackberries",      "match": ["blackberry", "blackberries"] },
-    { "name": "Raspberries",       "match": ["raspberry", "raspberries"] },
-    { "name": "Peaches",           "match": ["peach"] },
-    { "name": "Salt",              "match": ["salt"] },
-    { "name": "Sugar",             "match": ["sugar"] },
-    { "name": "Aquafaba",          "match": ["aquafaba"] }
-  ]
+  "Essentials": {
+    "description": "The foundation of most home bars",
+    "categories": {
+      "Base Spirits": [
+        { "name": "Bourbon",         "match": ["bourbon"] },
+        { "name": "Gin",             "match": ["gin"] },
+        { "name": "Vodka",           "match": ["vodka"] },
+        { "name": "White Rum",       "match": ["white rum", "light rum", "silver rum", "blanco rum"] },
+        { "name": "Blanco Tequila",  "match": ["blanco tequila", "silver tequila", "plata"] },
+        { "name": "Whiskey",         "match": ["whiskey", "whisky"] }
+      ],
+      "Citrus": [
+        { "name": "Lemons",    "match": ["lemon"] },
+        { "name": "Limes",     "match": ["lime"] },
+        { "name": "Oranges",   "match": ["orange juice", "orange"] }
+      ],
+      "Sweeteners": [
+        { "name": "Simple Syrup",  "match": ["simple syrup"] },
+        { "name": "Honey",         "match": ["honey"] },
+        { "name": "Sugar",         "match": ["sugar"] }
+      ],
+      "Bitters": [
+        { "name": "Angostura Bitters", "match": ["angostura"] }
+      ],
+      "Mixers": [
+        { "name": "Club Soda",   "match": ["club soda", "soda water", "sparkling water"] },
+        { "name": "Tonic Water", "match": ["tonic"] },
+        { "name": "Ginger Beer", "match": ["ginger beer"] }
+      ]
+    }
+  },
+  "Advanced": {
+    "description": "For the enthusiast home bar",
+    "categories": {
+      "More Spirits": [
+        { "name": "Rye Whiskey",      "match": ["rye"] },
+        { "name": "Scotch",           "match": ["scotch", "islay"] },
+        { "name": "Dark / Aged Rum",  "match": ["dark rum", "aged rum", "jamaican rum", "rhum", "blackstrap rum", "demerara rum"] },
+        { "name": "Reposado Tequila", "match": ["reposado"] },
+        { "name": "Mezcal",           "match": ["mezcal"] },
+        { "name": "Cognac / Brandy",  "match": ["cognac", "brandy", "armagnac"] }
+      ],
+      "Liqueurs": [
+        { "name": "Aperol",                     "match": ["aperol"] },
+        { "name": "Campari",                    "match": ["campari"] },
+        { "name": "Cointreau / Triple Sec",     "match": ["cointreau", "triple sec", "orange liqueur", "grand marnier", "curacao"] },
+        { "name": "St. Germain (Elderflower)",  "match": ["st. germain", "saint germain", "elderflower liqueur"] },
+        { "name": "Maraschino Liqueur",         "match": ["maraschino", "luxardo"] },
+        { "name": "Amaretto",                   "match": ["amaretto", "disaronno"] },
+        { "name": "Kahlúa / Coffee Liqueur",    "match": ["kahlua", "kahlúa", "coffee liqueur"] }
+      ],
+      "Vermouth & Wine": [
+        { "name": "Sweet Vermouth",           "match": ["sweet vermouth", "vermouth di torino", "carpano", "dolin rouge"] },
+        { "name": "Dry Vermouth",             "match": ["dry vermouth"] },
+        { "name": "Prosecco / Champagne",     "match": ["prosecco", "champagne", "sparkling wine", "cava"] }
+      ],
+      "More Bitters": [
+        { "name": "Peychaud's Bitters", "match": ["peychaud"] },
+        { "name": "Orange Bitters",     "match": ["orange bitters"] }
+      ],
+      "More Syrups": [
+        { "name": "Agave Syrup",    "match": ["agave syrup", "agave nectar"] },
+        { "name": "Grenadine",      "match": ["grenadine"] },
+        { "name": "Orgeat",         "match": ["orgeat"] },
+        { "name": "Demerara Syrup", "match": ["demerara"] }
+      ],
+      "More Citrus & Juice": [
+        { "name": "Grapefruit",      "match": ["grapefruit"] },
+        { "name": "Pineapple Juice", "match": ["pineapple"] },
+        { "name": "Cranberry Juice", "match": ["cranberry"] }
+      ],
+      "Pantry Basics": [
+        { "name": "Eggs",         "match": ["egg white", "egg yolk", "whole egg"] },
+        { "name": "Heavy Cream",  "match": ["heavy cream", "half and half", "half-and-half", "whipping cream"] },
+        { "name": "Mint",         "match": ["mint"] },
+        { "name": "Ginger Ale",   "match": ["ginger ale"] },
+        { "name": "Coconut Cream","match": ["coconut cream", "cream of coconut"] }
+      ]
+    }
+  },
+  "Deep Cuts": {
+    "description": "The serious cocktail nerd's arsenal",
+    "categories": {
+      "Rare & Specialty Spirits": [
+        { "name": "Irish Whiskey",    "match": ["irish whiskey"] },
+        { "name": "Japanese Whisky",  "match": ["japanese whisky", "suntory", "nikka"] },
+        { "name": "Añejo Tequila",    "match": ["añejo", "anejo"] },
+        { "name": "Cachaça",          "match": ["cachaça", "cachaca"] },
+        { "name": "Pisco",            "match": ["pisco"] },
+        { "name": "Aquavit",          "match": ["aquavit"] }
+      ],
+      "Amaro & Bitter Liqueurs": [
+        { "name": "Amaro Montenegro", "match": ["montenegro"] },
+        { "name": "Amaro Nonino",     "match": ["nonino"] },
+        { "name": "Amaro Averna",     "match": ["averna"] },
+        { "name": "Cynar",            "match": ["cynar"] },
+        { "name": "Fernet-Branca",    "match": ["fernet"] },
+        { "name": "Green Chartreuse", "match": ["green chartreuse"] },
+        { "name": "Yellow Chartreuse","match": ["yellow chartreuse"] },
+        { "name": "Bénédictine",      "match": ["benedictine", "bénédictine"] }
+      ],
+      "Specialty Liqueurs": [
+        { "name": "Allspice Dram",          "match": ["allspice dram"] },
+        { "name": "Falernum",               "match": ["falernum"] },
+        { "name": "Absinthe / Pastis",      "match": ["absinthe", "pastis", "pernod"] },
+        { "name": "Creme de Violette",      "match": ["creme de violette", "crème de violette"] },
+        { "name": "Creme de Menthe",        "match": ["creme de menthe", "crème de menthe"] },
+        { "name": "Drambuie",               "match": ["drambuie"] },
+        { "name": "Frangelico",             "match": ["frangelico"] },
+        { "name": "Chambord",               "match": ["chambord", "raspberry liqueur", "crème de cassis"] },
+        { "name": "Baileys / Irish Cream",  "match": ["baileys", "irish cream"] },
+        { "name": "Peach Schnapps",         "match": ["peach schnapps", "peach liqueur"] }
+      ],
+      "More Vermouth & Wine": [
+        { "name": "Lillet Blanc / Cocchi Americano", "match": ["lillet", "cocchi americano"] },
+        { "name": "Sherry",        "match": ["sherry", "amontillado", "oloroso", "fino"] },
+        { "name": "Dry White Wine","match": ["white wine", "sauvignon blanc", "pinot grigio"] }
+      ],
+      "Specialty Bitters": [
+        { "name": "Mole / Chocolate Bitters", "match": ["mole bitters", "chocolate bitters"] },
+        { "name": "Celery Bitters",            "match": ["celery bitters"] },
+        { "name": "Lavender Bitters",          "match": ["lavender bitters"] }
+      ],
+      "Specialty Syrups": [
+        { "name": "Maple Syrup",         "match": ["maple syrup"] },
+        { "name": "Ginger Syrup",        "match": ["ginger syrup"] },
+        { "name": "Cinnamon Syrup",      "match": ["cinnamon syrup"] },
+        { "name": "Lavender Syrup",      "match": ["lavender syrup"] },
+        { "name": "Raspberry Syrup",     "match": ["raspberry syrup"] },
+        { "name": "Passion Fruit Syrup", "match": ["passion fruit syrup", "passionfruit syrup"] }
+      ],
+      "Fresh Ingredients": [
+        { "name": "Basil",         "match": ["basil"] },
+        { "name": "Rosemary",      "match": ["rosemary"] },
+        { "name": "Cucumber",      "match": ["cucumber"] },
+        { "name": "Jalapeño",      "match": ["jalapeño", "jalapeno"] },
+        { "name": "Strawberries",  "match": ["strawberry", "strawberries"] },
+        { "name": "Blackberries",  "match": ["blackberry", "blackberries"] },
+        { "name": "Raspberries",   "match": ["raspberry", "raspberries"] },
+        { "name": "Peaches",       "match": ["peach"] }
+      ],
+      "Other": [
+        { "name": "Cold Brew / Espresso", "match": ["cold brew", "espresso", "coffee"] },
+        { "name": "Coconut Water",        "match": ["coconut water"] },
+        { "name": "Pomegranate Juice",    "match": ["pomegranate"] },
+        { "name": "Aquafaba",             "match": ["aquafaba"] },
+        { "name": "Salt",                 "match": ["salt"] }
+      ]
+    }
+  }
 }
