@@ -38,6 +38,7 @@ const finder = (() => {
   let spiritSubs = {};
   let barIngredients = {};
   let myBar = new Set();
+  let customBar = new Set();
   let tavernMode = false;
   let state = { mood: null, spirit: null, sequence: null, pendingStart: false };
   let results = [];
@@ -73,22 +74,24 @@ const finder = (() => {
     } else {
       myBar = new Set(JSON.parse(localStorage.getItem('terribleTavernBar') || '[]'));
     }
+    customBar = new Set(JSON.parse(localStorage.getItem('terribleTavernCustomBar') || '[]'));
     updateMyBarLabel();
   }
 
   function updateMyBarLabel() {
     const label = document.getElementById('my-bar-label');
     if (!label) return;
+    const total = myBar.size + customBar.size;
     if (tavernMode) {
       label.textContent = `🍸 Tonight's Bar (${myBar.size} items)`;
     } else {
-      label.textContent = myBar.size > 0 ? `My Bar (${myBar.size} items)` : 'Set Up My Bar';
+      label.textContent = total > 0 ? `My Bar (${total} items)` : 'Set Up My Bar';
     }
   }
 
   // Check if a drink ingredient string matches a bar item's keywords
   function ingredientInBar(ingStr) {
-    if (myBar.size === 0) return true;
+    if (myBar.size === 0 && customBar.size === 0) return true;
     const lower = ingStr.toLowerCase();
     try {
       for (const tier of Object.values(barIngredients)) {
@@ -101,6 +104,9 @@ const finder = (() => {
         }
       }
     } catch(e) { return true; }
+    for (const custom of customBar) {
+      if (lower.includes(custom.toLowerCase())) return true;
+    }
     return false;
   }
 
@@ -336,13 +342,70 @@ const finder = (() => {
     container.appendChild(chipArea);
     renderChips();
 
+    // Custom items section
+    const customSection = document.createElement('div');
+    customSection.className = 'mybar-category custom-items-section';
+    customSection.id = 'custom-items-section';
+
+    function renderCustomSection() {
+      customSection.innerHTML = '';
+      const title = document.createElement('div');
+      title.className = 'mybar-category-title';
+      title.textContent = 'Custom Items';
+      customSection.appendChild(title);
+
+      if (customBar.size > 0) {
+        const chips = document.createElement('div');
+        chips.className = 'mybar-items';
+        customBar.forEach(name => {
+          const chip = document.createElement('div');
+          chip.className = 'mybar-chip checked custom-chip';
+          chip.innerHTML = `${name} <span class="custom-chip-remove" data-name="${name}">×</span>`;
+          chip.querySelector('.custom-chip-remove').addEventListener('click', (e) => {
+            e.stopPropagation();
+            customBar.delete(name);
+            localStorage.setItem('terribleTavernCustomBar', JSON.stringify([...customBar]));
+            updateCount();
+            updateMyBarLabel();
+            renderCustomSection();
+          });
+          chips.appendChild(chip);
+        });
+        customSection.appendChild(chips);
+      }
+
+      if (!tavernMode) {
+        const addRow = document.createElement('div');
+        addRow.className = 'custom-add-row';
+        addRow.innerHTML = `<input type="text" class="custom-add-input" placeholder="e.g. Raspberry-Infused Bourbon" autocomplete="off" autocorrect="off" spellcheck="false"><button class="custom-add-btn">Add</button>`;
+        const input = addRow.querySelector('.custom-add-input');
+        const btn = addRow.querySelector('.custom-add-btn');
+        btn.addEventListener('click', () => {
+          const val = input.value.trim();
+          if (!val) return;
+          customBar.add(val);
+          localStorage.setItem('terribleTavernCustomBar', JSON.stringify([...customBar]));
+          input.value = '';
+          updateCount();
+          updateMyBarLabel();
+          renderCustomSection();
+        });
+        input.addEventListener('keydown', e => { if (e.key === 'Enter') btn.click(); });
+        customSection.appendChild(addRow);
+      }
+    }
+
+    renderCustomSection();
+    container.appendChild(customSection);
+
     updateCount();
     showStep('step-mybar');
   }
 
   function updateCount() {
     const el = document.getElementById('mybar-count');
-    if (el) el.textContent = myBar.size > 0 ? `${myBar.size} selected` : '';
+    const total = myBar.size + customBar.size;
+    if (el) el.textContent = total > 0 ? `${total} selected` : '';
   }
 
   function saveMyBar() {
@@ -358,9 +421,13 @@ const finder = (() => {
 
   function clearMyBar() {
     myBar.clear();
+    customBar.clear();
     localStorage.removeItem('terribleTavernBar');
+    localStorage.removeItem('terribleTavernCustomBar');
     updateMyBarLabel();
     document.querySelectorAll('.mybar-chip').forEach(c => c.classList.remove('checked'));
+    const cs = document.getElementById('custom-items-section');
+    if (cs) cs.remove();
     updateCount();
   }
 
