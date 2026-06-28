@@ -17,13 +17,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 #tavern-banner:active { background: rgba(216, 67, 21, 0.35); }
-.banner-fox {
-  height: 18px;
-  width: auto;
-  vertical-align: middle;
-  margin-right: 6px;
-  opacity: 0.9;
-}
 
 /* Tavern exit modal */
 #tavern-modal {

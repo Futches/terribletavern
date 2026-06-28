@@ -88,16 +88,6 @@ a {
     font-weight: 700;
     color: var(--color-rust);
     letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.nav-fox-icon {
-    height: 32px;
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .logo a:hover {
@@ -592,13 +582,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-bottom: 40px;
-}
-
-.footer-fox {
-    height: 60px;
-    width: auto;
-    margin-bottom: 12px;
-    display: block;
 }
 
 .footer-brand h3 {
