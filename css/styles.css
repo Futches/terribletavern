@@ -569,9 +569,11 @@ a {
 }
 .easter-egg-link:hover { opacity: 1; }
 .easter-egg-img {
-    height: 32px;
-    width: auto;
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
     display: block;
+    margin: 0 auto;
 }
 
 /* Footer */
