@@ -768,5 +768,13 @@ const finder = (() => {
 
   loadData().catch(console.error);
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal };
+  function openHelp() {
+    document.getElementById('help-modal').style.display = 'flex';
+  }
+
+  function closeHelp() {
+    document.getElementById('help-modal').style.display = 'none';
+  }
+
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp };
 })();

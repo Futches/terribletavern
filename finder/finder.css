@@ -100,6 +100,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: relative;
 }
 .finder-page .logo-link {
   font-family: 'Cinzel', serif;
@@ -108,6 +109,78 @@
   color: var(--color-rust);
   text-decoration: none;
   letter-spacing: 0.1em;
+}
+.help-btn {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: 1px solid rgba(245,230,211,0.25);
+  color: rgba(245,230,211,0.6);
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.help-btn:hover { border-color: var(--color-rust); color: var(--color-rust); }
+
+/* Help modal */
+#help-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#help-box {
+  background: #1e1e1e;
+  border: 1px solid rgba(245,230,211,0.12);
+  border-radius: 14px;
+  padding: 28px 24px 24px;
+  width: 100%;
+  max-width: 440px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+.help-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  color: var(--color-cream);
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+.help-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.help-section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  color: var(--color-rust);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 5px;
+}
+.help-section p {
+  font-family: 'Cinzel', serif;
+  font-size: 0.83rem;
+  color: #aaa;
+  line-height: 1.7;
+  margin: 0;
+}
+.help-section p em {
+  color: var(--color-cream);
+  font-style: normal;
 }
 
 /* Finder page layout */

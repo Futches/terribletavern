@@ -15,8 +15,45 @@
   <header class="header">
     <div class="header-content">
       <a href="/" class="logo-link">Terrible Tavern</a>
+      <button class="help-btn" onclick="finder.openHelp()" aria-label="Help">?</button>
     </div>
   </header>
+
+  <!-- Help modal -->
+  <div id="help-modal" style="display:none;">
+    <div id="help-box">
+      <h2 class="help-title">How It Works</h2>
+      <div class="help-sections">
+
+        <div class="help-section">
+          <div class="help-section-title">Find Your Drink</div>
+          <p>Answer three questions — vibe, spirit, and where you are in the night — and we'll pull the best match from the full bar. Tap <em>Find Alternative</em> to cycle through other options.</p>
+        </div>
+
+        <div class="help-section">
+          <div class="help-section-title">Search by Name</div>
+          <p>Know what you want? Type any part of a drink name to go straight to the recipe.</p>
+        </div>
+
+        <div class="help-section">
+          <div class="help-section-title">My Bar</div>
+          <p>Tell us what's behind your bar and we'll put drinks you can actually make right now at the top of the list. Choose a preset tier (Essentials, Advanced, Deep Cuts) or check off ingredients manually. Your bar saves automatically.</p>
+        </div>
+
+        <div class="help-section">
+          <div class="help-section-title">No This?</div>
+          <p>See a <em>No this?</em> button next to an ingredient? Tap it for a substitution suggestion if you're missing something.</p>
+        </div>
+
+        <div class="help-section">
+          <div class="help-section-title">Share</div>
+          <p>Found something good? Tap <em>Share This Recipe</em> on any result to send it to someone.</p>
+        </div>
+
+      </div>
+      <button class="finder-btn secondary" onclick="finder.closeHelp()">Got It</button>
+    </div>
+  </div>
 
   <div id="tavern-banner" onclick="finder.tavernBannerTap()">VISITING TERRIBLE TAVERN</div>
 
