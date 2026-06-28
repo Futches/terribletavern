@@ -21,9 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Smooth scrolling for navigation links
     function smoothScroll(e) {
-        e.preventDefault();
-
         const targetId = this.getAttribute('href');
+        if (!targetId || !targetId.startsWith('#')) return;
+
+        e.preventDefault();
         const targetSection = document.querySelector(targetId);
 
         if (targetSection) {
