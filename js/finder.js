@@ -37,7 +37,7 @@ const finder = (() => {
   let substitutions = {};
   let barIngredients = {};
   let myBar = new Set();
-  let state = { mood: null, spirit: null, sequence: null };
+  let state = { mood: null, spirit: null, sequence: null, pendingStart: false };
   let results = [];
   let resultIndex = 0;
   let history = [];
@@ -329,7 +329,12 @@ const finder = (() => {
   function saveMyBar() {
     localStorage.setItem('terribleTavernBar', JSON.stringify([...myBar]));
     updateMyBarLabel();
-    showStep('step-welcome');
+    if (state.pendingStart) {
+      state.pendingStart = false;
+      startFlow();
+    } else {
+      showStep('step-welcome');
+    }
   }
 
   function clearMyBar() {
@@ -342,7 +347,7 @@ const finder = (() => {
 
   // ── Guided flow ─────────────────────────────────────────────────────────
 
-  function start() {
+  function startFlow() {
     buildOptions('mood-options', MOODS, mood => {
       state.mood = mood;
       buildOptions('spirit-options', SPIRITS, spirit => {
@@ -363,6 +368,43 @@ const finder = (() => {
       showStep('step-spirit');
     });
     showStep('step-mood');
+  }
+
+  function start() {
+    if (myBar.size === 0) {
+      state.pendingStart = true;
+      showStep('step-barcheck');
+      return;
+    }
+    state.pendingStart = false;
+    startFlow();
+  }
+
+  function useDefaultBar(tierIndex) {
+    const tierOrder = ['Essentials', 'Advanced', 'Deep Cuts'];
+    myBar.clear();
+    for (let t = 0; t <= tierIndex; t++) {
+      const tier = barIngredients[tierOrder[t]];
+      if (!tier) continue;
+      for (const items of Object.values(tier.categories)) {
+        items.forEach(item => myBar.add(item.name));
+      }
+    }
+    localStorage.setItem('terribleTavernBar', JSON.stringify([...myBar]));
+    updateMyBarLabel();
+    state.pendingStart = false;
+    startFlow();
+  }
+
+  function stockMyBar() {
+    // Go to My Bar; on save, continue into the flow instead of returning to welcome
+    state.pendingStart = true;
+    openMyBar();
+  }
+
+  function skipBarCheck() {
+    state.pendingStart = false;
+    startFlow();
   }
 
   function next() {
@@ -442,7 +484,7 @@ const finder = (() => {
   }
 
   function restart() {
-    state = { mood: null, spirit: null, sequence: null };
+    state = { mood: null, spirit: null, sequence: null, pendingStart: false };
     results = [];
     resultIndex = 0;
     history = [];
@@ -451,5 +493,5 @@ const finder = (() => {
 
   loadData().catch(console.error);
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck };
 })();

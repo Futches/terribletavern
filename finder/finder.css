@@ -186,6 +186,53 @@
   flex: none;
 }
 
+/* Bar Check step */
+.barcheck-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.barcheck-tier-btn {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(245, 230, 211, 0.06);
+  border: 1px solid rgba(245, 230, 211, 0.15);
+  border-radius: 8px;
+  color: var(--color-cream);
+  font-family: 'Cinzel', serif;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+.barcheck-tier-btn:active,
+.barcheck-tier-btn:hover {
+  background: rgba(216, 67, 21, 0.2);
+  border-color: var(--color-rust);
+}
+.barcheck-tier-name {
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+.barcheck-tier-desc {
+  font-size: 0.75rem;
+  color: #888;
+  letter-spacing: 0.03em;
+}
+.barcheck-divider {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  color: #555;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
 /* My Bar page */
 .mybar-header {
   display: flex;

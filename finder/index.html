@@ -38,6 +38,29 @@
         </button>
       </div>
 
+      <!-- Bar Check -->
+      <div class="finder-step" id="step-barcheck">
+        <h2 class="finder-question">What's Behind Your Bar?</h2>
+        <p class="finder-subtitle">Pick a level and we'll assume you have everything in it — drinks you can make will float to the top.</p>
+        <div class="barcheck-tiers">
+          <button class="barcheck-tier-btn" onclick="finder.useDefaultBar(0)">
+            <span class="barcheck-tier-name">Essentials</span>
+            <span class="barcheck-tier-desc">Common home bar staples</span>
+          </button>
+          <button class="barcheck-tier-btn" onclick="finder.useDefaultBar(1)">
+            <span class="barcheck-tier-name">Advanced</span>
+            <span class="barcheck-tier-desc">The enthusiast's bar</span>
+          </button>
+          <button class="barcheck-tier-btn" onclick="finder.useDefaultBar(2)">
+            <span class="barcheck-tier-name">Deep Cuts</span>
+            <span class="barcheck-tier-desc">The full arsenal</span>
+          </button>
+        </div>
+        <div class="barcheck-divider">or</div>
+        <button class="finder-btn secondary" style="width:100%" onclick="finder.stockMyBar()">Stock My Bar Manually</button>
+        <button class="finder-btn ghost" onclick="finder.skipBarCheck()">Skip for now</button>
+      </div>
+
       <!-- My Bar -->
       <div class="finder-step" id="step-mybar">
         <div class="mybar-header">
