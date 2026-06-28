@@ -21,14 +21,17 @@
       <!-- Setup screen -->
       <div class="admin-screen" id="screen-setup">
         <h1 class="admin-title">Bar Admin Setup</h1>
-        <p class="admin-subtitle">One-time setup to connect your live inventory. You'll need a free account at <strong>jsonbin.io</strong>.</p>
+        <p class="admin-subtitle">One-time setup using your existing GitHub account. No new accounts needed.</p>
         <ol class="setup-steps">
-          <li>Sign up at jsonbin.io (free)</li>
-          <li>Go to your dashboard and copy your <strong>Master Key</strong></li>
-          <li>Paste it below and tap Connect</li>
+          <li>Go to <strong>github.com</strong> → your profile icon → <strong>Settings</strong></li>
+          <li>Scroll to the bottom of the left sidebar → <strong>Developer settings</strong></li>
+          <li>Personal access tokens → <strong>Tokens (classic)</strong></li>
+          <li>Generate new token (classic) → name it "Tavern Admin" → set expiration to <strong>No expiration</strong></li>
+          <li>Check <strong>public_repo</strong> under the repo section</li>
+          <li>Scroll down → Generate token → <strong>copy it immediately</strong> (starts with ghp_)</li>
         </ol>
-        <input type="password" id="api-key-input" class="admin-input" placeholder="Your JSONbin Master Key" autocomplete="off">
-        <button class="admin-btn primary" id="connect-btn" onclick="adminApp.connect()">Connect & Create</button>
+        <input type="text" id="api-key-input" class="admin-input" placeholder="Paste your GitHub token (ghp_...)" autocomplete="off" autocorrect="off" spellcheck="false">
+        <button class="admin-btn primary" id="connect-btn" onclick="adminApp.connect()">Connect</button>
         <p class="admin-error" id="setup-error"></p>
       </div>
 
@@ -37,7 +40,7 @@
         <h2 class="admin-title">Your QR Code</h2>
         <p class="admin-subtitle">Display this at the Tavern. Guests scan it to see tonight's live inventory.</p>
         <div id="qr-code"></div>
-        <p class="qr-hint">Screenshot this and display it on your phone, or print it.</p>
+        <p class="qr-hint">Screenshot this and display it on your phone, or print it out.</p>
         <button class="admin-btn primary" onclick="adminApp.showAdmin()">Update Tonight's Bar →</button>
         <button class="admin-btn ghost" onclick="adminApp.resetSetup()">Reset Setup</button>
       </div>
@@ -48,7 +51,7 @@
           <h2 class="admin-title">Tonight's Bar</h2>
           <span class="admin-count" id="admin-count"></span>
         </div>
-        <p class="admin-subtitle">Check what's in stock. Tap Publish when ready.</p>
+        <p class="admin-subtitle">Check what's in stock. Tap Publish when ready — live in about a minute.</p>
         <div class="admin-tier-selector" id="admin-tier-selector"></div>
         <div id="admin-chip-area"></div>
         <div class="admin-actions">

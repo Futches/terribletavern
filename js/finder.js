@@ -45,8 +45,7 @@ const finder = (() => {
 
   async function loadData() {
     const params = new URLSearchParams(window.location.search);
-    const binId = params.get('bin');
-    tavernMode = params.has('tavern') && !!binId;
+    tavernMode = params.has('tavern');
 
     const [cRes, sRes, bRes] = await Promise.all([
       fetch('../data/cocktails.json'),
@@ -59,9 +58,9 @@ const finder = (() => {
 
     if (tavernMode) {
       try {
-        const r = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`);
+        const r = await fetch('../data/tavern-tonight.json?t=' + Date.now());
         const d = await r.json();
-        myBar = new Set(d.record.items || []);
+        myBar = new Set(d.items || []);
         const banner = document.getElementById('tavern-banner');
         if (banner) banner.style.display = 'block';
       } catch(e) {

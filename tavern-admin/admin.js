@@ -1,11 +1,15 @@
-const JSONBIN = 'https://api.jsonbin.io/v3';
+const GITHUB_API = 'https://api.github.com';
+const REPO = 'Futches/terribletavern';
+const BRANCH = 'claude/create-tavern-website-Q10zE';
+const FILE_PATH = 'data/tavern-tonight.json';
+const TAVERN_URL = 'https://terribletavern.com/finder?tavern=1';
 const STORAGE = 'tavernAdmin';
 const TIER_ORDER = ['Essentials', 'Advanced', 'Deep Cuts'];
 
 let config = {};
 let barIngredients = {};
 let tonight = new Set();
-let activeTier = 2; // Default to Deep Cuts so all options are visible
+let activeTier = 2;
 
 const adminApp = (() => {
 
@@ -23,18 +27,44 @@ const adminApp = (() => {
     window.scrollTo(0, 0);
   }
 
+  function ghHeaders() {
+    return {
+      'Authorization': `token ${config.token}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json'
+    };
+  }
+
+  async function getFileSha() {
+    const r = await fetch(
+      `${GITHUB_API}/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
+      { headers: ghHeaders() }
+    );
+    if (!r.ok) return null;
+    const d = await r.json();
+    return d.sha;
+  }
+
+  async function readCurrentInventory() {
+    try {
+      const r = await fetch(
+        `${GITHUB_API}/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
+        { headers: ghHeaders() }
+      );
+      if (!r.ok) return;
+      const d = await r.json();
+      const decoded = JSON.parse(decodeURIComponent(escape(atob(d.content.replace(/\s/g, '')))));
+      tonight = new Set(decoded.items || []);
+    } catch(e) { tonight = new Set(); }
+  }
+
   async function init() {
     loadConfig();
     const res = await fetch('../data/bar-ingredients.json');
     barIngredients = await res.json();
 
-    if (config.binId && config.masterKey) {
-      // Load what was last published so Peter can adjust from there
-      try {
-        const r = await fetch(`${JSONBIN}/b/${config.binId}/latest`);
-        const d = await r.json();
-        tonight = new Set(d.record.items || []);
-      } catch(e) { tonight = new Set(); }
+    if (config.token) {
+      await readCurrentInventory();
       showAdmin();
     } else {
       showScreen('screen-setup');
@@ -42,46 +72,39 @@ const adminApp = (() => {
   }
 
   async function connect() {
-    const key = document.getElementById('api-key-input').value.trim();
+    const token = document.getElementById('api-key-input').value.trim();
     const btn = document.getElementById('connect-btn');
-    const err = document.getElementById('setup-error');
-    if (!key) { err.textContent = 'Please paste your Master Key.'; return; }
+    const errEl = document.getElementById('setup-error');
+    if (!token) { errEl.textContent = 'Please paste your GitHub token.'; return; }
     btn.textContent = 'Connecting…';
     btn.disabled = true;
-    err.textContent = '';
+    errEl.textContent = '';
     try {
-      const res = await fetch(`${JSONBIN}/b`, {
-        method: 'POST',
+      // Verify token works by checking the repo
+      const r = await fetch(`${GITHUB_API}/repos/${REPO}`, {
         headers: {
-          'Content-Type': 'application/json',
-          'X-Master-Key': key,
-          'X-Bin-Name': 'Terrible Tavern Tonight',
-          'X-Bin-Private': 'false'
-        },
-        body: JSON.stringify({ items: [] })
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
       });
-      if (!res.ok) {
-        const err2 = await res.json().catch(() => ({}));
-        throw new Error(err2.message || 'Invalid API key — check and try again.');
-      }
-      const data = await res.json();
-      config = { masterKey: key, binId: data.metadata.id };
+      if (!r.ok) throw new Error('Token not accepted — make sure you checked public_repo scope.');
+      config = { token };
       saveConfig();
-      showQR();
+      await readCurrentInventory();
+      showAdmin();
     } catch(e) {
-      err.textContent = e.message || 'Connection failed. Check your key and try again.';
-      btn.textContent = 'Connect & Create';
+      errEl.textContent = e.message || 'Connection failed. Check your token and try again.';
+      btn.textContent = 'Connect';
       btn.disabled = false;
     }
   }
 
   function showQR() {
     showScreen('screen-qr');
-    const url = `https://terribletavern.com/finder?tavern=1&bin=${config.binId}`;
     const qrEl = document.getElementById('qr-code');
     qrEl.innerHTML = '';
     new QRCode(qrEl, {
-      text: url,
+      text: TAVERN_URL,
       width: 240,
       height: 240,
       colorDark: '#1A1A1A',
@@ -160,17 +183,23 @@ const adminApp = (() => {
     btn.textContent = 'Publishing…';
     btn.disabled = true;
     try {
-      const res = await fetch(`${JSONBIN}/b/${config.binId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Master-Key': config.masterKey
-        },
-        body: JSON.stringify({ items: [...tonight] })
-      });
-      if (!res.ok) throw new Error();
-      btn.textContent = '✓ Published!';
-      setTimeout(() => { btn.textContent = 'Publish Tonight\'s Bar'; btn.disabled = false; }, 2500);
+      const content = { items: [...tonight] };
+      const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2))));
+      const sha = await getFileSha();
+      const body = {
+        message: 'Update tavern inventory',
+        content: encoded,
+        branch: BRANCH
+      };
+      if (sha) body.sha = sha;
+
+      const r = await fetch(
+        `${GITHUB_API}/repos/${REPO}/contents/${FILE_PATH}`,
+        { method: 'PUT', headers: ghHeaders(), body: JSON.stringify(body) }
+      );
+      if (!r.ok) throw new Error();
+      btn.textContent = '✓ Published! Live in ~1 min';
+      setTimeout(() => { btn.textContent = 'Publish Tonight\'s Bar'; btn.disabled = false; }, 3000);
     } catch(e) {
       btn.textContent = 'Failed — try again';
       btn.disabled = false;
@@ -184,13 +213,13 @@ const adminApp = (() => {
   }
 
   function resetSetup() {
-    if (!confirm('This will disconnect this device. The QR code will stop working until you reconnect. Continue?')) return;
+    if (!confirm('This will disconnect this device from admin. Continue?')) return;
     localStorage.removeItem(STORAGE);
     config = {};
     tonight = new Set();
     document.getElementById('api-key-input').value = '';
     document.getElementById('setup-error').textContent = '';
-    document.getElementById('connect-btn').textContent = 'Connect & Create';
+    document.getElementById('connect-btn').textContent = 'Connect';
     document.getElementById('connect-btn').disabled = false;
     showScreen('screen-setup');
   }
