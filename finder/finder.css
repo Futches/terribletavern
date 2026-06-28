@@ -81,14 +81,33 @@
   line-height: 1.5;
 }
 
-/* Header text link for finder page */
+/* Finder header */
+.finder-page .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: #111;
+  border-bottom: 1px solid rgba(245,230,211,0.08);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.finder-page .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 .finder-page .logo-link {
   font-family: 'Cinzel', serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-rust);
   text-decoration: none;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 /* Finder page layout */

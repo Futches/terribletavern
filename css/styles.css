@@ -686,7 +686,7 @@ footer {
 
 @media (max-width: 768px) {
     :root {
-        --header-height: 60px;
+        --header-height: 44px;
     }
 
     .nav-toggle {
