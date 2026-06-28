@@ -37,12 +37,17 @@ const finder = (() => {
   let substitutions = {};
   let barIngredients = {};
   let myBar = new Set();
+  let tavernMode = false;
   let state = { mood: null, spirit: null, sequence: null, pendingStart: false };
   let results = [];
   let resultIndex = 0;
   let history = [];
 
   async function loadData() {
+    const params = new URLSearchParams(window.location.search);
+    const binId = params.get('bin');
+    tavernMode = params.has('tavern') && !!binId;
+
     const [cRes, sRes, bRes] = await Promise.all([
       fetch('../data/cocktails.json'),
       fetch('../data/substitutions.json'),
@@ -51,16 +56,32 @@ const finder = (() => {
     cocktails = await cRes.json();
     substitutions = await sRes.json();
     barIngredients = await bRes.json();
-    myBar = new Set(JSON.parse(localStorage.getItem('terribleTavernBar') || '[]'));
+
+    if (tavernMode) {
+      try {
+        const r = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`);
+        const d = await r.json();
+        myBar = new Set(d.record || []);
+        const banner = document.getElementById('tavern-banner');
+        if (banner) banner.style.display = 'block';
+      } catch(e) {
+        tavernMode = false;
+        myBar = new Set(JSON.parse(localStorage.getItem('terribleTavernBar') || '[]'));
+      }
+    } else {
+      myBar = new Set(JSON.parse(localStorage.getItem('terribleTavernBar') || '[]'));
+    }
     updateMyBarLabel();
   }
 
   function updateMyBarLabel() {
     const label = document.getElementById('my-bar-label');
     if (!label) return;
-    label.textContent = myBar.size > 0
-      ? `My Bar (${myBar.size} items)`
-      : 'Set Up My Bar';
+    if (tavernMode) {
+      label.textContent = `🍸 Tonight's Bar (${myBar.size} items)`;
+    } else {
+      label.textContent = myBar.size > 0 ? `My Bar (${myBar.size} items)` : 'Set Up My Bar';
+    }
   }
 
   // Check if a drink ingredient string matches a bar item's keywords
@@ -253,6 +274,12 @@ const finder = (() => {
       loadData().then(() => openMyBar()).catch(console.error);
       return;
     }
+    // In tavern mode show read-only view — hide save/clear actions
+    document.querySelector('.mybar-actions').style.display = tavernMode ? 'none' : '';
+    document.getElementById('mybar-back-btn').style.display = tavernMode ? 'block' : '';
+    const header = document.querySelector('#step-mybar .finder-question');
+    if (header) header.textContent = tavernMode ? 'Tonight at Terrible Tavern' : 'My Bar';
+
     const container = document.getElementById('mybar-categories');
     container.innerHTML = '';
 
@@ -371,7 +398,7 @@ const finder = (() => {
   }
 
   function start() {
-    if (myBar.size === 0) {
+    if (myBar.size === 0 && !tavernMode) {
       state.pendingStart = true;
       showStep('step-barcheck');
       return;

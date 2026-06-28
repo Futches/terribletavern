@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Bar Admin — Terrible Tavern</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <header class="admin-header">
+    <img src="../images/Logo.png" alt="Terrible Tavern" class="admin-logo">
+  </header>
+
+  <main class="admin-main">
+    <div class="admin-container">
+
+      <!-- Setup screen -->
+      <div class="admin-screen" id="screen-setup">
+        <h1 class="admin-title">Bar Admin Setup</h1>
+        <p class="admin-subtitle">One-time setup to connect your live inventory. You'll need a free account at <strong>jsonbin.io</strong>.</p>
+        <ol class="setup-steps">
+          <li>Sign up at jsonbin.io (free)</li>
+          <li>Go to your dashboard and copy your <strong>Master Key</strong></li>
+          <li>Paste it below and tap Connect</li>
+        </ol>
+        <input type="password" id="api-key-input" class="admin-input" placeholder="Your JSONbin Master Key" autocomplete="off">
+        <button class="admin-btn primary" id="connect-btn" onclick="adminApp.connect()">Connect & Create</button>
+        <p class="admin-error" id="setup-error"></p>
+      </div>
+
+      <!-- QR Code screen -->
+      <div class="admin-screen hidden" id="screen-qr">
+        <h2 class="admin-title">Your QR Code</h2>
+        <p class="admin-subtitle">Display this at the Tavern. Guests scan it to see tonight's live inventory.</p>
+        <div id="qr-code"></div>
+        <p class="qr-hint">Screenshot this and display it on your phone, or print it.</p>
+        <button class="admin-btn primary" onclick="adminApp.showAdmin()">Update Tonight's Bar →</button>
+        <button class="admin-btn ghost" onclick="adminApp.resetSetup()">Reset Setup</button>
+      </div>
+
+      <!-- Admin (chip UI) screen -->
+      <div class="admin-screen hidden" id="screen-admin">
+        <div class="admin-header-row">
+          <h2 class="admin-title">Tonight's Bar</h2>
+          <span class="admin-count" id="admin-count"></span>
+        </div>
+        <p class="admin-subtitle">Check what's in stock. Tap Publish when ready.</p>
+        <div class="admin-tier-selector" id="admin-tier-selector"></div>
+        <div id="admin-chip-area"></div>
+        <div class="admin-actions">
+          <button class="admin-btn primary" id="publish-btn" onclick="adminApp.publish()">Publish Tonight's Bar</button>
+          <button class="admin-btn secondary" onclick="adminApp.showQR()">View QR Code</button>
+          <button class="admin-btn ghost" onclick="adminApp.clearAll()">Clear All</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
