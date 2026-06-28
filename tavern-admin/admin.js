@@ -459,6 +459,17 @@ const adminApp = (() => {
     updateCount();
   }
 
+  function copyToken() {
+    const token = config.token;
+    if (!token) return;
+    navigator.clipboard.writeText(token).then(() => {
+      const btn = document.getElementById('copy-token-btn');
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => { btn.textContent = orig; }, 2000);
+    });
+  }
+
   function resetSetup() {
     if (!confirm('This will disconnect this device from admin. Continue?')) return;
     localStorage.removeItem(STORAGE);
@@ -473,5 +484,5 @@ const adminApp = (() => {
 
   init().catch(console.error);
 
-  return { connect, showQR, showAdmin, publish, clearAll, resetSetup };
+  return { connect, showQR, showAdmin, publish, clearAll, resetSetup, copyToken };
 })();
