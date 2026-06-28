@@ -27,8 +27,11 @@
       <div class="finder-step active" id="step-welcome">
         <h1 class="finder-title">Find Your Drink</h1>
         <p class="finder-subtitle">Answer three questions and we'll find the perfect cocktail for right now.</p>
-        <button class="finder-btn primary" onclick="finder.start()">Let's Go</button>
-        <button class="finder-btn secondary" style="margin-top:12px;" onclick="finder.openSearch()">Search by Name</button>
+        <div class="welcome-main-btns">
+          <button class="finder-btn primary" onclick="finder.start()">Let's Go</button>
+          <button class="finder-btn secondary" onclick="finder.openSearch()">Search by Name</button>
+        </div>
+        <div class="welcome-spacer"></div>
         <div class="my-bar-divider"></div>
         <button class="finder-btn secondary" onclick="finder.openMyBar()">
           <span id="my-bar-label">Set Up My Bar</span>
