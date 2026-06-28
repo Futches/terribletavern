@@ -263,8 +263,25 @@ body {
   position: absolute;
   top: calc(100% + 4px);
   left: 0; right: 0;
-  z-index: 50;
+  background: #222;
+  border: 1px solid rgba(245,230,211,0.15);
+  border-radius: 8px;
+  list-style: none;
+  margin: 0; padding: 4px 0;
+  z-index: 200;
+  max-height: 220px;
+  overflow-y: auto;
 }
+.custom-sugg-list:empty { display: none; }
+.custom-sugg-list li {
+  padding: 10px 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  color: var(--color-cream);
+  cursor: pointer;
+  list-style: none;
+}
+.custom-sugg-list li:hover { background: rgba(245,230,211,0.08); }
 .custom-add-select {
   flex: 1; min-width: 140px; padding: 10px 14px;
   background: rgba(245,230,211,0.06); border: 1px solid rgba(245,230,211,0.18);
