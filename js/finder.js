@@ -67,14 +67,17 @@ const finder = (() => {
   function ingredientInBar(ingStr) {
     if (myBar.size === 0) return true;
     const lower = ingStr.toLowerCase();
-    for (const tier of Object.values(barIngredients)) {
-      for (const items of Object.values(tier.categories)) {
-        for (const item of items) {
-          if (!myBar.has(item.name)) continue;
-          if (item.match.some(kw => lower.includes(kw))) return true;
+    try {
+      for (const tier of Object.values(barIngredients)) {
+        if (!tier.categories) continue;
+        for (const items of Object.values(tier.categories)) {
+          for (const item of items) {
+            if (!myBar.has(item.name)) continue;
+            if (item.match.some(kw => lower.includes(kw))) return true;
+          }
         }
       }
-    }
+    } catch(e) { return true; }
     return false;
   }
 
@@ -246,6 +249,10 @@ const finder = (() => {
   // ── My Bar ──────────────────────────────────────────────────────────────
 
   function openMyBar() {
+    if (!barIngredients || !barIngredients['Essentials']) {
+      alert('Still loading — please try again in a moment.');
+      return;
+    }
     const container = document.getElementById('mybar-categories');
     container.innerHTML = '';
 
