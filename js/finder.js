@@ -196,7 +196,8 @@ const finder = (() => {
   function lookupSub(ingredient) {
     const lower = ingredient.toLowerCase().replace(/^\d[\d./ ]*oz\s*/i, '').replace(/fresh\s+/i, '').trim();
     for (const key of Object.keys(substitutions)) {
-      if (lower.includes(key)) return substitutions[key];
+      const re = new RegExp(`(?<![a-z])${key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![a-z])`, 'i');
+      if (re.test(lower)) return substitutions[key];
     }
     return null;
   }
