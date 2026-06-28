@@ -141,6 +141,83 @@ const adminApp = (() => {
     renderTierSelector();
     renderChipArea();
     updateCount();
+    setupSearch();
+  }
+
+  function setupSearch() {
+    const input = document.getElementById('admin-search');
+    const resultsEl = document.getElementById('admin-search-results');
+    if (!input) return;
+    input.value = '';
+
+    // Build flat item index across all tiers
+    const searchIndex = [];
+    TIER_ORDER.forEach((tierName, t) => {
+      const tier = barIngredients[tierName];
+      if (!tier) return;
+      Object.values(tier.categories).forEach(items => {
+        items.forEach(item => searchIndex.push({ name: item.name, tier: t }));
+      });
+    });
+
+    function scrollToChip(name, tierIndex) {
+      if (activeTier < tierIndex) {
+        activeTier = tierIndex;
+        document.querySelectorAll('.admin-tier-btn').forEach((b, j) => b.classList.toggle('active', j === tierIndex));
+        renderChipArea();
+      }
+      const chip = Array.from(document.querySelectorAll('#admin-chip-area .mybar-chip'))
+        .find(c => c.textContent.trim() === name);
+      if (chip) {
+        chip.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        chip.classList.add('admin-chip-highlight');
+        setTimeout(() => chip.classList.remove('admin-chip-highlight'), 1400);
+      }
+    }
+
+    function scrollToCustomAdd() {
+      const addInput = document.querySelector('#admin-custom-section .custom-add-input');
+      if (addInput) {
+        addInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => addInput.focus(), 350);
+      }
+    }
+
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      resultsEl.innerHTML = '';
+      if (!q) return;
+      const matches = searchIndex.filter(i => i.name.toLowerCase().includes(q)).slice(0, 8);
+      if (matches.length === 0) {
+        const li = document.createElement('li');
+        li.className = 'admin-search-result no-match';
+        li.textContent = 'No match — tap to add as custom item';
+        li.addEventListener('mousedown', () => {
+          const addInput = document.querySelector('#admin-custom-section .custom-add-input');
+          if (addInput) addInput.value = input.value.trim();
+          resultsEl.innerHTML = '';
+          input.value = '';
+          scrollToCustomAdd();
+        });
+        resultsEl.appendChild(li);
+      } else {
+        matches.forEach(item => {
+          const li = document.createElement('li');
+          li.className = 'admin-search-result';
+          li.textContent = item.name;
+          li.addEventListener('mousedown', () => {
+            resultsEl.innerHTML = '';
+            input.value = '';
+            scrollToChip(item.name, item.tier);
+          });
+          resultsEl.appendChild(li);
+        });
+      }
+    });
+
+    input.addEventListener('blur', () => {
+      setTimeout(() => { resultsEl.innerHTML = ''; }, 150);
+    });
   }
 
   function renderTierSelector() {

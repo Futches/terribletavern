@@ -47,9 +47,15 @@
 
       <!-- Admin (chip UI) screen -->
       <div class="admin-screen hidden" id="screen-admin">
-        <div class="admin-header-row">
-          <h2 class="admin-title">Tonight's Bar</h2>
-          <span class="admin-count" id="admin-count"></span>
+        <div class="admin-sticky-header">
+          <div class="admin-header-row">
+            <h2 class="admin-title">Tonight's Bar</h2>
+            <span class="admin-count" id="admin-count"></span>
+          </div>
+          <div class="admin-search-wrap">
+            <input type="text" id="admin-search" class="admin-search-input" placeholder="Search ingredients…" autocomplete="off" autocorrect="off" spellcheck="false">
+            <ul id="admin-search-results" class="admin-search-results"></ul>
+          </div>
         </div>
         <p class="admin-subtitle">Check what's in stock. Tap Publish when ready — live in about a minute.</p>
         <div class="admin-tier-selector" id="admin-tier-selector"></div>
