@@ -161,9 +161,9 @@ const finder = (() => {
     const attempts = [
       () => filterWith(state.mood, state.spirit, state.sequence, true),
       () => filterWith(state.mood, state.spirit, null,           true),
-      () => filterWith(state.mood, null,          null,           true),
       () => filterWith(state.mood, state.spirit, state.sequence, false),
       () => filterWith(state.mood, state.spirit, null,           false),
+      () => filterWith(null,       state.spirit, null,           false),
       () => filterWith(state.mood, null,          null,           false),
       () => filterWith(null,       null,          null,           false),
     ];
