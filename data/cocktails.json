@@ -17,7 +17,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Agave You a Chance",
@@ -33,7 +34,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "All Shook Up",
@@ -53,7 +55,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "American Gothic",
@@ -73,7 +76,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "American Trilogy",
@@ -93,7 +97,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Apple Cider Sour",
@@ -113,7 +118,8 @@
       "Tailgating"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Apple Thief",
@@ -129,7 +135,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Arlo Old Fashioned",
@@ -149,7 +156,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Autumn Old Fashioned",
@@ -169,7 +177,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Bacon Washed Bourbon",
@@ -190,7 +199,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Bee-Stung",
@@ -209,7 +219,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Berry Smash",
@@ -229,7 +240,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Better Days",
@@ -249,7 +261,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Billionaire",
@@ -258,7 +271,7 @@
     "ingredients": "2 oz Baker's bourbon, 0.75 oz lemon, 0.5 oz sugar, rinse absinthe, 0.5 oz grenadine",
     "method": "Shake and strain",
     "glass": "Coupe",
-    "notes": "W+C Fields",
+    "notes": "",
     "season": "All-Season",
     "sequence": "First Round",
     "moods": [
@@ -267,7 +280,8 @@
       "Tailgating"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "W+C Fields"
   },
   {
     "name": "Bitter Sling",
@@ -287,7 +301,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Black & Clear Blue",
@@ -303,7 +318,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Black Chocolate Manhattan",
@@ -322,7 +338,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Blackberry Sage Smash",
@@ -342,7 +359,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Blistered in the Sun",
@@ -358,7 +376,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Blood and Sand",
@@ -367,7 +386,7 @@
     "ingredients": "0.75 oz Black Grouse Scotch, 0.75 oz sweet vermouth, 0.75 oz orange juice, 0.75 oz cherry liqueur",
     "method": "Shake with ice, strain into chilled coupe",
     "glass": "Coupe",
-    "notes": "Red Phone Booth",
+    "notes": "",
     "season": "All-Season",
     "sequence": "First Round",
     "moods": [
@@ -376,7 +395,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Red Phone Booth"
   },
   {
     "name": "Blue Moon",
@@ -395,7 +415,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Blueberry Smash",
@@ -415,7 +436,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Boulevardier",
@@ -435,7 +457,8 @@
       "Venting"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Bourbon Allspice Sour",
@@ -453,7 +476,8 @@
       "Tailgating"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bourbon Cider Punch",
@@ -473,7 +497,8 @@
       "Tailgating"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bourbon For Breakfast",
@@ -490,7 +515,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Brunch",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Bramblin' Man",
@@ -507,7 +533,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Brooklyn Haze",
@@ -528,7 +555,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Brown Derby",
@@ -549,7 +577,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Brown Derby Cocktail",
@@ -570,7 +599,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bulleit Lion's Tail",
@@ -589,7 +619,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Butter Me Up",
@@ -606,7 +637,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Cablegram",
@@ -626,7 +658,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Call Me Nutty",
@@ -645,7 +678,8 @@
       "Venting"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Cardigan",
@@ -665,7 +699,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Chocolate Cherry Sour",
@@ -682,7 +717,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Chunky Knit Sweater",
@@ -699,7 +735,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Church Hill Toddy",
@@ -718,7 +755,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Classical Score",
@@ -738,7 +776,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Cleared Orchard",
@@ -754,7 +793,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Cold Fashioned",
@@ -775,7 +815,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Colonel Bolivar",
@@ -791,7 +832,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cookie Sour",
@@ -808,7 +850,8 @@
       "Dessert"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Dr. Peaches",
@@ -828,7 +871,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "F&G Tonic",
@@ -846,7 +890,8 @@
       "Venting"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Fair Weather Phoenix",
@@ -865,7 +910,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Fall in Vermont",
@@ -886,7 +932,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Foliage Fashion",
@@ -907,7 +954,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Frostbitten",
@@ -926,7 +974,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Funky Chicken",
@@ -945,7 +994,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Gentleman's Agreement",
@@ -965,7 +1015,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Gentleman's Blush",
@@ -983,7 +1034,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Gold Bar",
@@ -1003,7 +1055,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Gold Rush",
@@ -1023,7 +1076,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Good Neighbor",
@@ -1043,7 +1097,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Good Ol' Boy",
@@ -1062,7 +1117,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Herbaceous Jack",
@@ -1078,7 +1134,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Heritage Manhattan",
@@ -1097,7 +1154,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Hickory Noir",
@@ -1118,7 +1176,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Highwayman",
@@ -1127,7 +1186,7 @@
     "ingredients": "1.5 oz Bulleit Bourbon Whiskey, 0.5 oz Walnut Syrup, 1 oz Sherry Amontillado, 0.5 oz Pandan, 0.75 oz Bulleit Bourbon Whiskey, 0.5 oz Maple Syrup, 0.5 oz Praline, 0.5 oz Wafer Carbonaday, 1 oz Sherry Amontillado, 2 dashes Chocolate Bitters",
     "method": "",
     "glass": "Rocks glass",
-    "notes": "65 PLN",
+    "notes": "",
     "season": "Fall",
     "sequence": "Nightcap",
     "moods": [
@@ -1138,7 +1197,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "65 PLN"
   },
   {
     "name": "Honey Butter Old Fashioned",
@@ -1158,7 +1218,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Hot Monkey Business",
@@ -1174,7 +1235,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Hot N' Buttered",
@@ -1194,7 +1256,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Ichiego-Ichie",
@@ -1203,14 +1266,15 @@
     "ingredients": "Chivas 12 YO Whisky, Ardbeg 10 YO Whisky, Banana Liqueur, Pineapple, Passion Fruit, Yuzu Citrus, Egg White, Sesame Aroma",
     "method": "",
     "glass": "Coupe",
-    "notes": "60 PLN",
+    "notes": "",
     "season": "All-Season",
     "sequence": "First Round",
     "moods": [
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "60 PLN"
   },
   {
     "name": "In The Mood",
@@ -1219,7 +1283,7 @@
     "ingredients": "2 oz Bourbon, 0.5 oz maple syrup, 0.75 oz lemon, 0.5 oz allspice, 3-4 rosemary leaves, cinnamon, 2 dashes Angostura bitters",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Fall",
     "sequence": "Any Time",
     "moods": [
@@ -1229,7 +1293,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "Industry",
@@ -1245,7 +1310,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Kentucky Calypso",
@@ -1263,7 +1329,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Kentucky Heat",
@@ -1282,7 +1349,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Kentucky Resolution",
@@ -1291,7 +1359,7 @@
     "ingredients": "2 oz Jefferson's bourbon, 0.75 oz lemon, 3-4 thyme leaves, 0.5 oz Aviary",
     "method": "Shake and strain over ice",
     "glass": "Rocks glass",
-    "notes": "W+C Fields seasonal",
+    "notes": "",
     "season": "Spring",
     "sequence": "First Round",
     "moods": [
@@ -1301,7 +1369,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "W+C Fields seasonal"
   },
   {
     "name": "Knock on Wood",
@@ -1320,7 +1389,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Kotoba",
@@ -1329,14 +1399,15 @@
     "ingredients": "1.5 oz Whisky, 0.5 oz chartreuse, 0.25 oz maraschino, 0.75 oz lime",
     "method": "Stir with ice, strain",
     "glass": "Coupe or Jack & Jill",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Any Time",
     "moods": [
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "LV Blvd",
@@ -1355,7 +1426,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "La Louisiane",
@@ -1375,7 +1447,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Late Summer Bonfire",
@@ -1394,7 +1467,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Life During Wartime",
@@ -1414,7 +1488,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Lion's Tail",
@@ -1430,7 +1505,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lions Tale",
@@ -1447,7 +1523,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Litchfield Pear Moscow Mule",
@@ -1466,7 +1543,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Litchfield Whiskey Smash",
@@ -1486,7 +1564,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Looking Glass",
@@ -1502,7 +1581,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "MP Town Branch Fall Cider",
@@ -1511,7 +1591,7 @@
     "ingredients": "2 oz Town Branch Bourbon, 0.5 oz St. Elizabeth allspice dram, 0.5 oz Vermont maple syrup, 0.75 oz fresh lemon juice, 1 oz local apple cider, cinnamon sugar rim, cinnamon stick",
     "method": "Shake with ice, strain over ice; cinnamon sugar rim",
     "glass": "Rocks glass",
-    "notes": "Market Kitchen",
+    "notes": "",
     "season": "Fall",
     "sequence": "First Round",
     "moods": [
@@ -1521,7 +1601,8 @@
       "Tailgating"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Market Kitchen"
   },
   {
     "name": "Madamoiselle",
@@ -1539,7 +1620,8 @@
       "Venting"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Manhattan",
@@ -1548,7 +1630,7 @@
     "ingredients": "2 oz Rittenhouse rye, 1 oz sweet vermouth, 2 dashes Angostura bitters, cherry",
     "method": "Stir with ice, strain into chilled glass",
     "glass": "Coupe or Jack & Jill",
-    "notes": "W+C Fields",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Nightcap",
     "moods": [
@@ -1560,7 +1642,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": "W+C Fields"
   },
   {
     "name": "Maple Michter's Old Fashioned",
@@ -1582,7 +1665,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Maple Old Fashioned",
@@ -1603,7 +1687,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Mint Condition",
@@ -1622,7 +1707,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Miss Scarlett's Sour",
@@ -1631,7 +1717,7 @@
     "ingredients": "2 oz Michter's Small Batch Bourbon, 0.5 oz Vedrenne Pamplemousse Liqueur, 0.5 oz ginger simple syrup, 0.75 oz lemon juice",
     "method": "Shake with ice, strain into chilled glass",
     "glass": "Coupe",
-    "notes": "Batch cocktail menu",
+    "notes": "",
     "season": "Spring",
     "sequence": "First Round",
     "moods": [
@@ -1640,7 +1726,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Batch cocktail menu"
   },
   {
     "name": "Modified Whiskey Sour",
@@ -1649,7 +1736,7 @@
     "ingredients": "2 oz Whiskey, 0.75 oz lemon juice, 0.5 oz simple syrup, 1 oz egg white foam, 2 dashes bitters",
     "method": "Dry shake egg white; add whiskey, lemon, syrup; shake with ice; double strain",
     "glass": "Coupe",
-    "notes": "Red Phone Booth",
+    "notes": "",
     "season": "All-Season",
     "sequence": "First Round",
     "moods": [
@@ -1657,7 +1744,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Red Phone Booth"
   },
   {
     "name": "Moongold",
@@ -1677,7 +1765,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Movin' On Up",
@@ -1696,7 +1785,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "NY Whiskey Sour",
@@ -1713,7 +1803,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Nagano Mule",
@@ -1731,7 +1822,8 @@
       "Tailgating"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Never Say No",
@@ -1751,7 +1843,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "New Boot Goofin'",
@@ -1772,7 +1865,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "No Mustache",
@@ -1788,7 +1882,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "No. 7",
@@ -1807,7 +1902,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ol' Signalman",
@@ -1826,7 +1922,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Old Fashioned",
@@ -1835,7 +1932,7 @@
     "ingredients": "2 oz Knob Creek bourbon, 0.5 oz muddled sugar, lemon twist",
     "method": "Muddle sugar, add bourbon and ice, stir",
     "glass": "Rocks glass",
-    "notes": "W+C Fields",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Any Time",
     "moods": [
@@ -1844,7 +1941,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": "W+C Fields"
   },
   {
     "name": "Over and Out",
@@ -1860,7 +1958,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Paper Glider",
@@ -1879,7 +1978,8 @@
       "Venting"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Paper Plane",
@@ -1898,7 +1998,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Patriots + Tyrants",
@@ -1907,7 +2008,7 @@
     "ingredients": "2 oz Jefferson's bourbon, 0.5 oz sweet vermouth, 2 dashes Breckenridge bitters, 0.5 oz orange",
     "method": "Stir with ice, strain",
     "glass": "Coupe",
-    "notes": "W+C Fields",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Nightcap",
     "moods": [
@@ -1918,7 +2019,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "W+C Fields"
   },
   {
     "name": "Pear Highball",
@@ -1934,7 +2036,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Pendleton",
@@ -1950,7 +2053,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pine Basil Sour",
@@ -1968,7 +2072,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Plummet Boulevard",
@@ -1987,7 +2092,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Potent Potables",
@@ -1996,7 +2102,7 @@
     "ingredients": "2 oz Japanese whiskey, 0.5 oz foro, cinnamon, 0.75 oz yuzu, 3-4 smoked pineapple",
     "method": "Stir or shake with ice, strain over large ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Winter",
     "sequence": "Nightcap",
     "moods": [
@@ -2008,7 +2114,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "Red Hook",
@@ -2027,7 +2134,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Red Hot Manhattan",
@@ -2046,7 +2154,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Red Sky at Night",
@@ -2066,7 +2175,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Regal Royale",
@@ -2085,7 +2195,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "River Driver (DFT)",
@@ -2106,7 +2217,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Roadhouse Lemonade",
@@ -2126,7 +2238,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Root Down",
@@ -2135,14 +2248,15 @@
     "ingredients": "2 oz Bourbon, 0.5 oz Pierre Ferrand dry curaçao, 1 oz beet juice, 0.75 oz fresh lemon, 0.5 oz star anise, 3-4 rosemary leaves",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "ZO Restaurant",
+    "notes": "",
     "season": "Fall",
     "sequence": "First Round",
     "moods": [
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "ZO Restaurant"
   },
   {
     "name": "Rue Royale",
@@ -2163,7 +2277,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Santa Slide",
@@ -2183,7 +2298,8 @@
       "Venting"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Sapling Sazerac",
@@ -2204,7 +2320,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Sazerac",
@@ -2225,7 +2342,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Seeking Redemption",
@@ -2242,7 +2360,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Serenity",
@@ -2251,7 +2370,7 @@
     "ingredients": "1.5 oz Bourbon, 0.75 oz coconut rum, 0.75 oz lime juice, cinnamon syrup, 0.75 oz orange juice, 2 dashes Angostura bitters",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Indigo, Turks & Caicos",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -2261,7 +2380,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Indigo, Turks & Caicos"
   },
   {
     "name": "Shakedown Fashion",
@@ -2282,7 +2402,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Shayne's Old Fashioned",
@@ -2301,7 +2422,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Shut It Down",
@@ -2321,7 +2443,8 @@
       "Venting"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Smashed",
@@ -2341,7 +2464,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Smoked Old Fashioned",
@@ -2362,7 +2486,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Smoked Rob Roy",
@@ -2383,7 +2508,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Smoky Nor'easter",
@@ -2403,7 +2529,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Smooth Operator",
@@ -2423,7 +2550,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Snowball Old-Fashioned",
@@ -2443,7 +2571,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Sons of Monarchy",
@@ -2461,7 +2590,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Soul Stoned",
@@ -2470,7 +2600,7 @@
     "ingredients": "2 oz Bourbon, 0.5 oz peach, 0.75 oz lemon, 0.5 oz Caramaro, cinnamon, 2 dashes Angostura bitters",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -2481,7 +2611,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "Spiced Pear Bourbon Cocktail",
@@ -2501,7 +2632,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Spiced Pear Bourbon Smash",
@@ -2510,7 +2642,7 @@
     "ingredients": "Litchfield Distillery Cinnamon Bourbon, 0.5 oz elderflower liqueur, 0.5 oz pear purée, 0.75 oz lemon juice, 0.5 oz simple syrup",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Market Kitchen",
+    "notes": "",
     "season": "Fall",
     "sequence": "First Round",
     "moods": [
@@ -2521,7 +2653,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Market Kitchen"
   },
   {
     "name": "Stocking Stuffer",
@@ -2541,7 +2674,8 @@
       "Venting"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Strange Bedfellows",
@@ -2560,7 +2694,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Straw Man",
@@ -2576,7 +2711,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Strength of Ten",
@@ -2596,7 +2732,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Suntory Time",
@@ -2615,7 +2752,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Tall + Oats",
@@ -2634,7 +2772,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Terrible Cider",
@@ -2654,7 +2793,8 @@
       "Tailgating"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Terrible Manhattan",
@@ -2677,7 +2817,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Terrible Old Fashioned",
@@ -2699,7 +2840,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Thai One On",
@@ -2715,7 +2857,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Batcher's Sour",
@@ -2732,7 +2875,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Elixr",
@@ -2750,7 +2894,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Gentle Scotch Man",
@@ -2766,7 +2911,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Gentlemen's Agreement",
@@ -2785,7 +2931,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Good Lion",
@@ -2801,7 +2948,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Humbug",
@@ -2817,7 +2965,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Irish",
@@ -2836,7 +2985,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Kentucky Pumpkin",
@@ -2856,7 +3006,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Litchfield Honey-Li",
@@ -2874,7 +3025,8 @@
       "Tailgating"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The McKenzie",
@@ -2893,7 +3045,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The North Star Toddy",
@@ -2912,7 +3065,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "The Sophisticate",
@@ -2932,7 +3086,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Weston Manhattan",
@@ -2953,7 +3108,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "They/Them Apples",
@@ -2973,7 +3129,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Thyme Glider",
@@ -2989,7 +3146,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Uncommon Cargo",
@@ -3008,7 +3166,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Unlikey Duo",
@@ -3027,7 +3186,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Upside Down Pineapple",
@@ -3046,7 +3206,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Victory Lap",
@@ -3065,7 +3226,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "W+C Sazerac",
@@ -3074,7 +3236,7 @@
     "ingredients": "2 oz Redemption rye, rinse absinthe, 2 dashes Peychaud's, 0.25 oz sugar",
     "method": "Rinse glass with absinthe, stir rye with sugar and bitters, strain",
     "glass": "Rocks glass",
-    "notes": "W+C Fields",
+    "notes": "",
     "season": "Winter",
     "sequence": "Nightcap",
     "moods": [
@@ -3086,7 +3248,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": "W+C Fields"
   },
   {
     "name": "Wake Up Call",
@@ -3095,7 +3258,7 @@
     "ingredients": "1.5 oz Jack Daniel's Rye Whiskey, 0.75 oz ginger, 0.5 oz passionfruit, 1 oz Pedro Jimenez sherry, 0.75 oz lemon, top with club soda",
     "method": "Shake spirits and juices, strain over ice, top with club soda",
     "glass": "Highball glass",
-    "notes": "ALB Hour menu",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3106,7 +3269,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "ALB Hour menu"
   },
   {
     "name": "Walking in the Clouds",
@@ -3125,7 +3289,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Wayne's Old Fashioned",
@@ -3134,7 +3299,7 @@
     "ingredients": "2 oz Bourbon, 0.5 oz sizzurp (flavored simple syrup), 2 dashes orange bitters",
     "method": "Stir over ice in rocks glass",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Any Time",
     "moods": [
@@ -3142,7 +3307,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "Where There's Smoke",
@@ -3161,7 +3327,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Whiskey Business",
@@ -3170,7 +3337,7 @@
     "ingredients": "2 oz High West Campfire whiskey, 0.5 oz burnt orange Campari, 3-4 tarragon infused Spanish vermouth leaves",
     "method": "Stir with ice, strain",
     "glass": "Rocks glass or Coupe",
-    "notes": "Dranks",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Nightcap",
     "moods": [
@@ -3180,7 +3347,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "White Mustache",
@@ -3196,7 +3364,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Why Not",
@@ -3213,7 +3382,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Winter is Coming",
@@ -3233,7 +3403,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Woo-Tang Sour",
@@ -3249,7 +3420,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "'Tis the Season",
@@ -3269,7 +3441,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "19th on Fab",
@@ -3288,7 +3461,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "36 Mezcal",
@@ -3306,7 +3480,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Agave on Fire",
@@ -3315,7 +3490,7 @@
     "ingredients": "2 oz Lunazul El Humoso, 0.5 oz agave nectar, 0.75 oz lime juice, 3-4 muddled jalapeño, 2 dashes smoked chili bitters",
     "method": "Muddle jalapeño, add spirits and juices, shake with ice, strain",
     "glass": "Rocks glass",
-    "notes": "Batch cocktail menu",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3326,7 +3501,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Batch cocktail menu"
   },
   {
     "name": "Airstreamer",
@@ -3335,7 +3511,7 @@
     "ingredients": "2 oz Tequila, 3-4 mango, 0.75 oz fresh lime",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Cocovan Airstream Lounge",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3346,7 +3522,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Cocovan Airstream Lounge"
   },
   {
     "name": "Altos Paloma",
@@ -3366,7 +3543,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Amante Picante",
@@ -3385,7 +3563,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Amazing Grace",
@@ -3405,7 +3584,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ancho Libre",
@@ -3424,7 +3604,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Arlo Margarita",
@@ -3433,7 +3614,7 @@
     "ingredients": "2 oz Del Maguey Vida Mezcal, 0.75 oz grapefruit, 3-4 rosemary leaves, 3-4 habanero, 0.75 oz lime",
     "method": "Shake and strain over ice",
     "glass": "Rocks glass",
-    "notes": "ALB Hour menu",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3443,7 +3624,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "ALB Hour menu"
   },
   {
     "name": "Autumn Light",
@@ -3459,7 +3641,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Barely Notorious",
@@ -3477,7 +3660,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Beet 'Rita",
@@ -3496,7 +3680,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bitter Half",
@@ -3514,7 +3699,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Blood Orange Margarita",
@@ -3534,7 +3720,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Blue Monday",
@@ -3552,7 +3739,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Breakfast Margarita",
@@ -3570,7 +3758,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Burn Notice",
@@ -3588,7 +3777,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Burro Tropical",
@@ -3607,7 +3797,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Butterfly Effect",
@@ -3625,7 +3816,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Calle Elote",
@@ -3634,7 +3826,7 @@
     "ingredients": "2 oz Mezcal, 0.5 oz corn liquor, 0.5 oz Ancho Reyes, 0.5 oz orange, 0.75 oz lime, 0.5 oz agave, 3-4 cilantro leaves",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3643,7 +3835,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "Carlos No. 5",
@@ -3652,7 +3845,7 @@
     "ingredients": "0.5 oz Espolón blanco, 3-4 cucumber, 0.5 oz apple, 0.75 oz lemon, 6-8 mint leaves",
     "method": "Muddle mint and cucumber, shake all with ice, strain",
     "glass": "Rocks glass",
-    "notes": "W+C Fields seasonal",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3663,7 +3856,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "W+C Fields seasonal"
   },
   {
     "name": "Chabelita",
@@ -3683,7 +3877,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Charleston Raccoon",
@@ -3701,7 +3896,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Cider Margarita",
@@ -3719,7 +3915,8 @@
       "Tailgating"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Classic Margarita",
@@ -3739,7 +3936,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Clear Margarita",
@@ -3759,7 +3957,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cold Arbor",
@@ -3777,7 +3976,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Como La Flor",
@@ -3794,7 +3994,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Concrete Tiger",
@@ -3813,7 +4014,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cranberry Margarita",
@@ -3831,7 +4033,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cries in Spanish",
@@ -3850,7 +4053,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Cucumber-Habanero Margarita",
@@ -3869,7 +4073,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Curious Gourd",
@@ -3885,7 +4090,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Deadbeet",
@@ -3894,7 +4100,7 @@
     "ingredients": "2 oz Tequila, 0.5 oz beet-habanero shrub, 0.5 oz orange liqueur, 0.75 oz lime",
     "method": "Shake and strain over ice",
     "glass": "Rocks glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3903,7 +4109,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Devil In A New Dress",
@@ -3912,7 +4119,7 @@
     "ingredients": "2 oz Mezcal, 0.5 oz blood orange, 0.75 oz lemon, 0.5 oz vanilla, 0.5 oz rhubarb amaro, smoked salt",
     "method": "Shake with ice, strain; add smoked salt rim",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3921,7 +4128,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "Dolores",
@@ -3940,7 +4148,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Dr. Feelgood",
@@ -3949,7 +4158,7 @@
     "ingredients": "2 oz Mezcal, 1 oz sherry, 0.5 oz alpine liqueur, 0.5 oz gentian, 0.5 oz avocado, 3-4 cucumber, 3-4 jalapeño, 0.5 oz agave, 0.75 oz lemon",
     "method": "Muddle cucumber and jalapeño; shake all with ice; strain",
     "glass": "Rocks glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -3958,7 +4167,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "El Diablo Swizzle",
@@ -3977,7 +4187,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "El Espresso Martini",
@@ -3995,7 +4206,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Ember",
@@ -4013,7 +4225,8 @@
       "Adventurous"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Energy",
@@ -4022,7 +4235,7 @@
     "ingredients": "Mi Campo Blano tequila, El Dorado 8yr rum Giffard, Madagascar de Vanille, Tempus Fugit crème de cacao, St. George NOLA, cinnamon, Xocolatl mole bitters, espresso",
     "method": "Shake with ice, strain into chilled glass",
     "glass": "Coupe",
-    "notes": "ZO Current Playlist",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -4031,7 +4244,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "ZO Current Playlist"
   },
   {
     "name": "Equinox",
@@ -4049,7 +4263,8 @@
       "Tailgating"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "False Idol",
@@ -4067,7 +4282,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Fiery (Fruity) & Famous",
@@ -4085,7 +4301,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Garden Marg",
@@ -4104,7 +4321,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ghost Margarita",
@@ -4123,7 +4341,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ginger Margarita",
@@ -4143,7 +4362,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Gone Til November",
@@ -4159,7 +4379,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Gordito",
@@ -4177,7 +4398,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Guava Lava",
@@ -4197,7 +4419,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Harvest Paloma",
@@ -4217,7 +4440,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Heat of the Moment",
@@ -4236,7 +4460,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Heatwave",
@@ -4255,7 +4480,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Hipflask Margarita",
@@ -4264,7 +4490,7 @@
     "ingredients": "2 oz El Tequileno Tequila, 0.5 oz Grand Marnier, 0.5 oz Apricot, 0.75 oz Lime Sherbet, 0.5 oz Demerara, 0.75 oz Citrus, 2 dashes Orange Bitters",
     "method": "",
     "glass": "Coupe",
-    "notes": "Alchemist Hipflask to keep",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -4273,7 +4499,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Alchemist Hipflask to keep"
   },
   {
     "name": "Holy Grail",
@@ -4292,7 +4519,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Hot Honey Drop",
@@ -4311,7 +4539,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ice Melts",
@@ -4320,7 +4549,7 @@
     "ingredients": "2 oz Del Maguey Vida mezcal, 0.5 oz Italicus, 3-4 pineapple, 0.75 oz lime, 0.5 oz sumac, 0.5 oz clove",
     "method": "Shake with ice, strain over large ice",
     "glass": "Rocks glass",
-    "notes": "ZO Current Playlist",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -4329,7 +4558,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "ZO Current Playlist"
   },
   {
     "name": "Indian Summer",
@@ -4346,7 +4576,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "It Got Weird Again",
@@ -4355,7 +4586,7 @@
     "ingredients": "2 oz Mezcal, 0.25 oz Fernet, 3-4 pineapple, 0.75 oz lime, top with velvet falernum",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -4364,7 +4595,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "It Got Weird Pt. II",
@@ -4383,7 +4615,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Jack Frost",
@@ -4403,7 +4636,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Jalapeño-Pineapple Margarita",
@@ -4422,7 +4656,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Janie's Cryin'",
@@ -4443,7 +4678,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Juice Is Loose",
@@ -4461,7 +4697,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Koala LaLaLa",
@@ -4477,7 +4714,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "La Violeta",
@@ -4495,7 +4733,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Laguna Salada",
@@ -4515,7 +4754,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Lavender Vida Loca",
@@ -4532,7 +4772,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Look West",
@@ -4550,7 +4791,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Los Muertos",
@@ -4568,7 +4810,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lost Marguerite",
@@ -4586,7 +4829,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lost in Migration",
@@ -4606,7 +4850,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lucha Libre",
@@ -4625,7 +4870,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "M-80",
@@ -4644,7 +4890,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Man Bun Magic",
@@ -4653,7 +4900,7 @@
     "ingredients": "2 oz Tequila, 0.25 oz green chartreuse, 3-4 pineapple, 0.75 oz lime, 0.5 oz agave, 2 dashes tiki bitters",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -4662,7 +4909,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "Maria, Maria",
@@ -4680,7 +4928,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Marygold's Margarita",
@@ -4699,7 +4948,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Master of None",
@@ -4717,7 +4967,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Matthew McConaughey Margarita",
@@ -4736,7 +4987,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Mele Kalikimaka",
@@ -4753,7 +5005,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Mermaid's Garden",
@@ -4770,7 +5023,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Mexican Hot Chocolate",
@@ -4789,7 +5043,8 @@
       "Dessert"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Mexican Pink",
@@ -4807,7 +5062,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Mezcal Old Fashioned",
@@ -4826,7 +5082,8 @@
       "Contemplative"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Mezcal Sun-Risa",
@@ -4844,7 +5101,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Mi Serrana",
@@ -4863,7 +5121,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Mucho Take It Easy",
@@ -4880,7 +5139,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Nacho Beer",
@@ -4898,7 +5158,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Naked & Afraid",
@@ -4916,7 +5177,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Naked & Famous",
@@ -4937,7 +5199,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Numero Tres",
@@ -4956,7 +5219,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Número Tres",
@@ -4975,7 +5239,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Oaxaca Berry Sour",
@@ -4994,7 +5259,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Oaxaca Old Fashioned",
@@ -5010,7 +5276,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Obregon",
@@ -5028,7 +5295,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Otoño",
@@ -5046,7 +5314,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Paid Vacation",
@@ -5064,7 +5333,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Paiko Passion",
@@ -5082,7 +5352,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Paloma",
@@ -5103,7 +5374,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Patron Margarita Reál",
@@ -5123,7 +5395,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pea-Cante",
@@ -5141,7 +5414,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pineapple-Jalapeño Margarita",
@@ -5160,7 +5434,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pink Flamingo",
@@ -5169,7 +5444,7 @@
     "ingredients": "2 oz Tequila Olmeca Altos Plata, 0.5 oz Aperol Aperitif, 0.5 oz Grapefruit Cordial, 0.5 oz Coriander Seeds, 3-4 Rose Pepper, 0.75 oz Lime, Sea Salt, top with Soda",
     "method": "",
     "glass": "Rocks glass",
-    "notes": "60 PLN",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -5180,7 +5455,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "60 PLN"
   },
   {
     "name": "Pistolero",
@@ -5199,7 +5475,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Pop-Sicle",
@@ -5220,7 +5497,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Poquito Picoso",
@@ -5239,7 +5517,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Prickly Pear Margarita",
@@ -5259,7 +5538,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pumpkin Margarita",
@@ -5277,7 +5557,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ramos & Eve",
@@ -5296,7 +5577,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ready, Aim, Fire!",
@@ -5315,7 +5597,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Red Dead Revolver",
@@ -5333,7 +5616,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Red Revolver",
@@ -5351,7 +5635,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ring of Fire",
@@ -5360,7 +5645,7 @@
     "ingredients": "1.5 oz Tequila, 0.5 oz Cointreau, 0.75 oz mezcal, 0.75 oz lime juice, 3-4 jalapeño, 0.5 oz agave syrup, 2 dashes hellfire bitters, salt rim",
     "method": "Shake with ice, strain; salt rim",
     "glass": "Rocks glass",
-    "notes": "Indigo, Turks & Caicos",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -5370,7 +5655,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Indigo, Turks & Caicos"
   },
   {
     "name": "Rosa Paloma",
@@ -5387,7 +5673,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Saber Rattler",
@@ -5405,7 +5692,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Scantily Clad",
@@ -5414,7 +5702,7 @@
     "ingredients": "2 oz Mezcal, 0.5 oz apertivo, 0.5 oz poblano, 1 oz carrot, 0.75 oz lime",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -5423,7 +5711,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Second Summer",
@@ -5440,7 +5729,8 @@
       "Refreshing"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Secret Revenge",
@@ -5456,7 +5746,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "September Light",
@@ -5472,7 +5763,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Serotinal Sun",
@@ -5490,7 +5782,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Seven Margarita",
@@ -5510,7 +5803,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Silver Breeze",
@@ -5530,7 +5824,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Siren's Call",
@@ -5548,7 +5843,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Smoked Corn & Coconut Manhattan",
@@ -5567,7 +5863,8 @@
       "Contemplative"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Smokeshow",
@@ -5585,7 +5882,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Smokey the Bear",
@@ -5603,7 +5901,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Smoky Maria",
@@ -5619,7 +5918,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Sombra Loma",
@@ -5638,7 +5938,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Sonora Margarita",
@@ -5658,7 +5959,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Stealth Margarita",
@@ -5678,7 +5980,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Stone Wall",
@@ -5695,7 +5998,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Strawberry Basil Margarita",
@@ -5715,7 +6019,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Strawberry, Spice & Everything Nice",
@@ -5735,7 +6040,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Sweater Weather",
@@ -5752,7 +6058,8 @@
       "Adventurous"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Sweater Weather Spicy",
@@ -5769,7 +6076,8 @@
       "Adventurous"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "T&T",
@@ -5788,7 +6096,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Tekilla Mule",
@@ -5808,7 +6117,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Tequila Snowbank",
@@ -5826,7 +6136,8 @@
       "Adventurous"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Terrible Margarita",
@@ -5846,7 +6157,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "The Krampus",
@@ -5864,7 +6176,8 @@
       "Adventurous"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Royal Tenenbaum",
@@ -5883,7 +6196,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "This Is The Way",
@@ -5892,7 +6206,7 @@
     "ingredients": "2 oz Mezcal, 0.5 oz espresso, cinnamon, 2 dashes mole",
     "method": "Shake with ice, strain",
     "glass": "Coupe or Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Winter",
     "sequence": "Nightcap",
     "moods": [
@@ -5902,7 +6216,8 @@
       "Dessert"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "Trankilo Melón",
@@ -5920,7 +6235,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Tranquilo",
@@ -5938,7 +6254,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Tree Top",
@@ -5958,7 +6275,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Under the Influence",
@@ -5978,7 +6296,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Veranda Blues",
@@ -5998,7 +6317,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "War of Ideas",
@@ -6016,7 +6336,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Watermelon Basil Margarita",
@@ -6035,7 +6356,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Where They Smoke",
@@ -6054,7 +6376,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Wicked Judy",
@@ -6072,7 +6395,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Witch's Medicine",
@@ -6091,7 +6415,8 @@
       "Contemplative"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Zoharita",
@@ -6100,7 +6425,7 @@
     "ingredients": "2 oz Thai chili infused Cazadores Blanco tequila, 0.5 oz Aperol, 0.5 oz passionfruit, 0.75 oz fresh lemon, 0.5 oz agave",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "ZO Restaurant",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -6109,7 +6434,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "ZO Restaurant"
   },
   {
     "name": "Zona Rosa",
@@ -6127,7 +6453,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "3.5oz of Happiness",
@@ -6136,7 +6463,7 @@
     "ingredients": "2 oz Bombay Sapphire Premier Cru Gin, 0.5 oz Mouse Kingdom Dark Berries, 0.5 oz Martini Rubino, 0.75 oz Citrus, 0.5 oz Raspberry, 0.5 oz Carpano Dry",
     "method": "",
     "glass": "Coupe or Jack & Jill",
-    "notes": "Alchemist Hipflask to keep",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -6145,7 +6472,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Alchemist Hipflask to keep"
   },
   {
     "name": "A Long Winter's Nap",
@@ -6163,7 +6491,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "A Taste of Valinor",
@@ -6182,7 +6511,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Almost Counts",
@@ -6202,7 +6532,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Alpen Glo Highball",
@@ -6222,7 +6553,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ankle Biter",
@@ -6242,7 +6574,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Anti-Matter",
@@ -6258,7 +6591,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Apple & Harlow",
@@ -6277,7 +6611,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Arlo Collins",
@@ -6286,7 +6621,7 @@
     "ingredients": "2 oz Hendrick's Gin, 3-4 cucumber, 3-4 thyme leaves, 3-4 black pepper, 0.75 oz lime, top with club soda",
     "method": "Build over ice, top with club soda",
     "glass": "Highball glass",
-    "notes": "ALB Hour menu",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -6297,7 +6632,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "ALB Hour menu"
   },
   {
     "name": "Bar Hill Humdinger",
@@ -6313,7 +6649,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Barrel Aged Negroni",
@@ -6332,7 +6669,8 @@
       "Contemplative"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Barrel O' Bees",
@@ -6349,7 +6687,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Basil Breeze",
@@ -6369,7 +6708,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Beach Baron",
@@ -6387,7 +6727,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Bee Line",
@@ -6405,7 +6746,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bee's Knees",
@@ -6422,7 +6764,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Bee's Knees Two Ways - Classic",
@@ -6439,7 +6782,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Bee's Knees Two Ways - Strawberry",
@@ -6459,7 +6803,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Beeswax Negroni",
@@ -6475,7 +6820,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Beet Gin Fizz",
@@ -6495,7 +6841,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bergamo",
@@ -6504,7 +6851,7 @@
     "ingredients": "2 oz Tanqueray No. Ten, 0.5 oz Aperitif Lillet Blanc, 0.5 oz St. Germain Elderflower Liqueur, top with Sauvignon Blanc Wine, 3-4 Rose Pepper, Bergamot Fragrance, Olive Oil",
     "method": "",
     "glass": "Coupe or Jack & Jill",
-    "notes": "60 PLN",
+    "notes": "",
     "season": "Spring",
     "sequence": "First Round",
     "moods": [
@@ -6512,7 +6859,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "60 PLN"
   },
   {
     "name": "Bitter Ole Tom",
@@ -6530,7 +6878,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Blackberry Mint Bee's Knees",
@@ -6550,7 +6899,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Borneo Speedwagon",
@@ -6569,7 +6919,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Botanist",
@@ -6578,7 +6929,7 @@
     "ingredients": "2 oz Gin Beefeater, 0.5 oz St. Germain Elderflower Liqueur, 3-4 Cucumber, 0.75 oz Lemon, 0.75 oz Rose Lemonade",
     "method": "",
     "glass": "Highball glass",
-    "notes": "60 PLN",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -6589,7 +6940,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "60 PLN"
   },
   {
     "name": "Bourdain's Way",
@@ -6598,7 +6950,7 @@
     "ingredients": "2 oz Gin, 0.5 oz Aperol, 0.5 oz Carpano Antica",
     "method": "Stir with ice, strain",
     "glass": "Coupe",
-    "notes": "Dranks",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Nightcap",
     "moods": [
@@ -6607,7 +6959,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "Brooklyn Fizz",
@@ -6616,7 +6969,7 @@
     "ingredients": "2 oz Greenhook gin, 0.5 oz beach plum, 0.75 oz lemon, 0.75 oz lime",
     "method": "Shake and strain over ice",
     "glass": "Highball glass",
-    "notes": "W+C Fields",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -6627,7 +6980,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "W+C Fields"
   },
   {
     "name": "Brooklyn Love",
@@ -6645,7 +6999,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bubblebath",
@@ -6663,7 +7018,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Caicos Mule",
@@ -6672,7 +7028,7 @@
     "ingredients": "1.5 oz Gin, 0.75 oz bourbon, top with ginger beer, 0.75 oz lime",
     "method": "Build over ice, top with ginger beer",
     "glass": "Mug or Highball glass",
-    "notes": "Cocovan",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -6683,7 +7039,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Cocovan"
   },
   {
     "name": "Canary in a Goldmine",
@@ -6701,7 +7058,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Casino Royale",
@@ -6720,7 +7078,8 @@
       "Contemplative"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Chastity",
@@ -6738,7 +7097,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Citron Presse",
@@ -6758,7 +7118,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cold Pressed Concoction",
@@ -6778,7 +7139,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Crystal Ship",
@@ -6796,7 +7158,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Dangerous Liason",
@@ -6816,7 +7179,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Do Wrong Right",
@@ -6834,7 +7198,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Double Dutch",
@@ -6854,7 +7219,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Easy Peasy",
@@ -6871,7 +7237,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "El Camino",
@@ -6888,7 +7255,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Engines Ready",
@@ -6908,7 +7276,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Figgin' Festive",
@@ -6926,7 +7295,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Figgy Star",
@@ -6942,7 +7312,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Flying Empress",
@@ -6960,7 +7331,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Froz-Oni",
@@ -6980,7 +7352,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Garden Smash",
@@ -7000,7 +7373,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Gimlet on the Vine",
@@ -7016,7 +7390,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Gin Daisy",
@@ -7036,7 +7411,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Gin Garden",
@@ -7056,7 +7432,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ginger Rickey",
@@ -7076,7 +7453,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ginja Ninja",
@@ -7096,7 +7474,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Golden Touch",
@@ -7114,7 +7493,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Goshen Garden Party",
@@ -7134,7 +7514,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Grace Bay Elixir",
@@ -7154,7 +7535,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Grateful Eight",
@@ -7172,7 +7554,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Green Flag",
@@ -7189,7 +7572,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Grey Lock Sparkler",
@@ -7198,7 +7582,7 @@
     "ingredients": "2 oz Berkshire's Grey Lock gin, 0.75 oz grapefruit juice, sparkling white wine float, lime twist",
     "method": "Shake gin and grapefruit with ice; strain; float sparkling wine; lime twist garnish",
     "glass": "Champagne flute or wine glass",
-    "notes": "Market Kitchen",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -7210,7 +7594,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Market Kitchen"
   },
   {
     "name": "Harvestini",
@@ -7228,7 +7613,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "High Pass",
@@ -7247,7 +7633,8 @@
       "Contemplative"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Hive Noir",
@@ -7265,7 +7652,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "House Martini",
@@ -7282,7 +7670,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "I Feel It Coming",
@@ -7291,7 +7680,7 @@
     "ingredients": "2 oz Aviation gin, 0.5 oz Pierre Ferrand dry curaçao, 0.75 oz grapefruit, 0.75 oz lime, 0.5 oz fenugreek, top with soda",
     "method": "Shake gin, curaçao, grapefruit, lime with ice; strain; top with soda",
     "glass": "Highball glass",
-    "notes": "ZO Current Playlist",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -7302,7 +7691,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "ZO Current Playlist"
   },
   {
     "name": "Indigo Blue",
@@ -7311,7 +7701,7 @@
     "ingredients": "2 oz Gin, 0.5 oz blue curaçao, 0.5 oz blood orange, 3-4 mango, 0.5 oz passion fruit, 0.75 oz lime juice, 1 oz cranberry, 1 oz egg white, 0.5 oz rose petals",
     "method": "Dry shake egg white, then shake all with ice; double strain",
     "glass": "Coupe",
-    "notes": "Indigo, Turks & Caicos",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -7320,7 +7710,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Indigo, Turks & Caicos"
   },
   {
     "name": "Iron Curtain",
@@ -7336,7 +7727,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Jackson House Rules",
@@ -7353,7 +7745,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Jasmine's Slipper",
@@ -7370,7 +7763,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Jupiter Rising",
@@ -7388,7 +7782,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Killa Bees Knees",
@@ -7397,7 +7792,7 @@
     "ingredients": "2 oz Gin, 0.5 oz hibiscus, 3-4 habanero, 0.75 oz lemon",
     "method": "Shake with ice, double strain into chilled coupe",
     "glass": "Coupe",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -7407,7 +7802,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "Leaf Peepers",
@@ -7426,7 +7822,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Leftini",
@@ -7442,7 +7839,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Leveled Rays",
@@ -7460,7 +7858,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lightbulb Moment",
@@ -7478,7 +7877,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lillet Lady Lay",
@@ -7496,7 +7896,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Limonana",
@@ -7505,7 +7906,7 @@
     "ingredients": "2 oz London dry gin, 0.75 oz lemon, 6-8 mint leaves",
     "method": "Muddle mint; shake with gin and lemon; strain over ice",
     "glass": "Rocks glass or Highball glass",
-    "notes": "ZO Restaurant",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -7516,7 +7917,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "ZO Restaurant"
   },
   {
     "name": "Martini",
@@ -7525,7 +7927,7 @@
     "ingredients": "2 oz Perry's Tot gin, 0.5 oz dry vermouth, lemon twist",
     "method": "Stir with ice, strain into chilled glass",
     "glass": "Martini glass",
-    "notes": "W+C Fields",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Nightcap",
     "moods": [
@@ -7536,7 +7938,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": "W+C Fields"
   },
   {
     "name": "Misled Youth",
@@ -7554,7 +7957,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Mogador Gimlet",
@@ -7574,7 +7978,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Montenegroni",
@@ -7591,7 +7996,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Moonflower",
@@ -7608,7 +8014,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Negrona",
@@ -7625,7 +8032,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Negroni Express",
@@ -7644,7 +8052,8 @@
       "Contemplative"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Neighbor Lady",
@@ -7653,7 +8062,7 @@
     "ingredients": "2 oz Gin, 3-4 lavender leaves, 0.75 oz grapefruit, 0.75 oz lime, top with soda",
     "method": "Shake gin and juices, strain over ice, top with soda",
     "glass": "Highball glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -7664,7 +8073,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Neptunia Sea Glass",
@@ -7684,7 +8094,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Nightcap Negroni",
@@ -7702,7 +8113,8 @@
       "Dessert"
     ],
     "primary_mood": "Nightcap",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Nitro Negroni",
@@ -7720,7 +8132,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "No Friends in the Industry",
@@ -7729,7 +8142,7 @@
     "ingredients": "2 oz Ford's gin, 0.25 oz Liquore Strega, 0.5 oz Aperol, 0.75 oz fresh lime",
     "method": "Shake with ice, strain into chilled glass",
     "glass": "Coupe",
-    "notes": "ZO Current Playlist",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -7738,7 +8151,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "ZO Current Playlist"
   },
   {
     "name": "Oath",
@@ -7754,7 +8168,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Orchard After Dark",
@@ -7772,7 +8187,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Paper Aeroplane",
@@ -7790,7 +8206,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Patience",
@@ -7806,7 +8223,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pear Pressure",
@@ -7826,7 +8244,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Perfectly Plumbob",
@@ -7844,7 +8263,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Pinky Promise",
@@ -7861,7 +8281,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Pomme Sucree",
@@ -7877,7 +8298,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pomme Sucrée",
@@ -7893,7 +8315,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pop Notch",
@@ -7909,7 +8332,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Porch Swing",
@@ -7918,7 +8342,7 @@
     "ingredients": "2 oz Gin, 0.5 oz Pimm's, 3-4 cucumber, 0.75 oz lemon, 2 dashes bitters",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass or Highball glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -7929,7 +8353,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Qui Gon Gin",
@@ -7949,7 +8374,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Raspberry Ripple",
@@ -7970,7 +8396,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rooibos Club",
@@ -7987,7 +8414,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rosemary Bees Knees",
@@ -8007,7 +8435,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Rosemary Infuse Negroni",
@@ -8024,7 +8453,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rosemary's Beekeeper",
@@ -8043,7 +8473,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Saint Basil",
@@ -8063,7 +8494,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Saturn",
@@ -8081,7 +8513,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Sea Witch",
@@ -8099,7 +8532,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Shady Lady",
@@ -8117,7 +8551,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Silk Road",
@@ -8126,14 +8561,15 @@
     "ingredients": "2 oz Curry spice infused gin, 1 oz coconut milk, 0.5 oz raisin, 0.75 oz lime",
     "method": "Shake and strain",
     "glass": "Coupe or Rocks glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Any Time",
     "moods": [
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Silk Road (Homestyle)",
@@ -8149,7 +8585,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Sink or Gin",
@@ -8167,7 +8604,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Smith & Ninth",
@@ -8185,7 +8623,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Snap Judgement",
@@ -8203,7 +8642,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Spiced Apple Bees Knees",
@@ -8221,7 +8661,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Spill the Tea",
@@ -8240,7 +8681,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Spring Fling",
@@ -8259,7 +8701,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Spring Lady",
@@ -8276,7 +8719,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Strawberry Fool",
@@ -8294,7 +8738,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Temperance",
@@ -8314,7 +8759,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The 'Bourdain'",
@@ -8332,7 +8778,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Aviation",
@@ -8351,7 +8798,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Bee's Knees",
@@ -8368,7 +8816,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Beekeeper's Mule",
@@ -8388,7 +8837,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Dixon",
@@ -8406,7 +8856,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Hawley Garden",
@@ -8424,7 +8875,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Legal One",
@@ -8443,7 +8895,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Violet Lady",
@@ -8461,7 +8914,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Wild Reed",
@@ -8481,7 +8935,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Thyme For Gin & Juice",
@@ -8490,7 +8945,7 @@
     "ingredients": "2 oz Greenhook old tom gin, 3-4 thyme leaves, 0.75 oz lemon, 0.5 oz juicy IPA",
     "method": "Shake gin, thyme syrup, lemon; strain over ice, top with IPA",
     "glass": "Highball glass",
-    "notes": "W+C Fields seasonal",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -8500,7 +8955,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "W+C Fields seasonal"
   },
   {
     "name": "Tonic Spritz",
@@ -8520,7 +8976,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Topsy Turvy",
@@ -8538,7 +8995,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Truth",
@@ -8554,7 +9012,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Uncertain Spring",
@@ -8570,7 +9029,8 @@
       "Date Night"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Under the Host",
@@ -8587,7 +9047,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Vermont Bramble Twist",
@@ -8607,7 +9068,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Le Cosmo",
@@ -8625,7 +9087,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "24 Carrot",
@@ -8634,7 +9097,7 @@
     "ingredients": "2 oz Cardamom infused vodka, 1 oz carrot juice, 0.75 oz fresh lemon, 0.5 oz honey",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "ZO Restaurant",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -8643,7 +9106,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "ZO Restaurant"
   },
   {
     "name": "99 Cents",
@@ -8652,14 +9116,15 @@
     "ingredients": "2 oz Green tea infused vodka, 0.5 oz vermouth, 0.5 oz passionfruit, 0.5 oz honey, 0.5 oz orange, 0.75 oz lemon, 2 dashes bitters",
     "method": "Shake with ice, strain",
     "glass": "Coupe",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "All-Season",
     "sequence": "First Round",
     "moods": [
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Adulting",
@@ -8679,7 +9144,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Adulting 2.0",
@@ -8688,7 +9154,7 @@
     "ingredients": "2 oz Tito's vodka, 0.5 oz elderflower, 3-4 blackberry, 0.5 oz vanilla, 0.75 oz lemon",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -8699,7 +9165,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "Adulting 3.0",
@@ -8708,7 +9175,7 @@
     "ingredients": "2 oz Tito's vodka, 0.5 oz elderflower, 0.5 oz vanilla, 3-4 blackberry, 3-4 cherry, 0.75 oz lemon",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -8719,7 +9186,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "After School Snack Fizz",
@@ -8735,7 +9203,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Bachata Horchata",
@@ -8752,7 +9221,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bad Bunny",
@@ -8771,7 +9241,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Banana Bread Espresso Martini",
@@ -8789,7 +9260,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Basic Bitch",
@@ -8806,7 +9278,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Basil Berry Martini",
@@ -8824,7 +9297,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Berri Blush",
@@ -8844,7 +9318,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bison in the Moss",
@@ -8863,7 +9338,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Blackberry Lemonade",
@@ -8883,7 +9359,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Bushes & Branches",
@@ -8900,7 +9377,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Calamansi",
@@ -8920,7 +9398,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "California Dreamin'",
@@ -8940,7 +9419,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Caprese Martini",
@@ -8956,7 +9436,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Cha-Chai",
@@ -8973,7 +9454,8 @@
       "Adventurous"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Christmapolitan",
@@ -8991,7 +9473,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Coco Panda",
@@ -9000,7 +9483,7 @@
     "ingredients": "2 oz Cîroc Coconut Vodka, top with White Chocolate, 3-4 Pineapple, 0.5 oz Wasabi, 0.5 oz Matcha",
     "method": "",
     "glass": "Coupe",
-    "notes": "65 PLN",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -9009,7 +9492,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "65 PLN"
   },
   {
     "name": "Colour Changing One",
@@ -9030,7 +9514,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cucumber Crush",
@@ -9050,7 +9535,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cucumber Jalapeño Pants",
@@ -9059,7 +9545,7 @@
     "ingredients": "2 oz Tito's vodka, 0.5 oz Ancho Reyes chili, 0.75 oz lime, 3-4 cucumber, 3-4 jalapeño",
     "method": "Muddle cucumber and jalapeño, add vodka, Ancho Reyes, lime; shake and strain",
     "glass": "Rocks glass",
-    "notes": "W+C Fields",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -9069,7 +9555,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "W+C Fields"
   },
   {
     "name": "Daisy Cutter",
@@ -9086,7 +9573,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Dirty Sue",
@@ -9103,7 +9591,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Errand Boy",
@@ -9112,7 +9601,7 @@
     "ingredients": "2 oz Vodka, 0.5 oz apertivo, 3-4 strawberry, 0.5 oz agave, 0.75 oz lime, 6-8 mint leaves, 2 dashes bitters, top with soda",
     "method": "Shake with ice; strain; top with soda",
     "glass": "Highball glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -9123,7 +9612,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Espresso Martini",
@@ -9140,7 +9630,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Finishing School",
@@ -9161,7 +9652,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Fireside White Russian",
@@ -9180,7 +9672,8 @@
       "Dessert"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Flora Americana",
@@ -9200,7 +9693,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Flower Drop",
@@ -9218,7 +9712,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "French Kiss",
@@ -9238,7 +9733,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Gibson Please",
@@ -9254,7 +9750,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Glass Gimlet",
@@ -9274,7 +9771,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Good Fortune",
@@ -9294,7 +9792,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Grace Bay Breeze",
@@ -9303,7 +9802,7 @@
     "ingredients": "2 oz Pineapple infused vodka, 3-4 pineapple, 1 oz cranberry",
     "method": "Shake with ice, strain over ice",
     "glass": "Highball glass",
-    "notes": "Cocovan",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -9314,7 +9813,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Cocovan"
   },
   {
     "name": "Great Northern",
@@ -9330,7 +9830,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Grow a Pear",
@@ -9349,7 +9850,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Harvest Moon",
@@ -9365,7 +9867,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Heritage Shandy",
@@ -9385,7 +9888,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Hibiscus & Sage Highball",
@@ -9405,7 +9909,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Honey Brunches of Oats",
@@ -9421,7 +9926,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Hot & Dirty",
@@ -9437,7 +9943,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "I'll Have That",
@@ -9454,7 +9961,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Indigo Rose",
@@ -9463,7 +9971,7 @@
     "ingredients": "2 oz Vodka, 0.5 oz X-Rated liqueur, 0.5 oz lychee syrup, 0.75 oz fresh lime, 1 oz cranberry juice",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass or Coupe",
-    "notes": "Indigo, Turks & Caicos",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -9474,7 +9982,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Indigo, Turks & Caicos"
   },
   {
     "name": "Jaffa Cup-Cake",
@@ -9491,7 +10000,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Junebug",
@@ -9511,7 +10021,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Kaleidoscope Eyes",
@@ -9529,7 +10040,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lady in Red",
@@ -9549,7 +10061,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Legal White Sangria",
@@ -9570,7 +10083,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Liberality",
@@ -9590,7 +10104,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lost in Translation",
@@ -9610,7 +10125,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lotus Mule",
@@ -9630,7 +10146,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "MP Detox/Retox",
@@ -9650,7 +10167,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "MP Signature Chocola-tini",
@@ -9659,7 +10177,7 @@
     "ingredients": "2 oz LVOV vanilla infused vodka, 1 oz Bailey's vanilla and cinnamon Irish cream, top with Dorda double chocolate liqueur",
     "method": "Shake with ice, strain into chilled glass",
     "glass": "Martini glass",
-    "notes": "Market Kitchen",
+    "notes": "",
     "season": "Winter",
     "sequence": "Any Time",
     "moods": [
@@ -9667,7 +10185,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Market Kitchen"
   },
   {
     "name": "Magic Number",
@@ -9676,14 +10195,15 @@
     "ingredients": "2 oz Vodka, 0.5 oz vermouth, 1 oz clarified tomato, 0.5 oz brine, 2 dashes bitters",
     "method": "Stir with ice, strain",
     "glass": "Martini glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Any Time",
     "moods": [
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Magic Numbers",
@@ -9699,7 +10219,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Make It Tso",
@@ -9717,7 +10238,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Market Place Signature Martini",
@@ -9734,7 +10256,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Martini-in-a-Bottle",
@@ -9755,7 +10278,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Maui Mule",
@@ -9775,7 +10299,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ménage à Trois",
@@ -9793,7 +10318,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Naked Eye",
@@ -9809,7 +10335,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Naked Porn Star",
@@ -9827,7 +10354,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Nantucket Cranberry Lemonade",
@@ -9847,7 +10375,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "No Moni, No Honey",
@@ -9867,7 +10396,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Nothing ComPears",
@@ -9885,7 +10415,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Ode To Tom",
@@ -9905,7 +10436,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Okemosabe",
@@ -9914,7 +10446,7 @@
     "ingredients": "2 oz Vodka, 0.5 oz orange, 1 oz cream, 1 oz egg white, top with soda",
     "method": "Dry shake egg white; add vodka, orange, cream; shake with ice; strain; top with soda",
     "glass": "Highball glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -9925,7 +10457,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Old Port Maine",
@@ -9945,7 +10478,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Olive Skin",
@@ -9961,7 +10495,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Over the Clover",
@@ -9978,7 +10513,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Over the River + Through the Woods",
@@ -9997,7 +10533,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Pear & Elderflower Martini",
@@ -10015,7 +10552,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Pearilous Seas",
@@ -10033,7 +10571,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Persian Lemon",
@@ -10051,7 +10590,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Pom & Rose Lemon Drop",
@@ -10069,7 +10609,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Pomegranate Lemonade",
@@ -10089,7 +10630,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Red Headed Step-Child",
@@ -10107,7 +10649,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rudolph's Replacement",
@@ -10126,7 +10669,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Screwball 11",
@@ -10144,7 +10688,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "She's Giving Clarity",
@@ -10164,7 +10709,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Shot for Me",
@@ -10183,7 +10729,8 @@
       "Tailgating"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Smooth Criminal",
@@ -10201,7 +10748,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Solo Espresso Martini",
@@ -10218,7 +10766,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Spiced Cranberry Mule",
@@ -10236,7 +10785,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Spring Thyme",
@@ -10255,7 +10805,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Strawmegranate Martini",
@@ -10273,7 +10824,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Summer Bloom",
@@ -10293,7 +10845,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Sun Kissed",
@@ -10311,7 +10864,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Tall Trees",
@@ -10320,14 +10874,15 @@
     "ingredients": "3-4 Tarragon infused vodka leaves, 1 oz sherry, 1 oz celery, 3-4 sage leaves, 0.5 oz acid OJ, top with soda",
     "method": "Shake vodka and juices, strain over ice, top with soda",
     "glass": "Highball glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Terrible Espresso Martini",
@@ -10345,7 +10900,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "The (Great) Pumpkin Martini",
@@ -10362,7 +10918,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Antipasto Martini",
@@ -10378,7 +10935,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Dirty Earl",
@@ -10394,7 +10952,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Duchess",
@@ -10403,7 +10962,7 @@
     "ingredients": "2 oz Wódka Belvedere, 0.75 oz Lemon, 3-4 Lemongrass leaves, 0.5 oz Raspberry, 1 oz Egg White, 0.75 oz Ginger Lemonade",
     "method": "",
     "glass": "Coupe",
-    "notes": "60 PLN",
+    "notes": "",
     "season": "Spring",
     "sequence": "First Round",
     "moods": [
@@ -10412,7 +10971,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "60 PLN"
   },
   {
     "name": "The Espresso Martini",
@@ -10429,7 +10989,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Green Mile",
@@ -10448,7 +11009,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Key to Paradise",
@@ -10464,7 +11026,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Pornstar",
@@ -10483,7 +11046,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Vodka Fix",
@@ -10503,7 +11067,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Vodka Martini",
@@ -10523,7 +11088,8 @@
       "Tailgating"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Wicked Games",
@@ -10532,7 +11098,7 @@
     "ingredients": "2 oz Etion herb infused vodka, 0.5 oz Ancho Reyes Verde, 3-4 bell pepper, 0.75 oz lime, 0.75 oz grapefruit sherbet",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "ZO Current Playlist",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -10542,7 +11108,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "ZO Current Playlist"
   },
   {
     "name": "Working Class Warrior",
@@ -10558,7 +11125,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "1869 Punch",
@@ -10579,7 +11147,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "4 The Ocean Cocktail",
@@ -10599,7 +11168,8 @@
       "Tailgating"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "A Jornada",
@@ -10615,7 +11185,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "A Night in Tunisia",
@@ -10624,7 +11195,7 @@
     "ingredients": "1.5 oz Coconut washed rum, 0.75 oz pineapple rum, 1 oz falernum, 0.5 oz allspice, 0.5 oz herbal liqueur, 2 dashes bitters",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -10634,7 +11205,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Absent Stars",
@@ -10652,7 +11224,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Appledaq",
@@ -10670,7 +11243,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Autumn Breeze",
@@ -10689,7 +11263,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "B&B Hurricane",
@@ -10710,7 +11285,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Beached",
@@ -10719,7 +11295,7 @@
     "ingredients": "1.5 oz Coconut washed rum, 0.75 oz pineapple rum, 1 oz falernum, 0.5 oz allspice, 0.5 oz herbal liqueur, 2 dashes bitters",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -10729,7 +11305,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Before Sunset",
@@ -10747,7 +11324,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Blackberry Lime No. 4",
@@ -10767,7 +11345,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "CCR Mojito",
@@ -10787,7 +11366,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Caicos Cooler",
@@ -10807,7 +11387,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Caitlin's Tater Pie",
@@ -10824,7 +11405,8 @@
       "Contemplative"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Calvin Coolidge",
@@ -10841,7 +11423,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Caribbean Gold Rush",
@@ -10859,7 +11442,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Castro's Car",
@@ -10878,7 +11462,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Charity",
@@ -10896,7 +11481,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cherry Blossom",
@@ -10916,7 +11502,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Christmasaurus",
@@ -10933,7 +11520,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Clarified Milk Punch",
@@ -10950,7 +11538,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Clarified Rum Punch",
@@ -10968,7 +11557,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Clearly Not",
@@ -10987,7 +11577,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Coconut Mojito",
@@ -11007,7 +11598,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Coffin Corner",
@@ -11025,7 +11617,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Commander Six Toes",
@@ -11034,7 +11627,7 @@
     "ingredients": "2 oz Captain Morgan white rum, 0.75 oz grapefruit, 0.75 oz lime, smoked sea salt",
     "method": "Shake and strain over ice",
     "glass": "Rocks glass",
-    "notes": "W+C Fields seasonal",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -11045,7 +11638,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "W+C Fields seasonal"
   },
   {
     "name": "Contraband",
@@ -11063,7 +11657,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Dark & Stormy",
@@ -11083,7 +11678,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Dark and Stormy",
@@ -11092,7 +11688,7 @@
     "ingredients": "2 oz Bambara black rum, 0.75 oz lime juice, top with ginger beer",
     "method": "Build over ice, top with ginger beer",
     "glass": "Highball glass or mug",
-    "notes": "Indigo Tiki Bar",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -11103,7 +11699,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Indigo Tiki Bar"
   },
   {
     "name": "Dashing through the Snow",
@@ -11122,7 +11719,8 @@
       "Cozy"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Dolphin Shoals",
@@ -11140,7 +11738,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Don 23",
@@ -11158,7 +11757,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Epiphany",
@@ -11167,7 +11767,7 @@
     "ingredients": "2 oz Clarified rum punch, top with sparkling lime, 0.75 oz yuzu",
     "method": "Shake rum with lime and yuzu; strain; top with sparkling lime",
     "glass": "Highball glass or Coupe",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -11178,7 +11778,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Dranks"
   },
   {
     "name": "Forest Fruit Old-Fashioned",
@@ -11195,7 +11796,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Four Islands",
@@ -11213,7 +11815,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Golden Hour",
@@ -11234,7 +11837,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Grapefruit Mojito",
@@ -11254,7 +11858,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Havana Nights",
@@ -11272,7 +11877,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Hemingway Daiquiri",
@@ -11292,7 +11898,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "High Tea",
@@ -11312,7 +11919,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Honey Suckle Daiquiri",
@@ -11332,7 +11940,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Hot Buttered Rum",
@@ -11351,7 +11960,8 @@
       "Adventurous"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Hotel Nacional Special",
@@ -11370,7 +11980,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Issa Wonderful Life",
@@ -11388,7 +11999,8 @@
       "Cozy"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "It Got Weird",
@@ -11406,7 +12018,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Jets du Brésil",
@@ -11426,7 +12039,8 @@
       "Contemplative"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Jungle Bird",
@@ -11435,7 +12049,7 @@
     "ingredients": "0.5 oz Campari, 3-4 pineapple, 0.75 oz fresh lime, dark rum floater",
     "method": "Shake Campari, pineapple, lime with ice; strain; float dark rum",
     "glass": "Rocks glass",
-    "notes": "Cocovan",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -11444,7 +12058,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Cocovan"
   },
   {
     "name": "Kill Devyl",
@@ -11464,7 +12079,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "La Chiquita Banana",
@@ -11484,7 +12100,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Legal Red Sangria",
@@ -11505,7 +12122,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Love & Thunder",
@@ -11523,7 +12141,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Lychee's Finest",
@@ -11543,7 +12162,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Mai the Tai Be With You",
@@ -11552,7 +12172,7 @@
     "ingredients": "Mad River Rum 44, orgeat, triple sec, St. Elizabeth's Allspice, lime juice, Angostura",
     "method": "Shake with ice, strain over crushed ice",
     "glass": "Rocks glass or tiki mug",
-    "notes": "Batch cocktail menu",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -11563,7 +12183,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Batch cocktail menu"
   },
   {
     "name": "Maui Mai Tai",
@@ -11583,7 +12204,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Milhouse",
@@ -11599,7 +12221,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Monkey God",
@@ -11608,7 +12231,7 @@
     "ingredients": "2 oz Coffee infused rum blend, 0.5 oz banana, 0.5 oz cocoa",
     "method": "Shake with ice, strain",
     "glass": "Coupe or Rocks glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Any Time",
     "moods": [
@@ -11616,7 +12239,8 @@
       "Dessert"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "My Oh Mai",
@@ -11636,7 +12260,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Nauti Pineapple",
@@ -11654,7 +12279,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "New England Daiquiri",
@@ -11674,7 +12300,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Night Watch",
@@ -11693,7 +12320,8 @@
       "Contemplative"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Old Lahaina Mai Tai",
@@ -11713,7 +12341,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Orchard Stroll",
@@ -11729,7 +12358,8 @@
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pain Killer",
@@ -11749,7 +12379,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Papa's Piña Doble",
@@ -11769,7 +12400,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pilar",
@@ -11787,7 +12419,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Punch Drunk",
@@ -11806,7 +12439,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rang Yai Pearl",
@@ -11826,7 +12460,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rasta Rum Punch",
@@ -11835,7 +12470,7 @@
     "ingredients": "0.5 oz Jamaican rum, 3-4 pineapple, 0.75 oz orange juice, 0.5 oz grenadine",
     "method": "Shake or stir, serve over ice",
     "glass": "Highball glass",
-    "notes": "Cocovan",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -11847,7 +12482,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Cocovan"
   },
   {
     "name": "Riptide",
@@ -11865,7 +12501,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rum Punch",
@@ -11886,7 +12523,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "S.S. Belafonte",
@@ -11905,7 +12543,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Saturday Night Stay",
@@ -11921,7 +12560,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Say Yellow to My Little Friend",
@@ -11941,7 +12581,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Snapple Fact #66",
@@ -11950,7 +12591,7 @@
     "ingredients": "2 oz Lapsang souchong tea rum, 3-4 basil leaves, 3-4 strawberry, 0.75 oz lemon",
     "method": "Muddle basil and strawberry; add rum and lemon; shake with ice; strain",
     "glass": "Coupe or Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -11959,7 +12600,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "Spiced Rum Canelzao",
@@ -11977,7 +12619,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Spro Coco",
@@ -11986,7 +12629,7 @@
     "ingredients": "2 oz Rum blend, 0.5 oz espresso, 0.5 oz toasted coconut",
     "method": "Shake with ice, strain into chilled glass",
     "glass": "Coupe or Rocks glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "All-Season",
     "sequence": "Any Time",
     "moods": [
@@ -11994,7 +12637,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Staycation",
@@ -12014,7 +12658,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Stolen Booty",
@@ -12032,7 +12677,8 @@
       "Contemplative"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Summer of Suzie",
@@ -12052,7 +12698,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Diplomatic Daiquiri",
@@ -12072,7 +12719,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "The Pineapple Suite",
@@ -12090,7 +12738,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "This Little Piggy",
@@ -12110,7 +12759,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Tiki Torch",
@@ -12128,7 +12778,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "To Be Fair...",
@@ -12147,7 +12798,8 @@
       "Contemplative"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Tongue Tied Mai Tai",
@@ -12167,7 +12819,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Twenty-Fifth Sour",
@@ -12183,7 +12836,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "VT Summer Old Fashioned",
@@ -12199,7 +12853,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Welcome to the Jungle",
@@ -12218,7 +12873,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Wymara Bird",
@@ -12227,7 +12883,7 @@
     "ingredients": "2 oz Rum, 0.5 oz Galliano, 0.5 oz banana liqueur, 1 oz pineapple juice, 0.75 oz orange juice",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass or Highball glass",
-    "notes": "Indigo Tiki Bar",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -12238,7 +12894,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Indigo Tiki Bar"
   },
   {
     "name": "Wymara's Mai Tai",
@@ -12247,7 +12904,7 @@
     "ingredients": "1.5 oz Bambara silver rum, 0.75 oz Bambara dark rum, 1 oz pineapple juice, 0.5 oz orgeat syrup, 0.75 oz fresh lime",
     "method": "Shake with ice, strain over crushed ice",
     "glass": "Rocks glass or tiki mug",
-    "notes": "Indigo Tiki Bar",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -12258,7 +12915,8 @@
       "Tailgating"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Indigo Tiki Bar"
   },
   {
     "name": "Yippee Ki Yay Mother F••••r!",
@@ -12276,7 +12934,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Adios Verano",
@@ -12294,7 +12953,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Aperol Spritz",
@@ -12303,7 +12963,7 @@
     "ingredients": "0.5 oz Aperol, top with prosecco, top with club soda",
     "method": "Build in glass over ice, stir gently",
     "glass": "Wine glass",
-    "notes": "Indigo",
+    "notes": "",
     "season": "Summer",
     "sequence": "Aperitif",
     "moods": [
@@ -12314,7 +12974,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": "Indigo"
   },
   {
     "name": "Apple Pickin' Spritz",
@@ -12333,7 +12994,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Aren't You Glad...",
@@ -12351,7 +13013,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Aurora Spritz",
@@ -12370,7 +13033,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Blinding Lights",
@@ -12388,7 +13052,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Breakfast Martini",
@@ -12407,7 +13072,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Champagne Socialist",
@@ -12426,7 +13092,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Cheers",
@@ -12443,7 +13110,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Classic Champagne",
@@ -12460,7 +13128,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Cranmosa",
@@ -12477,7 +13146,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Crunchy Leaves",
@@ -12496,7 +13166,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Desert Fizz",
@@ -12513,7 +13184,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Double Cross Cure",
@@ -12529,7 +13201,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Flight to France",
@@ -12546,7 +13219,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Fraise Sauvage",
@@ -12565,7 +13239,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "French 75",
@@ -12584,7 +13259,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "French Disconnection",
@@ -12600,7 +13276,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Garden Party",
@@ -12619,7 +13296,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Georgia Seed",
@@ -12639,7 +13317,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Guava '75",
@@ -12658,7 +13337,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Harvest Spritz",
@@ -12677,7 +13357,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Porch Sipper",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Honest Thief",
@@ -12696,7 +13377,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Honeydew Spritz",
@@ -12705,7 +13387,7 @@
     "ingredients": "2 oz Rum, 0.5 oz vermouth, 0.5 oz honeydew, 0.75 oz lime, top with sparkling wine",
     "method": "Shake rum, vermouth, honeydew, lime with ice; strain; top with sparkling wine",
     "glass": "Flute or wine glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "Aperitif",
     "moods": [
@@ -12715,7 +13397,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Honeydude Spritz",
@@ -12724,7 +13407,7 @@
     "ingredients": "2 oz Vodka, 0.5 oz apertivo, 3-4 strawberry, 0.5 oz agave, 0.75 oz lime, 6-8 mint leaves, 2 dashes bitters, top with soda",
     "method": "Shake vodka and juices with ice; strain; top with soda",
     "glass": "Highball glass",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Summer",
     "sequence": "Aperitif",
     "moods": [
@@ -12734,7 +13417,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Humility",
@@ -12753,7 +13437,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lava Lamp",
@@ -12772,7 +13457,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Lucky Day",
@@ -12791,7 +13477,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Mulled Wine Bellini",
@@ -12808,7 +13495,8 @@
       "Cozy"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Napoleon's Legacy",
@@ -12825,7 +13513,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Negroni Sbagliato",
@@ -12845,7 +13534,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "No. 6 Spritz",
@@ -12864,7 +13554,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Our '91",
@@ -12883,7 +13574,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Red Aurora Spritz",
@@ -12902,7 +13594,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rossini",
@@ -12921,7 +13614,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Run Run Reindeer",
@@ -12938,7 +13632,8 @@
       "Cozy"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Save the Rainbow",
@@ -12954,7 +13649,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Slippery Slope",
@@ -12963,14 +13659,15 @@
     "ingredients": "2 oz Vodka, 0.5 oz vermouth, 0.5 oz allspice, 1 oz spiced cranberry, 0.75 oz lemon, top with cava",
     "method": "Shake spirits and juices, strain, top with cava",
     "glass": "Champagne flute or Coupe",
-    "notes": "Homestyle Hotel",
+    "notes": "",
     "season": "Winter",
     "sequence": "Aperitif",
     "moods": [
       "Cozy"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": "Homestyle Hotel"
   },
   {
     "name": "Sorbet Spritz",
@@ -12989,7 +13686,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Spirulina Spritz",
@@ -13008,7 +13706,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Spritz Appeal",
@@ -13027,7 +13726,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Spritz Hugo",
@@ -13036,7 +13736,7 @@
     "ingredients": "0.5 oz St. Germain, top with prosecco, 0.75 oz fresh lime, top with club soda",
     "method": "Build in glass over ice, stir gently",
     "glass": "Wine glass",
-    "notes": "Indigo",
+    "notes": "",
     "season": "Summer",
     "sequence": "Aperitif",
     "moods": [
@@ -13046,7 +13746,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Indigo"
   },
   {
     "name": "Spritz de la Sol",
@@ -13065,7 +13766,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Spritz the Bill",
@@ -13081,7 +13783,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "St. Pancras Sgroppino",
@@ -13097,7 +13800,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Sunset Spritz",
@@ -13116,7 +13820,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Supernova",
@@ -13134,7 +13839,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Supersonic Spritz",
@@ -13153,7 +13859,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Big Apple",
@@ -13172,7 +13879,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Maverick",
@@ -13191,7 +13899,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Perfect Pear",
@@ -13210,7 +13919,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "The Ritz",
@@ -13227,7 +13937,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Wandering Eyes",
@@ -13243,7 +13954,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Well, Hello There...",
@@ -13252,7 +13964,7 @@
     "ingredients": "2 oz Jalapeño infused gin, 0.75 oz lime, 0.5 oz Holbrook rhubarb syrup, 1 oz velvet falernum, top with prosecco",
     "method": "Shake gin, lime, syrup, falernum with ice; strain; top with prosecco",
     "glass": "Champagne flute or Coupe",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Spring",
     "sequence": "Aperitif",
     "moods": [
@@ -13260,7 +13972,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "Yardbird",
@@ -13279,7 +13992,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Alpaca My Bags",
@@ -13295,7 +14009,8 @@
       "Crowd Pleaser"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Before Dinner",
@@ -13313,7 +14028,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Caffe Corretto",
@@ -13331,7 +14047,8 @@
       "Venting"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Caffè Corretto",
@@ -13349,7 +14066,8 @@
       "Venting"
     ],
     "primary_mood": "Dessert",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Caldera Complex",
@@ -13368,7 +14086,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Chai Me a River",
@@ -13387,7 +14106,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Choked Up",
@@ -13406,7 +14126,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Classic Negroni",
@@ -13415,7 +14136,7 @@
     "ingredients": "0.5 oz Vermouth rosso, 0.5 oz Campari, 2 oz gin",
     "method": "Stir with ice, strain over large ice",
     "glass": "Rocks glass",
-    "notes": "Indigo",
+    "notes": "",
     "season": "All-Season",
     "sequence": "First Round",
     "moods": [
@@ -13423,7 +14144,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": "Indigo"
   },
   {
     "name": "Down to Earth",
@@ -13442,7 +14164,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "I Am Bored with It All",
@@ -13461,7 +14184,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Juice Cleanse",
@@ -13470,7 +14194,7 @@
     "ingredients": "Coconut oil washed Campari, 2 oz pineapple rum, 0.75 oz lime, 0.5 oz demerara",
     "method": "Shake with ice, strain over ice",
     "glass": "Rocks glass",
-    "notes": "Dranks",
+    "notes": "",
     "season": "Summer",
     "sequence": "First Round",
     "moods": [
@@ -13479,7 +14203,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": "Dranks"
   },
   {
     "name": "Long Kiss Goodbye",
@@ -13498,7 +14223,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "McCarthy's Remedy",
@@ -13517,7 +14243,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Mont Vert",
@@ -13538,7 +14265,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Mountaineer",
@@ -13556,7 +14284,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Nautical Shawl",
@@ -13576,7 +14305,8 @@
       "Venting"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Numo Negroni",
@@ -13593,7 +14323,8 @@
       "Tailgating"
     ],
     "primary_mood": "Crowd Pleaser",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Pallino",
@@ -13612,7 +14343,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rhuby Rose",
@@ -13631,7 +14363,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Refreshing",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Rising Sun",
@@ -13650,7 +14383,8 @@
       "Venting"
     ],
     "primary_mood": "Contemplative",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Tropicaldi",
@@ -13668,7 +14402,8 @@
       "Day Drinking"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Twist My Arm",
@@ -13686,7 +14421,8 @@
       "Venting"
     ],
     "primary_mood": "Nightcap",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Anjou Pear",
@@ -13704,7 +14440,8 @@
       "Tailgating"
     ],
     "primary_mood": "Date Night",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "BMW-R75",
@@ -13722,7 +14459,8 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Crooked Antler",
@@ -13741,7 +14479,8 @@
       "Venting"
     ],
     "primary_mood": "Cozy",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Jingle Balls Nog",
@@ -13761,7 +14500,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   },
   {
     "name": "Lafitte's Fog",
@@ -13782,7 +14522,8 @@
       "Venting"
     ],
     "primary_mood": "Campfire",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Papa Manzano",
@@ -13798,7 +14539,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 3
+    "mood_score": 3,
+    "attribution": ""
   },
   {
     "name": "Royal Pêche",
@@ -13815,7 +14557,8 @@
       "Adventurous"
     ],
     "primary_mood": "Adventurous",
-    "mood_score": 4
+    "mood_score": 4,
+    "attribution": ""
   },
   {
     "name": "Sidecar",
@@ -13833,6 +14576,7 @@
       "Tailgating"
     ],
     "primary_mood": "Celebratory",
-    "mood_score": 5
+    "mood_score": 5,
+    "attribution": ""
   }
 ]
