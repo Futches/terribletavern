@@ -553,6 +553,10 @@ a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all var(--transition-speed);
 }
 
