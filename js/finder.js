@@ -2,7 +2,7 @@ const finder = (() => {
   const MOODS = [
     'Refreshing', 'Celebratory', 'Porch Sipper', 'Date Night',
     'Cozy', 'Adventurous', 'Contemplative', 'Nightcap',
-    'Crowd Pleaser', 'Campfire', 'Brunch', 'Dessert',
+    'Crowd Pleaser', 'Campfire', 'Dessert',
     'Day Drinking', 'Tailgating', 'Venting'
   ];
 
@@ -41,7 +41,8 @@ const finder = (() => {
   let myBar = new Set();
   let customBar = []; // [{name, category}]
   let tavernMode = false;
-  let state = { mood: null, spirit: null, sequence: null, pendingStart: false };
+  let state = { mood: [], spirit: [], sequence: [], pendingStart: false };
+  const MAX_SELECT = 3;
   let results = [];
   let lastFilterWasUnmakeable = false;
   let resultIndex = 0;
@@ -126,25 +127,49 @@ const finder = (() => {
     window.scrollTo(0, 0);
   }
 
-  function buildOptions(containerId, items, onSelect) {
+  function buildOptions(containerId, items, continueBtnId, onAdvance) {
     const container = document.getElementById(containerId);
+    const continueBtn = document.getElementById(continueBtnId);
     container.innerHTML = '';
+    continueBtn.style.display = 'none';
+    const selected = new Set();
+
     items.forEach(item => {
+      const value = typeof item === 'string' ? item : item.value;
+      const label = typeof item === 'string' ? item : item.label;
       const btn = document.createElement('button');
       btn.className = 'option-btn';
-      btn.textContent = typeof item === 'string' ? item : item.label;
-      btn.addEventListener('click', () => onSelect(typeof item === 'string' ? item : item.value));
+      btn.textContent = label;
+
+      if (value === null) {
+        // Wildcard option (e.g. "Surprise me") — bypasses multi-select entirely
+        btn.addEventListener('click', () => onAdvance([]));
+      } else {
+        btn.addEventListener('click', () => {
+          if (selected.has(value)) {
+            selected.delete(value);
+            btn.classList.remove('selected');
+          } else {
+            if (selected.size >= MAX_SELECT) return;
+            selected.add(value);
+            btn.classList.add('selected');
+          }
+          continueBtn.style.display = selected.size > 0 ? 'block' : 'none';
+        });
+      }
       container.appendChild(btn);
     });
+
+    continueBtn.onclick = () => onAdvance(Array.from(selected));
   }
 
-  function filterWith(mood, spirit, sequence, useSeason, requireMakeable) {
+  function filterWith(moods, spirits, sequences, useSeason, requireMakeable) {
     const season = getSeason();
     const filtered = cocktails.filter(d => {
       const seasonOk = !useSeason || d.season === season || d.season === 'All-Season';
-      const moodOk   = !mood     || d.moods.includes(mood);
-      const spiritOk = !spirit   || d.category === spirit;
-      const seqOk    = !sequence || d.sequence === sequence || d.sequence === 'Any Time';
+      const moodOk   = !moods.length     || moods.some(m => d.moods.includes(m));
+      const spiritOk = !spirits.length   || spirits.includes(d.category);
+      const seqOk    = !sequences.length || sequences.some(s => d.sequence === s || d.sequence === 'Any Time');
       const makeOk   = !requireMakeable || drinkMakeability(d).makeable;
       return seasonOk && moodOk && spiritOk && seqOk && makeOk;
     });
@@ -156,21 +181,21 @@ const finder = (() => {
     const barIsSetUp = myBar.size > 0 || customBar.length > 0;
     const attempts = [
       () => filterWith(state.mood, state.spirit, state.sequence, true,  barIsSetUp),
-      () => filterWith(state.mood, state.spirit, null,           true,  barIsSetUp),
+      () => filterWith(state.mood, state.spirit, [],             true,  barIsSetUp),
       () => filterWith(state.mood, state.spirit, state.sequence, false, barIsSetUp),
-      () => filterWith(state.mood, state.spirit, null,           false, barIsSetUp),
-      () => filterWith(null,       state.spirit, null,           false, barIsSetUp),
-      () => filterWith(state.mood, null,          null,           false, barIsSetUp),
-      () => filterWith(null,       null,          null,           false, barIsSetUp),
+      () => filterWith(state.mood, state.spirit, [],             false, barIsSetUp),
+      () => filterWith([],         state.spirit, [],             false, barIsSetUp),
+      () => filterWith(state.mood, [],            [],             false, barIsSetUp),
+      () => filterWith([],         [],            [],             false, barIsSetUp),
       // Last resort: relax makeability so the user still gets a result,
       // but the caller is told via lastFilterWasUnmakeable.
       () => filterWith(state.mood, state.spirit, state.sequence, true,  false),
-      () => filterWith(state.mood, state.spirit, null,           true,  false),
+      () => filterWith(state.mood, state.spirit, [],             true,  false),
       () => filterWith(state.mood, state.spirit, state.sequence, false, false),
-      () => filterWith(state.mood, state.spirit, null,           false, false),
-      () => filterWith(null,       state.spirit, null,           false, false),
-      () => filterWith(state.mood, null,          null,           false, false),
-      () => filterWith(null,       null,          null,           false, false),
+      () => filterWith(state.mood, state.spirit, [],             false, false),
+      () => filterWith([],         state.spirit, [],             false, false),
+      () => filterWith(state.mood, [],            [],             false, false),
+      () => filterWith([],         [],            [],             false, false),
     ];
     for (let idx = 0; idx < attempts.length; idx++) {
       const r = attempts[idx]();
@@ -602,11 +627,11 @@ const finder = (() => {
   // ── Guided flow ─────────────────────────────────────────────────────────
 
   function startFlow() {
-    buildOptions('mood-options', MOODS, mood => {
+    buildOptions('mood-options', MOODS, 'mood-continue-btn', mood => {
       state.mood = mood;
-      buildOptions('spirit-options', SPIRITS, spirit => {
+      buildOptions('spirit-options', SPIRITS, 'spirit-continue-btn', spirit => {
         state.spirit = spirit;
-        buildOptions('sequence-options', SEQUENCES, sequence => {
+        buildOptions('sequence-options', SEQUENCES, 'sequence-continue-btn', sequence => {
           state.sequence = sequence;
           results = filter();
           resultIndex = 0;
@@ -760,7 +785,7 @@ const finder = (() => {
   }
 
   function restart() {
-    state = { mood: null, spirit: null, sequence: null, pendingStart: false };
+    state = { mood: [], spirit: [], sequence: [], pendingStart: false };
     results = [];
     resultIndex = 0;
     history = [];

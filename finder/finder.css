@@ -282,6 +282,17 @@
   color: #fff;
 }
 
+.option-btn.selected {
+  background: rgba(216, 67, 21, 0.35);
+  border-color: var(--color-rust);
+  color: #fff;
+}
+
+.continue-btn {
+  margin-top: 16px;
+  width: 100%;
+}
+
 /* CTA buttons */
 .finder-btn {
   font-family: 'Cinzel', serif;
