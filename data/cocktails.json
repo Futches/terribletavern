@@ -4162,22 +4162,6 @@
     "mood_score": 4
   },
   {
-    "name": "Gone Til' November",
-    "category": "Tequila / Mezcal",
-    "spirits": "Tequila",
-    "ingredients": "2 oz Reposado Tequila, 1 oz Spiced Cider, Cinnamon, 0.5 oz Elderflower, 0.75 oz Lemon",
-    "method": "",
-    "glass": "Coupe",
-    "notes": "",
-    "season": "Fall",
-    "sequence": "First Round",
-    "moods": [
-      "Cozy"
-    ],
-    "primary_mood": "Cozy",
-    "mood_score": 3
-  },
-  {
     "name": "Gordito",
     "category": "Tequila / Mezcal",
     "spirits": "Altos Reposado Tequila, Del Maguey Vida Mezcal, Ancho Reyes",
@@ -6478,23 +6462,6 @@
     "mood_score": 3
   },
   {
-    "name": "Bees Knees",
-    "category": "Gin",
-    "spirits": "Barr Hill Tom Cat Reserve Gin",
-    "ingredients": "2 oz Barr Hill Tom Cat Reserve Gin, 0.75 oz fresh lemon juice, 0.75 oz honey syrup",
-    "method": "Shake hard, double strain",
-    "glass": "Coupe",
-    "notes": "Honey syrup: 2:1 honey to warm water, stir to combine. Tom Cat's barrel-aged honey character amplifies the classic honey-lemon profile. Lemon twist garnish.",
-    "season": "All-Season",
-    "sequence": "First Round",
-    "moods": [
-      "Crowd Pleaser",
-      "Tailgating"
-    ],
-    "primary_mood": "Crowd Pleaser",
-    "mood_score": 5
-  },
-  {
     "name": "Beeswax Negroni",
     "category": "Gin",
     "spirits": "Gin",
@@ -7985,26 +7952,6 @@
     "mood_score": 5
   },
   {
-    "name": "Qui-Gon Gin",
-    "category": "Gin",
-    "spirits": "Barr Hill Gin",
-    "ingredients": "2 oz Barr Hill gin, 1 oz velvet falernum, 0.75 oz lime, 6-8 mint leaves, 0.5 oz vanilla, 1 oz egg white",
-    "method": "Dry shake, then shake with ice, double strain",
-    "glass": "Coupe",
-    "notes": "Dranks; egg white for froth",
-    "season": "Summer",
-    "sequence": "First Round",
-    "moods": [
-      "Refreshing",
-      "Porch Sipper",
-      "Crowd Pleaser",
-      "Day Drinking",
-      "Tailgating"
-    ],
-    "primary_mood": "Refreshing",
-    "mood_score": 4
-  },
-  {
     "name": "Raspberry Ripple",
     "category": "Gin",
     "spirits": "Gin",
@@ -8041,26 +7988,6 @@
     ],
     "primary_mood": "Crowd Pleaser",
     "mood_score": 3
-  },
-  {
-    "name": "Rosemary Bee's Knees",
-    "category": "Gin",
-    "spirits": "Gin (London Dry or botanical)",
-    "ingredients": "2 oz gin, 0.75 oz fresh lemon juice, 0.75 oz rosemary honey syrup",
-    "method": "Shake, double strain",
-    "glass": "Coupe",
-    "notes": "Make rosemary honey: warm honey and water 1:1 with fresh rosemary sprigs. Classic Bee's Knees elevated with herbal depth. Rosemary sprig garnish.",
-    "season": "Spring",
-    "sequence": "First Round",
-    "moods": [
-      "Refreshing",
-      "Porch Sipper",
-      "Crowd Pleaser",
-      "Day Drinking",
-      "Tailgating"
-    ],
-    "primary_mood": "Refreshing",
-    "mood_score": 4
   },
   {
     "name": "Rosemary Bees Knees",
@@ -8277,24 +8204,6 @@
     ],
     "primary_mood": "Contemplative",
     "mood_score": 4
-  },
-  {
-    "name": "Spiced Apple Bee's Knees",
-    "category": "Gin",
-    "spirits": "Gin",
-    "ingredients": "2 oz Tom Cat Reserve Gin, 1 oz Apple Cider, 0.75 oz Fresh Lemon Juice, 0.5 oz Honey Syrup, 2 dashes Angostura Bitters",
-    "method": "Shaken",
-    "glass": "Coupe",
-    "notes": "2oz gin, 1.5oz apple cider, .75oz lemon juice, .5oz honey syrup, 6 dashes Angostura",
-    "season": "Fall",
-    "sequence": "First Round",
-    "moods": [
-      "Porch Sipper",
-      "Cozy",
-      "Day Drinking"
-    ],
-    "primary_mood": "Cozy",
-    "mood_score": 3
   },
   {
     "name": "Spiced Apple Bees Knees",
