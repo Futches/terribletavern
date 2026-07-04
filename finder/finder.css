@@ -1127,8 +1127,14 @@
     object-fit: contain;
   }
   .print-columns {
-    column-count: 2;
     column-gap: 36px;
+  }
+  .print-columns.one-col {
+    column-count: 1;
+  }
+  .print-columns.two-col {
+    column-count: 2;
+    column-fill: balance;
   }
   .print-category {
     break-inside: avoid;

@@ -815,6 +815,9 @@ const finder = (() => {
         </div>`;
     }).join('');
 
+    const totalDrinks = lastMenu.reduce((sum, g) => sum + g.drinks.length, 0);
+    const colClass = totalDrinks > 7 ? 'two-col' : 'one-col';
+
     root.innerHTML = `
       <div class="print-header">
         <div>
@@ -823,7 +826,7 @@ const finder = (() => {
         </div>
         <img class="print-logo" src="/images/tt-black-logo.png" alt="">
       </div>
-      <div class="print-columns">${categoriesHtml}</div>
+      <div class="print-columns ${colClass}">${categoriesHtml}</div>
     `;
 
     window.print();
