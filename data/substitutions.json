@@ -105,5 +105,11 @@
   "overproof rum": "Use 1.5x the amount of standard rum",
   "gin": "Vodka (loses botanical notes) or aquavit for a different herbal spin",
   "vodka": "Gin (adds botanical flavor) or white rum",
-  "whiskey": "Bourbon or rye depending on the recipe direction"
+  "whiskey": "Bourbon or rye depending on the recipe direction",
+  "hendrick's neptunia gin": "Regular Hendrick's Gin or any London Dry gin, plus a pinch of sea salt for the briny note",
+  "neptunia gin": "Regular Hendrick's Gin or any London Dry gin, plus a pinch of sea salt for the briny note",
+  "barr hill gin": "Any London Dry gin plus a small bar spoon of honey",
+  "barr hill tom cat aged gin": "A barrel-aged gin like Ransom Old Tom, or light bourbon with a dash of juniper bitters",
+  "barr hill old tom gin": "Ransom Old Tom Gin, or London Dry gin plus a bar spoon of simple syrup",
+  "barr hill tom cat reserve gin": "Any barrel-aged gin, or light whiskey with a drop of juniper bitters"
 }

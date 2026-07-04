@@ -1,19 +1,28 @@
 {
   "Barr Hill Gin": {
     "type": "branded",
+    "strictMatch": true,
     "note": "Barr Hill is a Vermont honey gin with a distinctly floral, lightly sweet character from raw wildflower honey. Any quality London Dry gin works — Tanqueray or Beefeater are solid standbys. For the floral quality, Hendrick's is a closer match. Add a small bar spoon of honey to approximate the sweetness."
   },
   "Barr Hill Tom Cat Aged Gin": {
     "type": "branded",
+    "strictMatch": true,
     "note": "Tom Cat is Barr Hill's barrel-aged gin — it sits between gin and whiskey, with oak, honey, and juniper all present. Substitute with a barrel-aged gin like Ransom Old Tom, or use a light bourbon with a few dashes of juniper tincture if you're improvising."
   },
   "Barr Hill Old Tom Gin": {
     "type": "branded",
+    "strictMatch": true,
     "note": "Old Tom is a slightly sweeter, softer style of gin. Ransom Old Tom Gin is the closest substitute. In a pinch, use London Dry gin and add a small bar spoon of simple syrup to the drink."
   },
   "Barr Hill Tom Cat Reserve Gin": {
     "type": "branded",
+    "strictMatch": true,
     "note": "The Reserve is the premium aged expression of Tom Cat — deeper oak, more complexity. Substitute with any barrel-aged gin, or a light whiskey with a drop of juniper bitters."
+  },
+  "Hendrick's Neptunia Gin": {
+    "type": "branded",
+    "strictMatch": true,
+    "note": "Neptunia is a limited-edition Hendrick's variant built around ocean botanicals — sea kelp, saltwater, and citrus, on top of the usual cucumber and rose. Substitute with regular Hendrick's Gin or any London Dry gin. To approximate the briny, marine note, add a small pinch of sea salt or a few drops of a saline solution to the drink."
   },
   "Serrano Tequila": {
     "type": "flavored",
