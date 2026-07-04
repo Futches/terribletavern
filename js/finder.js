@@ -2,7 +2,8 @@ const finder = (() => {
   const MOODS = [
     'Refreshing', 'Celebratory', 'Porch Sipper', 'Date Night',
     'Cozy', 'Adventurous', 'Contemplative', 'Nightcap',
-    'Crowd Pleaser', 'Campfire', 'Brunch', 'Dessert'
+    'Crowd Pleaser', 'Campfire', 'Brunch', 'Dessert',
+    'Day Drinking', 'Tailgating', 'Venting'
   ];
 
   const SPIRITS = [
