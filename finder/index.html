@@ -138,6 +138,21 @@
         <button class="finder-btn ghost" id="mybar-back-btn" style="display:none;margin-top:16px;" onclick="finder.restart()">← Back</button>
       </div>
 
+      <!-- Step: Mode choice -->
+      <div class="finder-step" id="step-mode">
+        <h2 class="finder-question">Drink or Menu?</h2>
+        <p class="finder-subtitle">Choose your path — we'll ask the same three questions either way.</p>
+        <button class="mode-choice-btn" onclick="finder.chooseMode('single')">
+          <span class="mode-choice-title">One Perfect Drink</span>
+          <span class="mode-choice-desc">Answer three questions, get a single recommendation</span>
+        </button>
+        <button class="mode-choice-btn" onclick="finder.chooseMode('menu')">
+          <span class="mode-choice-title">Show Me a Menu</span>
+          <span class="mode-choice-desc">Get a curated menu of options to choose from</span>
+        </button>
+        <button class="finder-btn ghost" style="margin-top:16px;" onclick="finder.restart()">← Back</button>
+      </div>
+
       <!-- Step: Search -->
       <div class="finder-step" id="step-search">
         <h2 class="finder-question">What's the drink?</h2>
@@ -171,6 +186,14 @@
         <p class="finder-subtitle">Pick up to three.</p>
         <div class="finder-options" id="sequence-options"></div>
         <button class="finder-btn primary continue-btn" id="sequence-continue-btn" style="display:none;" onclick="finder.continueSequence()">Continue</button>
+      </div>
+
+      <!-- Menu -->
+      <div class="finder-step" id="step-menu">
+        <h2 class="finder-question">Your Menu</h2>
+        <p class="finder-subtitle">Tap any drink for the full recipe.</p>
+        <div id="menu-list"></div>
+        <button class="finder-btn ghost" style="margin-top:16px;" onclick="finder.restart()">Start Over</button>
       </div>
 
       <!-- No results -->

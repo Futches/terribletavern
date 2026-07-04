@@ -38,10 +38,11 @@ const finder = (() => {
   let substitutions = {};
   let spiritSubs = {};
   let barIngredients = {};
+  let easySubs = [];
   let myBar = new Set();
   let customBar = []; // [{name, category}]
   let tavernMode = false;
-  let state = { mood: [], spirit: [], sequence: [], pendingStart: false };
+  let state = { mode: null, mood: [], spirit: [], sequence: [], pendingStart: false };
   const MAX_SELECT = 3;
   let results = [];
   let lastFilterWasUnmakeable = false;
@@ -52,16 +53,18 @@ const finder = (() => {
     const params = new URLSearchParams(window.location.search);
     tavernMode = params.has('tavern');
 
-    const [cRes, sRes, bRes, ssRes] = await Promise.all([
+    const [cRes, sRes, bRes, ssRes, esRes] = await Promise.all([
       fetch('../data/cocktails.json'),
       fetch('../data/substitutions.json'),
       fetch('../data/bar-ingredients.json'),
       fetch('../data/spirit-subs.json'),
+      fetch('../data/easy-substitutions.json'),
     ]);
     cocktails = await cRes.json();
     substitutions = await sRes.json();
     barIngredients = await bRes.json();
     spiritSubs = await ssRes.json();
+    easySubs = await esRes.json();
 
     if (tavernMode) {
       try {
@@ -119,6 +122,74 @@ const finder = (() => {
     const ings = parseIngredients(drink.ingredients);
     const missing = ings.filter(i => !ingredientInBar(i));
     return { makeable: missing.length === 0, missing };
+  }
+
+  // Is a missing ingredient covered by an easy 1-for-1 swap the user already has?
+  function isEasilySubstitutable(ingredientStr) {
+    const lower = ingredientStr.toLowerCase();
+    for (const group of easySubs) {
+      const matched = group.find(kw => lower.includes(kw));
+      if (!matched) continue;
+      if (group.some(kw => kw !== matched && ingredientInBar(kw))) return true;
+    }
+    return false;
+  }
+
+  // Menu eligibility: makeable outright, or every missing ingredient has an easy swap in stock
+  function menuEligibility(drink) {
+    const barIsSetUp = myBar.size > 0 || customBar.length > 0;
+    if (!barIsSetUp) return { eligible: true, makeable: true, substituted: false, missing: [] };
+    const ings = parseIngredients(drink.ingredients);
+    const missing = ings.filter(i => !ingredientInBar(i));
+    if (missing.length === 0) return { eligible: true, makeable: true, substituted: false, missing: [] };
+    const allSubbable = missing.every(m => isEasilySubstitutable(m));
+    return { eligible: allSubbable, makeable: false, substituted: allSubbable, missing };
+  }
+
+  function poolForCategory(category) {
+    const season = getSeason();
+    const attempts = [
+      { mood: state.mood, sequence: state.sequence, season: true },
+      { mood: state.mood, sequence: [],             season: true },
+      { mood: state.mood, sequence: state.sequence, season: false },
+      { mood: state.mood, sequence: [],             season: false },
+      { mood: [],         sequence: [],             season: false },
+    ];
+    for (const a of attempts) {
+      const pool = cocktails.filter(d => {
+        if (d.category !== category) return false;
+        const seasonOk = !a.season || d.season === season || d.season === 'All-Season';
+        const moodOk   = !a.mood.length     || a.mood.some(m => d.moods.includes(m));
+        const seqOk    = !a.sequence.length || a.sequence.some(s => d.sequence === s || d.sequence === 'Any Time');
+        return seasonOk && moodOk && seqOk;
+      });
+      if (pool.length > 0) return pool;
+    }
+    return [];
+  }
+
+  function buildMenu() {
+    const spiritOrder = SPIRITS.filter(s => s.value !== null).map(s => s.value);
+    const spiritsToUse = state.spirit.length > 0
+      ? spiritOrder.filter(v => state.spirit.includes(v))
+      : spiritOrder;
+    const perCap = state.spirit.length > 0 ? 3 : 2;
+
+    const menu = [];
+    spiritsToUse.forEach(category => {
+      const pool = poolForCategory(category);
+      const scored = pool
+        .map(d => ({ d, elig: menuEligibility(d) }))
+        .filter(x => x.elig.eligible)
+        .sort((a, b) => {
+          if (a.elig.makeable !== b.elig.makeable) return (b.elig.makeable ? 1 : 0) - (a.elig.makeable ? 1 : 0);
+          return b.d.mood_score - a.d.mood_score;
+        });
+      if (scored.length === 0) return; // omit category — nothing makeable or easily substitutable
+      const top = scored.slice(0, perCap).map(x => Object.assign({}, x.d, { _menuEligibility: x.elig }));
+      menu.push({ category, drinks: top });
+    });
+    return menu;
   }
 
   function showStep(id) {
@@ -606,7 +677,7 @@ const finder = (() => {
     updateMyBarLabel();
     if (state.pendingStart) {
       state.pendingStart = false;
-      startFlow();
+      showModeStep();
     } else {
       showStep('step-welcome');
     }
@@ -633,13 +704,23 @@ const finder = (() => {
         state.spirit = spirit;
         buildOptions('sequence-options', SEQUENCES, 'sequence-continue-btn', sequence => {
           state.sequence = sequence;
-          results = filter();
-          resultIndex = 0;
-          history = [];
-          if (results.length === 0) {
-            showStep('step-noresults');
+          if (state.mode === 'menu') {
+            const menu = buildMenu();
+            if (menu.length === 0) {
+              showStep('step-noresults');
+            } else {
+              renderMenu(menu);
+              showStep('step-menu');
+            }
           } else {
-            renderResult();
+            results = filter();
+            resultIndex = 0;
+            history = [];
+            if (results.length === 0) {
+              showStep('step-noresults');
+            } else {
+              renderResult();
+            }
           }
         });
         showStep('step-sequence');
@@ -649,6 +730,56 @@ const finder = (() => {
     showStep('step-mood');
   }
 
+  function showModeStep() {
+    showStep('step-mode');
+  }
+
+  function chooseMode(mode) {
+    state.mode = mode;
+    startFlow();
+  }
+
+  function renderMenu(menu) {
+    const container = document.getElementById('menu-list');
+    container.innerHTML = '';
+    const flat = [];
+    menu.forEach(group => {
+      const section = document.createElement('div');
+      section.className = 'menu-category-section';
+      const title = document.createElement('h3');
+      title.className = 'menu-category-title';
+      title.textContent = group.category;
+      section.appendChild(title);
+      const list = document.createElement('div');
+      list.className = 'menu-category-drinks';
+      group.drinks.forEach(drink => {
+        const idx = flat.length;
+        flat.push(drink);
+        const card = document.createElement('button');
+        card.className = 'menu-drink-card';
+        let badge = '';
+        if (drink._menuEligibility.makeable) {
+          badge = '<span class="menu-badge makeable">✓ Makeable</span>';
+        } else if (drink._menuEligibility.substituted) {
+          badge = '<span class="menu-badge substitute">~ Easy Swap</span>';
+        }
+        card.innerHTML = `<span class="menu-drink-name">${drink.name}</span>${badge}`;
+        card.addEventListener('click', () => openMenuDrink(idx));
+        list.appendChild(card);
+      });
+      section.appendChild(list);
+      container.appendChild(section);
+    });
+    results = flat;
+  }
+
+  function openMenuDrink(idx) {
+    resultIndex = idx;
+    history = [];
+    renderResult();
+    showStep('step-result');
+  }
+
   function start() {
     if (myBar.size === 0 && !tavernMode) {
       state.pendingStart = true;
@@ -656,7 +787,7 @@ const finder = (() => {
       return;
     }
     state.pendingStart = false;
-    startFlow();
+    showModeStep();
   }
 
   function useDefaultBar(tierIndex) {
@@ -672,7 +803,7 @@ const finder = (() => {
     localStorage.setItem('terribleTavernBar', JSON.stringify([...myBar]));
     updateMyBarLabel();
     state.pendingStart = false;
-    startFlow();
+    showModeStep();
   }
 
   function stockMyBar() {
@@ -683,7 +814,7 @@ const finder = (() => {
 
   function skipBarCheck() {
     state.pendingStart = false;
-    startFlow();
+    showModeStep();
   }
 
   function next() {
@@ -719,6 +850,8 @@ const finder = (() => {
     if (history.length > 0) {
       resultIndex = history.pop();
       renderResult();
+    } else if (state.mode === 'menu') {
+      showStep('step-menu');
     } else {
       restart();
     }
@@ -785,7 +918,7 @@ const finder = (() => {
   }
 
   function restart() {
-    state = { mood: [], spirit: [], sequence: [], pendingStart: false };
+    state = { mode: null, mood: [], spirit: [], sequence: [], pendingStart: false };
     results = [];
     resultIndex = 0;
     history = [];
@@ -814,5 +947,5 @@ const finder = (() => {
     document.getElementById('help-modal').style.display = 'none';
   }
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp, chooseMode };
 })();
