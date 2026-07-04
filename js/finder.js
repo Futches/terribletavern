@@ -99,16 +99,6 @@ const finder = (() => {
   function ingredientInBar(ingStr) {
     if (myBar.size === 0 && customBar.length === 0) return true;
     const lower = ingStr.toLowerCase();
-
-    // Distinctive specialty products (flagged strictMatch in spirit-subs.json) aren't
-    // satisfied by a generic category checkbox (e.g. "Gin") — only an exact custom item counts.
-    const strictBrand = Object.keys(spiritSubs).find(name =>
-      spiritSubs[name].strictMatch && lower.includes(name.toLowerCase())
-    );
-    if (strictBrand) {
-      return customBar.some(c => c.checked !== false && lower.includes(c.name.toLowerCase()));
-    }
-
     try {
       for (const tier of Object.values(barIngredients)) {
         if (!tier.categories) continue;
