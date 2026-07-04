@@ -698,6 +698,10 @@
   letter-spacing: 0.06em;
   margin-bottom: 12px;
 }
+.makeable-badge.missing {
+  color: #d84315;
+  border-color: #d84315;
+}
 .ingredient-name.missing {
   color: #777;
 }

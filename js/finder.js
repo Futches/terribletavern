@@ -42,6 +42,7 @@ const finder = (() => {
   let tavernMode = false;
   let state = { mood: null, spirit: null, sequence: null, pendingStart: false };
   let results = [];
+  let lastFilterWasUnmakeable = false;
   let resultIndex = 0;
   let history = [];
 
@@ -103,7 +104,7 @@ const finder = (() => {
           }
         }
       }
-    } catch(e) { return true; }
+    } catch(e) { return false; }
     for (const custom of customBar) {
       if (custom.checked === false) continue;
       if (lower.includes(custom.name.toLowerCase())) return true;
@@ -136,41 +137,48 @@ const finder = (() => {
     });
   }
 
-  function filterWith(mood, spirit, sequence, useSeason) {
+  function filterWith(mood, spirit, sequence, useSeason, requireMakeable) {
     const season = getSeason();
     const filtered = cocktails.filter(d => {
       const seasonOk = !useSeason || d.season === season || d.season === 'All-Season';
       const moodOk   = !mood     || d.moods.includes(mood);
       const spiritOk = !spirit   || d.category === spirit;
       const seqOk    = !sequence || d.sequence === sequence || d.sequence === 'Any Time';
-      return seasonOk && moodOk && spiritOk && seqOk;
+      const makeOk   = !requireMakeable || drinkMakeability(d).makeable;
+      return seasonOk && moodOk && spiritOk && seqOk && makeOk;
     });
 
-    // Sort: makeable drinks first (if bar is set up), then by mood score
-    return filtered.sort((a, b) => {
-      if (myBar.size > 0) {
-        const aMake = drinkMakeability(a).makeable ? 1 : 0;
-        const bMake = drinkMakeability(b).makeable ? 1 : 0;
-        if (bMake !== aMake) return bMake - aMake;
-      }
-      return b.mood_score - a.mood_score;
-    });
+    return filtered.sort((a, b) => b.mood_score - a.mood_score);
   }
 
   function filter() {
+    const barIsSetUp = myBar.size > 0 || customBar.length > 0;
     const attempts = [
-      () => filterWith(state.mood, state.spirit, state.sequence, true),
-      () => filterWith(state.mood, state.spirit, null,           true),
-      () => filterWith(state.mood, state.spirit, state.sequence, false),
-      () => filterWith(state.mood, state.spirit, null,           false),
-      () => filterWith(null,       state.spirit, null,           false),
-      () => filterWith(state.mood, null,          null,           false),
-      () => filterWith(null,       null,          null,           false),
+      () => filterWith(state.mood, state.spirit, state.sequence, true,  barIsSetUp),
+      () => filterWith(state.mood, state.spirit, null,           true,  barIsSetUp),
+      () => filterWith(state.mood, state.spirit, state.sequence, false, barIsSetUp),
+      () => filterWith(state.mood, state.spirit, null,           false, barIsSetUp),
+      () => filterWith(null,       state.spirit, null,           false, barIsSetUp),
+      () => filterWith(state.mood, null,          null,           false, barIsSetUp),
+      () => filterWith(null,       null,          null,           false, barIsSetUp),
+      // Last resort: relax makeability so the user still gets a result,
+      // but the caller is told via lastFilterWasUnmakeable.
+      () => filterWith(state.mood, state.spirit, state.sequence, true,  false),
+      () => filterWith(state.mood, state.spirit, null,           true,  false),
+      () => filterWith(state.mood, state.spirit, state.sequence, false, false),
+      () => filterWith(state.mood, state.spirit, null,           false, false),
+      () => filterWith(null,       state.spirit, null,           false, false),
+      () => filterWith(state.mood, null,          null,           false, false),
+      () => filterWith(null,       null,          null,           false, false),
     ];
-    for (const attempt of attempts) {
-      const r = attempt();
-      if (r.length > 0) return r;
+    for (let idx = 0; idx < attempts.length; idx++) {
+      const r = attempts[idx]();
+      if (r.length > 0) {
+        lastFilterWasUnmakeable = barIsSetUp && idx >= 7;
+        return r;
+      }
     }
+    lastFilterWasUnmakeable = false;
     return [];
   }
 
@@ -222,9 +230,13 @@ const finder = (() => {
       badge.id = 'makeable-badge';
       document.getElementById('drink-meta').after(badge);
     }
-    if (myBar.size > 0 && makeable) {
+    const barIsSetUp = myBar.size > 0 || customBar.length > 0;
+    if (barIsSetUp && makeable) {
       badge.className = 'makeable-badge';
       badge.textContent = '✓ You can make this';
+    } else if (barIsSetUp && lastFilterWasUnmakeable) {
+      badge.className = 'makeable-badge missing';
+      badge.textContent = `✗ Missing: ${missing.join(', ')}`;
     } else {
       badge.className = '';
       badge.textContent = '';
