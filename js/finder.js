@@ -337,13 +337,13 @@ const finder = (() => {
     const barIsSetUp = myBar.size > 0 || customBar.length > 0;
     if (barIsSetUp && makeable) {
       badge.className = 'makeable-badge';
-      badge.textContent = '✓ You can make this';
+      badge.innerHTML = '<span class="makeable-check">✓</span> Makeable';
     } else if (barIsSetUp && lastFilterWasUnmakeable) {
       badge.className = 'makeable-badge missing';
-      badge.textContent = `✗ Missing: ${missing.join(', ')}`;
+      badge.innerHTML = `<span class="makeable-check unmakeable">✗</span> Missing: ${missing.join(', ')}`;
     } else {
       badge.className = '';
-      badge.textContent = '';
+      badge.innerHTML = '';
     }
 
     const ingredients = parseIngredients(drink.ingredients);
@@ -766,15 +766,14 @@ const finder = (() => {
         card.className = 'menu-drink-card';
         let badge = '';
         if (drink._menuEligibility.makeable) {
-          badge = '<span class="menu-badge makeable">✓ Makeable</span>';
+          badge = '<span class="makeable-check menu-corner-icon" title="Makeable">✓</span>';
         } else if (drink._menuEligibility.substituted) {
-          badge = '<span class="menu-badge substitute">~ Easy Swap</span>';
+          badge = '<span class="makeable-check substitute menu-corner-icon" title="Easy swap available">~</span>';
         }
         const ingredientsLine = parseIngredients(drink.ingredients).map(stripQuantity).join(', ');
         card.innerHTML = `
-          <div class="menu-drink-top">
-            <span class="menu-drink-name">${drink.name}</span>${badge}
-          </div>
+          ${badge}
+          <div class="menu-drink-name">${drink.name}</div>
           <div class="menu-drink-ingredients">${ingredientsLine}</div>`;
         card.addEventListener('click', () => openMenuDrink(idx));
         list.appendChild(card);
@@ -914,7 +913,7 @@ const finder = (() => {
       const li = document.createElement('li');
       li.className = 'search-result-item';
       const { makeable } = drinkMakeability(drink);
-      const badge = (myBar.size > 0 && makeable) ? ' ✓' : '';
+      const badge = (myBar.size > 0 && makeable) ? ' <span class="makeable-check">✓</span>' : '';
       li.innerHTML = `
         <div class="search-result-name">${drink.name}${badge}</div>
         <div class="search-result-meta">${drink.category}</div>
