@@ -46,6 +46,7 @@ const finder = (() => {
   const MAX_SELECT = 3;
   let results = [];
   let lastFilterWasUnmakeable = false;
+  let lastMenu = [];
   let resultIndex = 0;
   let history = [];
 
@@ -748,6 +749,7 @@ const finder = (() => {
   }
 
   function renderMenu(menu) {
+    lastMenu = menu;
     const container = document.getElementById('menu-list');
     container.innerHTML = '';
     const flat = [];
@@ -790,6 +792,41 @@ const finder = (() => {
     history = [];
     renderResult();
     showStep('step-result');
+  }
+
+  function printMenu() {
+    if (!lastMenu.length) return;
+    const root = document.getElementById('print-menu-root');
+    const dateStr = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+    const categoriesHtml = lastMenu.map(group => {
+      const drinksHtml = group.drinks.map(drink => {
+        const ingredientsLine = parseIngredients(drink.ingredients).map(stripQuantity).join(' / ');
+        return `
+          <div class="print-drink">
+            <div class="print-drink-name">${drink.name}</div>
+            <div class="print-drink-ingredients">${ingredientsLine}</div>
+          </div>`;
+      }).join('');
+      return `
+        <div class="print-category">
+          <div class="print-category-title">${group.category}</div>
+          ${drinksHtml}
+        </div>`;
+    }).join('');
+
+    root.innerHTML = `
+      <div class="print-header">
+        <div>
+          <h1 class="print-title">Terrible Tavern</h1>
+          <div class="print-subtitle">${dateStr}</div>
+        </div>
+        <img class="print-logo" src="/images/tt-black-logo.png" alt="">
+      </div>
+      <div class="print-columns">${categoriesHtml}</div>
+    `;
+
+    window.print();
   }
 
   function start() {
@@ -959,5 +996,5 @@ const finder = (() => {
     document.getElementById('help-modal').style.display = 'none';
   }
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp, chooseMode };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp, chooseMode, printMenu };
 })();

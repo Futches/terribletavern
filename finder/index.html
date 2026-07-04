@@ -194,6 +194,9 @@
         <p class="finder-subtitle">Tap any drink for the full recipe.</p>
         <div id="menu-list"></div>
         <button class="finder-btn ghost" style="margin-top:16px;" onclick="finder.restart()">Start Over</button>
+        <button class="menu-print-egg" onclick="finder.printMenu()" aria-label="Print this menu" title="Print this menu">
+          <img src="/images/tt-black-logo.png" alt="">
+        </button>
       </div>
 
       <!-- No results -->
@@ -241,6 +244,8 @@
 
     </div>
   </main>
+
+  <div id="print-menu-root"></div>
 
   <script src="../js/finder.js"></script>
 </body>
