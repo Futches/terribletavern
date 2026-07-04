@@ -956,8 +956,12 @@
 /* Action buttons */
 .result-actions {
   display: flex;
+  align-items: center;
   gap: 12px;
   margin-top: 32px;
+}
+.result-actions .finder-btn {
+  margin-top: 0;
 }
 
 .result-actions-bottom {
