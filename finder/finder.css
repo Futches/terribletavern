@@ -962,9 +962,8 @@
 .menu-drink-card {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  flex-direction: column;
+  gap: 4px;
   padding: 14px 16px;
   background: rgba(245, 230, 211, 0.05);
   border: 1px solid rgba(245, 230, 211, 0.12);
@@ -979,10 +978,22 @@
   background: rgba(216, 67, 21, 0.15);
   border-color: var(--color-rust);
 }
+.menu-drink-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
 .menu-drink-name {
   font-family: 'Cinzel', serif;
   font-size: 0.9rem;
   color: var(--color-cream);
+}
+.menu-drink-ingredients {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  color: #999;
+  line-height: 1.4;
 }
 .menu-badge {
   font-family: 'Cinzel', serif;

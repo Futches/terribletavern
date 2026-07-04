@@ -284,6 +284,13 @@ const finder = (() => {
     return raw.split(/,(?![^(]*\))/).map(s => s.trim()).filter(Boolean);
   }
 
+  function stripQuantity(ing) {
+    return ing
+      .replace(/^\d[\d./\-\s]*(oz|ml|dashes?|tsp|tbsp|cups?|rinse|splash|drops?|parts?|bar\s?spoons?|pinch|scoop|whole|large|small|medium|leaves?|slices?|wedges?|sprigs?)?\.?\s*/i, '')
+      .replace(/^(top with|fresh|frozen|muddled|dried|ground|crushed|cracked|grated|sliced|cubed|chilled|warm|hot)\s+/i, '')
+      .trim();
+  }
+
   function buildRecipeIngredientIndex() {
     const seen = new Set();
     (cocktails || []).forEach(drink => {
@@ -763,7 +770,12 @@ const finder = (() => {
         } else if (drink._menuEligibility.substituted) {
           badge = '<span class="menu-badge substitute">~ Easy Swap</span>';
         }
-        card.innerHTML = `<span class="menu-drink-name">${drink.name}</span>${badge}`;
+        const ingredientsLine = parseIngredients(drink.ingredients).map(stripQuantity).join(', ');
+        card.innerHTML = `
+          <div class="menu-drink-top">
+            <span class="menu-drink-name">${drink.name}</span>${badge}
+          </div>
+          <div class="menu-drink-ingredients">${ingredientsLine}</div>`;
         card.addEventListener('click', () => openMenuDrink(idx));
         list.appendChild(card);
       });
