@@ -390,6 +390,7 @@
 #step-welcome .finder-btn:last-child {
   width: 100%;
   flex: none;
+  margin-bottom: 36px;
 }
 
 /* Bar Check step */
