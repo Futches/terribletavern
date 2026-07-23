@@ -168,13 +168,13 @@ a {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: #ffffff;
-    padding-top: var(--header-height);
+    padding: calc(var(--header-height) + 80px) 20px 60px;
 }
 
 .hero-content {
@@ -255,7 +255,7 @@ a {
 .hero-image-full {
     width: 100%;
     max-width: 100vw;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 .hero-image-full img {
