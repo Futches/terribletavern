@@ -564,20 +564,23 @@ a {
     background-color: var(--color-charcoal);
 }
 
-.easter-egg-link {
+.find-drink-btn {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 24px;
+    padding: 16px 36px;
+    background-color: var(--color-rust);
+    color: var(--color-cream);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-decoration: none;
-    opacity: 0.25;
-    transition: opacity 0.3s;
+    border-radius: 5px;
+    transition: all var(--transition-speed);
 }
-.easter-egg-link:hover { opacity: 1; }
-.easter-egg-img {
-    height: 36px;
-    width: 36px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
+.find-drink-btn:hover {
+    background-color: var(--color-charcoal);
 }
 
 /* Footer */
