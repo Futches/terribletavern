@@ -564,9 +564,14 @@ a {
     background-color: var(--color-charcoal);
 }
 
+.find-drink-wrap {
+    text-align: center;
+    padding: 60px 20px;
+}
+
 .find-drink-btn {
     display: inline-block;
-    margin-top: 24px;
+    margin-top: 0;
     padding: 16px 36px;
     background-color: var(--color-rust);
     color: var(--color-cream);
