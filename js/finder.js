@@ -47,6 +47,8 @@ const finder = (() => {
   let results = [];
   let lastFilterWasUnmakeable = false;
   let lastMenu = [];
+  let searchMode = 'name';       // 'name' | 'ingredient'
+  let recipeIngIndex = [];       // lazily built, powers ingredient autocomplete
   let resultIndex = 0;
   let history = [];
 
@@ -309,10 +311,7 @@ const finder = (() => {
     const seen = new Set();
     (cocktails || []).forEach(drink => {
       parseIngredients(drink.ingredients).forEach(ing => {
-        const name = ing
-          .replace(/^\d[\d./\s]*(oz|ml|dashes?|tsp|tbsp|cups?|rinse|splash|drops?|parts?|bar\s?spoons?|pinch|scoop|whole|large|small|medium)\.?\s*/i, '')
-          .replace(/^(fresh|frozen|muddled|dried|ground|crushed|cracked|grated|sliced|cubed|chilled|warm|hot)\s+/i, '')
-          .trim();
+        const name = stripQuantity(ing);
         if (name && name.length > 2) seen.add(name);
       });
     });
@@ -943,34 +942,111 @@ const finder = (() => {
 
   function openSearch() {
     showStep('step-search');
-    document.getElementById('search-input').value = '';
-    document.getElementById('search-results').innerHTML = '';
+    setSearchMode('name');
     setTimeout(() => document.getElementById('search-input').focus(), 100);
+  }
+
+  function setSearchMode(mode) {
+    searchMode = mode;
+    const isIng = mode === 'ingredient';
+    document.getElementById('search-mode-name').classList.toggle('active', !isIng);
+    document.getElementById('search-mode-ingredient').classList.toggle('active', isIng);
+    document.getElementById('search-heading').textContent = isIng ? "What's in the bottle?" : "What's the drink?";
+    const input = document.getElementById('search-input');
+    input.placeholder = isIng ? 'Start typing an ingredient…' : 'Start typing a name…';
+    input.value = '';
+    document.getElementById('search-results').innerHTML = '';
+    document.getElementById('search-suggestions').innerHTML = '';
+    document.getElementById('search-makeable-row').style.display = isIng ? '' : 'none';
+    document.getElementById('search-makeable-only').checked = false;
+    input.focus();
+  }
+
+  // Does a drink reference this ingredient anywhere in its ingredient list?
+  function drinkHasIngredient(drink, q) {
+    return parseIngredients(drink.ingredients).some(i => i.toLowerCase().includes(q));
+  }
+
+  function renderSuggestions(q) {
+    const box = document.getElementById('search-suggestions');
+    box.innerHTML = '';
+    if (searchMode !== 'ingredient' || q.length < 2) return;
+    if (!recipeIngIndex.length) recipeIngIndex = buildRecipeIngredientIndex();
+    // Suggest distinct ingredient names containing the query, shortest (most generic) first
+    const seen = new Set();
+    recipeIngIndex
+      .filter(s => s.toLowerCase().includes(q))
+      .sort((a, b) => a.length - b.length)
+      .filter(s => { const k = s.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; })
+      .slice(0, 6)
+      .forEach(s => {
+        const li = document.createElement('li');
+        li.className = 'search-suggestion';
+        li.textContent = s;
+        li.addEventListener('mousedown', e => {
+          e.preventDefault();
+          document.getElementById('search-input').value = s;
+          box.innerHTML = '';
+          onSearch(s);
+        });
+        box.appendChild(li);
+      });
   }
 
   function onSearch(query) {
     const list = document.getElementById('search-results');
     list.innerHTML = '';
     const q = query.trim().toLowerCase();
+    renderSuggestions(q);
     if (!q) return;
 
-    const matches = cocktails
-      .filter(d => d.name.toLowerCase().includes(q))
-      .slice(0, 20);
+    const byIngredient = searchMode === 'ingredient';
+    const makeableOnly = byIngredient && document.getElementById('search-makeable-only').checked;
 
-    if (matches.length === 0) {
-      list.innerHTML = '<li class="search-empty">No drinks found.</li>';
+    let matches = cocktails.filter(d =>
+      byIngredient ? drinkHasIngredient(d, q) : d.name.toLowerCase().includes(q)
+    );
+
+    if (byIngredient) {
+      // Makeable first, then by mood score — the ✓ ones are what you can pour tonight
+      matches = matches
+        .map(d => ({ d, makeable: drinkMakeability(d).makeable }))
+        .filter(x => !makeableOnly || x.makeable)
+        .sort((a, b) => (b.makeable - a.makeable) || (b.d.mood_score - a.d.mood_score))
+        .map(x => x.d);
+    }
+
+    const total = matches.length;
+    const shown = matches.slice(0, byIngredient ? 40 : 20);
+
+    if (total === 0) {
+      list.innerHTML = makeableOnly
+        ? '<li class="search-empty">Nothing you can make with that right now. Uncheck the filter to see all of them.</li>'
+        : '<li class="search-empty">No drinks found.</li>';
       return;
     }
 
-    matches.forEach(drink => {
+    if (byIngredient) {
+      const count = document.createElement('li');
+      count.className = 'search-count';
+      count.textContent = `${total} drink${total === 1 ? '' : 's'}${total > shown.length ? ` — showing first ${shown.length}` : ''}`;
+      list.appendChild(count);
+    }
+
+    shown.forEach(drink => {
       const li = document.createElement('li');
       li.className = 'search-result-item';
       const { makeable } = drinkMakeability(drink);
       const badge = makeable ? ' <span class="makeable-check">✓</span>' : '';
+      // In ingredient mode, show which ingredient matched rather than just the category
+      let meta = drink.category;
+      if (byIngredient) {
+        const hit = parseIngredients(drink.ingredients).find(i => i.toLowerCase().includes(q));
+        if (hit) meta = `${drink.category} · ${stripQuantity(hit)}`;
+      }
       li.innerHTML = `
         <div class="search-result-name">${drink.name}${badge}</div>
-        <div class="search-result-meta">${drink.category}</div>
+        <div class="search-result-meta">${meta}</div>
       `;
       li.addEventListener('click', () => {
         results = [drink];
@@ -1012,5 +1088,5 @@ const finder = (() => {
     document.getElementById('help-modal').style.display = 'none';
   }
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp, chooseMode, printMenu };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp, chooseMode, printMenu, setSearchMode };
 })();

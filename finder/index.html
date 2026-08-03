@@ -36,8 +36,8 @@
         </div>
 
         <div class="help-section">
-          <div class="help-section-title">Search by Name</div>
-          <p>Know what you want? Type any part of a drink name to go straight to the recipe.</p>
+          <div class="help-section-title">Search</div>
+          <p>Two ways to look things up. <em>By Name</em> — know what you want? Type any part of a drink name to go straight to the recipe. <em>By Ingredient</em> — got a pint of blueberries to use up? Type an ingredient to see every drink that calls for it, with the ones you can make right now sorted to the top. Tick <em>Only show drinks I can make</em> to hide the rest.</p>
         </div>
 
         <div class="help-section">
@@ -99,7 +99,7 @@
         <p class="finder-subtitle">Answer three questions and we'll find the perfect cocktail for right now.</p>
         <div class="welcome-main-btns">
           <button class="finder-btn primary" style="width:100%" onclick="finder.start()">Let's Go</button>
-          <button class="finder-btn secondary" style="width:100%;flex:none;margin-top:12px" onclick="finder.openSearch()">Search by Name</button>
+          <button class="finder-btn secondary" style="width:100%;flex:none;margin-top:12px" onclick="finder.openSearch()">Search</button>
         </div>
         <div class="welcome-spacer"></div>
         <div class="my-bar-divider"></div>
@@ -170,8 +170,19 @@
 
       <!-- Step: Search -->
       <div class="finder-step" id="step-search">
-        <h2 class="finder-question">What's the drink?</h2>
-        <input type="text" id="search-input" class="search-input" placeholder="Start typing a name…" oninput="finder.onSearch(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
+        <h2 class="finder-question" id="search-heading">What's the drink?</h2>
+        <div class="search-mode-toggle">
+          <button class="search-mode-btn active" id="search-mode-name" onclick="finder.setSearchMode('name')">By Name</button>
+          <button class="search-mode-btn" id="search-mode-ingredient" onclick="finder.setSearchMode('ingredient')">By Ingredient</button>
+        </div>
+        <div class="search-input-wrap">
+          <input type="text" id="search-input" class="search-input" placeholder="Start typing a name…" oninput="finder.onSearch(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
+          <ul id="search-suggestions" class="search-suggestions"></ul>
+        </div>
+        <label class="search-filter-row" id="search-makeable-row" style="display:none;">
+          <input type="checkbox" id="search-makeable-only" onchange="finder.onSearch(document.getElementById('search-input').value)">
+          <span>Only show drinks I can make</span>
+        </label>
         <ul class="search-results" id="search-results"></ul>
         <button class="finder-btn ghost" style="margin-top:16px;" onclick="finder.restart()"><svg class="btn-arrow" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="13" y1="8" x2="3" y2="8"></line><polyline points="7,4 3,8 7,12"></polyline></svg> Back</button>
       </div>
