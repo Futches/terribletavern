@@ -381,13 +381,10 @@
   width: 100%;
   flex: none;
 }
-/* Sits between Let's Go and Search; the top margin adds a blank line of
-   space above it, on top of the container's 12px gap. */
+/* Sits between Let's Go and Search. Styling comes from .finder-subtitle so it
+   matches the hint under the title; this only adjusts spacing. The top margin
+   adds a blank line above it, on top of the container's 12px gap. */
 .welcome-search-hint {
-  font-family: 'Cinzel', serif;
-  font-size: 0.85rem;
-  color: #999;
-  line-height: 1.6;
   text-align: center;
   margin: 22px 0 0;
 }
