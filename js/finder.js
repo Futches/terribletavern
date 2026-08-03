@@ -943,7 +943,22 @@ const finder = (() => {
   function openSearch() {
     showStep('step-search');
     setSearchMode('name');
-    setTimeout(() => document.getElementById('search-input').focus(), 100);
+    const input = document.getElementById('search-input');
+    if (!input.dataset.blurBound) {
+      // Tapping away (or hitting Return) dismisses the dropdown. mousedown on a
+      // suggestion calls preventDefault, so picking one never triggers this.
+      input.addEventListener('blur', () => setTimeout(closeSuggestions, 120));
+      input.addEventListener('keydown', e => { if (e.key === 'Enter') { closeSuggestions(); input.blur(); } });
+      input.dataset.blurBound = '1';
+    }
+    setTimeout(() => input.focus(), 100);
+  }
+
+  // The "only show drinks I can make" checkbox re-runs the search without
+  // reopening the suggestion dropdown.
+  function onFilterChange() {
+    closeSuggestions();
+    runSearch(document.getElementById('search-input').value);
   }
 
   function setSearchMode(mode) {
@@ -985,19 +1000,35 @@ const finder = (() => {
         li.textContent = s;
         li.addEventListener('mousedown', e => {
           e.preventDefault();
-          document.getElementById('search-input').value = s;
-          box.innerHTML = '';
-          onSearch(s);
+          pickSuggestion(s);
         });
         box.appendChild(li);
       });
   }
 
+  // Choosing a suggestion runs the search but must NOT reopen the dropdown,
+  // so it calls runSearch directly rather than going back through onSearch.
+  function pickSuggestion(s) {
+    document.getElementById('search-input').value = s;
+    closeSuggestions();
+    runSearch(s);
+  }
+
+  function closeSuggestions() {
+    const box = document.getElementById('search-suggestions');
+    if (box) box.innerHTML = '';
+  }
+
+  // Typing: refresh both the dropdown and the results.
   function onSearch(query) {
+    renderSuggestions(query.trim().toLowerCase());
+    runSearch(query);
+  }
+
+  function runSearch(query) {
     const list = document.getElementById('search-results');
     list.innerHTML = '';
     const q = query.trim().toLowerCase();
-    renderSuggestions(q);
     if (!q) return;
 
     const byIngredient = searchMode === 'ingredient';
@@ -1088,5 +1119,5 @@ const finder = (() => {
     document.getElementById('help-modal').style.display = 'none';
   }
 
-  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp, chooseMode, printMenu, setSearchMode };
+  return { start, next, back, restart, share, openSearch, onSearch, openMyBar, saveMyBar, clearMyBar, useDefaultBar, stockMyBar, skipBarCheck, tavernBannerTap, closeTavernModal, returnToHomeBar, closeSubModal, openHelp, closeHelp, chooseMode, printMenu, setSearchMode, onFilterChange };
 })();
