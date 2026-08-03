@@ -977,9 +977,38 @@ const finder = (() => {
     input.focus();
   }
 
-  // Does a drink reference this ingredient anywhere in its ingredient list?
+  // Every distinct word appearing in the recipe vocabulary, used to tell a
+  // finished search term from someone mid-type.
+  let ingredientWordSet = null;
+  function ingredientWords() {
+    if (!ingredientWordSet) {
+      if (!recipeIngIndex.length) recipeIngIndex = buildRecipeIngredientIndex();
+      ingredientWordSet = new Set();
+      recipeIngIndex.forEach(term => {
+        term.toLowerCase().split(/[^a-z0-9'’]+/).forEach(w => {
+          if (w.length > 2) ingredientWordSet.add(w);
+        });
+      });
+    }
+    return ingredientWordSet;
+  }
+
+  // "gin" is a real word, so it should match gin and not ginger. "blueberr" is
+  // someone still typing, so it has to stay a substring match or search-as-you-
+  // type breaks. Multi-word queries are specific enough to leave as substrings.
+  function isCompleteWordQuery(q) {
+    return !/\s/.test(q) && ingredientWords().has(q);
+  }
+
+  // The ingredient line that caused this drink to match, or null.
+  function matchingIngredient(drink, q) {
+    const whole = isCompleteWordQuery(q);
+    return parseIngredients(drink.ingredients)
+      .find(i => whole ? keywordMatches(q, i.toLowerCase()) : i.toLowerCase().includes(q)) || null;
+  }
+
   function drinkHasIngredient(drink, q) {
-    return parseIngredients(drink.ingredients).some(i => i.toLowerCase().includes(q));
+    return matchingIngredient(drink, q) !== null;
   }
 
   function renderSuggestions(q) {
@@ -1072,7 +1101,7 @@ const finder = (() => {
       // In ingredient mode, show which ingredient matched rather than just the category
       let meta = drink.category;
       if (byIngredient) {
-        const hit = parseIngredients(drink.ingredients).find(i => i.toLowerCase().includes(q));
+        const hit = matchingIngredient(drink, q);
         if (hit) meta = `${drink.category} · ${stripQuantity(hit)}`;
       }
       li.innerHTML = `
