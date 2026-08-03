@@ -96,6 +96,19 @@ const finder = (() => {
     }
   }
 
+  // Whole-word keyword matcher (allows a trailing plural s/es), compiled once per keyword.
+  // Plain substring matching wrongly satisfies "ginger beer" from "gin", "lemonade" from
+  // "lemon", "pineapple juice" from "apple juice", etc.
+  const kwRegexCache = new Map();
+  function keywordMatches(kw, lower) {
+    let re = kwRegexCache.get(kw);
+    if (!re) {
+      re = new RegExp('(?<![a-z])' + kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:s|es)?(?![a-z])', 'i');
+      kwRegexCache.set(kw, re);
+    }
+    return re.test(lower);
+  }
+
   // Check if a drink ingredient string matches a bar item's keywords
   function ingredientInBar(ingStr) {
     if (myBar.size === 0 && customBar.length === 0) return true;
@@ -106,20 +119,20 @@ const finder = (() => {
         for (const items of Object.values(tier.categories)) {
           for (const item of items) {
             if (!myBar.has(item.name)) continue;
-            if (item.match.some(kw => lower.includes(kw))) return true;
+            if (item.match.some(kw => keywordMatches(kw, lower))) return true;
           }
         }
       }
     } catch(e) { return false; }
     for (const custom of customBar) {
       if (custom.checked === false) continue;
-      if (lower.includes(custom.name.toLowerCase())) return true;
+      if (keywordMatches(custom.name.toLowerCase(), lower)) return true;
     }
     return false;
   }
 
   function drinkMakeability(drink) {
-    if (myBar.size === 0) return { makeable: false, missing: [] };
+    if (myBar.size === 0 && customBar.length === 0) return { makeable: false, missing: [] };
     const ings = parseIngredients(drink.ingredients);
     const missing = ings.filter(i => !ingredientInBar(i));
     return { makeable: missing.length === 0, missing };
@@ -362,7 +375,7 @@ const finder = (() => {
       row.className = 'ingredient-row';
 
       const name = document.createElement('span');
-      name.className = 'ingredient-name' + (myBar.size > 0 && !have ? ' missing' : '');
+      name.className = 'ingredient-name' + (barIsSetUp && !have ? ' missing' : '');
       name.textContent = ing;
       row.appendChild(name);
 
@@ -954,7 +967,7 @@ const finder = (() => {
       const li = document.createElement('li');
       li.className = 'search-result-item';
       const { makeable } = drinkMakeability(drink);
-      const badge = (myBar.size > 0 && makeable) ? ' <span class="makeable-check">✓</span>' : '';
+      const badge = makeable ? ' <span class="makeable-check">✓</span>' : '';
       li.innerHTML = `
         <div class="search-result-name">${drink.name}${badge}</div>
         <div class="search-result-meta">${drink.category}</div>
