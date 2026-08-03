@@ -381,6 +381,16 @@
   width: 100%;
   flex: none;
 }
+/* Sits between Let's Go and Search; the top margin adds a blank line of
+   space above it, on top of the container's 12px gap. */
+.welcome-search-hint {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  color: #999;
+  line-height: 1.6;
+  text-align: center;
+  margin: 22px 0 0;
+}
 .welcome-spacer { flex: 1; }
 .my-bar-divider {
   border-top: 1px solid rgba(245,230,211,0.1);
